@@ -280,7 +280,7 @@
                         <div class="card-header border-bottom">
                             <h4 class="card-title">Aprobaciones</h4>
                             <div class="dt-buttons d-inline-flex"> 
-                                <button class="dt-button create-new btn btn-primary" tabindex="0" aria-controls="DataTables_Table_0" type="button" data-bs-toggle="modal" data-bs-target="#modals-slide-in"><span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus me-50 font-small-4"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>Aprobar</span></button>
+                                <button class="dt-button create-new btn btn-primary" tabindex="0" aria-controls="DataTables_Table_0" type="button" data-bs-toggle="modal" data-bs-target="#add-new-sidebar"><span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus me-50 font-small-4"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>Aprobación</span></button>
                             </div>
                         </div>
                         <div class="card-datatable table-responsive">
@@ -401,6 +401,31 @@
                             </div>
                         </div>
                     </div>
+                
+                                    <!-- Nueva Aprobación modal-->
+                                    <div class="modal modal-slide-in event-sidebar fade" id="add-new-sidebar">
+                                        <div class="modal-dialog sidebar-lg">
+                                            <div class="modal-content p-0">
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">×</button>
+                                                <div class="modal-header mb-1">
+                                                    <h5 class="modal-title">Nueva Aprobación</h5>
+                                                </div>
+                                                <div class="modal-body flex-grow-1 pb-sm-0 pb-3">
+                                                    <form class="event-form needs-validation" data-ajax="false" novalidate="novalidate">
+                                                        <div class="mb-1">
+                                                            <label for="title" class="form-label">Cliente</label>
+                                                            <input type="busqueda" class="form-control" placeholder="Buscar" aria-controls="DataTables_Table_0">
+                                                        </div>
+                                                        <div class="mb-1">
+                                                            <label for="formFile" class="form-label">Agregar Archivos</label>
+                                                            <input class="form-control" type="file" id="formFile">
+                                                          </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--/ Nueva Aprobación modal-->
                 </section>
             </div>
         </div>
