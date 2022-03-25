@@ -38,7 +38,7 @@ $(window).on('load', function () {
   setTimeout(function () {
     toastr['success'](
       'Has iniciado sesión correctamente en Olympiac. ¡Ya puedes empezar a explorar!',
-      '👋 Bienvenido Hector!',
+      '👋 Bienvienido Hector!',
       {
         closeButton: true,
         tapToDismiss: false,
