@@ -18,6 +18,7 @@
     <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/vendors.min.css">
     <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/charts/apexcharts.css">
     <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/extensions/toastr.min.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/pickers/flatpickr/flatpickr.min.css">
     <!-- END: Vendor CSS-->
 
     <!-- BEGIN: Theme CSS-->
@@ -57,7 +58,7 @@
                 </ul>
                 <ul class="nav navbar-nav bookmark-icons">
                     <li class="nav-item d-none d-lg-block"><a class="nav-link" href="app-email.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Enviar correo general"><i class="ficon" data-feather="mail"></i></a></li>
-                    <li class="nav-item d-none d-lg-block"><a class="nav-link" href="app-todo.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Accesos"><i class="ficon" data-feather="check-square"></i></a></li>
+                    <li class="active  nav-item d-none d-lg-block"><a class="nav-link" href="app-todo.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Accesos"><i class="ficon" data-feather="check-square"></i></a></li>
                     <li class="nav-item d-none d-lg-block"><a class="nav-link" href="app-calendar.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Eventos"><i class="ficon" data-feather="calendar"></i></a></li>
                 </ul>
             </div>
@@ -207,7 +208,7 @@
                     <span data-i18n="Apps &amp; Pages">TRAINING</span>
                     <i data-feather="more-horizontal"></i>
                 </li>
-                <li class=" nav-item"><a class="d-flex align-items-center" href="accesos.html">
+                <li class="active nav-item"><a class="d-flex align-items-center" href="accesos.html">
                     <i data-feather="check-square"></i>
                     <span class="menu-title text-truncate" data-i18n="Accesos">Accesos</span></a>
                 </li>
@@ -281,9 +282,9 @@
                     <div class="card">
                         <div class="card-header border-bottom">
                             <h4 class="card-title">Accesos</h4>
-                            <div class="dt-buttons d-inline-flex"> 
+                            <!-- <div class="dt-buttons d-inline-flex"> 
                                 <button class="dt-button create-new btn btn-primary" tabindex="0" aria-controls="DataTables_Table_0" type="button" data-bs-toggle="modal" data-bs-target="#modals-slide-in"><span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus me-50 font-small-4"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>Nueva Factura</span></button>
-                            </div>
+                            </div> -->
                         </div>
                         <div class="card-datatable table-responsive">
                             <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper dt-bootstrap5 no-footer">
@@ -300,12 +301,12 @@
                                                 <option value="Pagado" class="text-capitalize">Deshabilitado</option>
                                             </select>
                                         </div> 
-                                    </div>
-                                </div>
-                                    
                                         
-                                <div class="dt-buttons d-inline-flex"> 
-                                    <button class="dt-button create-new btn btn-primary" tabindex="0" aria-controls="DataTables_Table_0" type="button" data-bs-toggle="modal" data-bs-target="#modals-slide-in"><span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus me-50 font-small-4"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>Nueva Factura</span></button>
+                                        <div class="invoice_status ms-sm-2">
+
+                                    <input type="text" id="fp-range" class="form-control flatpickr-range" placeholder="YYYY-MM-DD to YYYY-MM-DD" />
+                                        </div> 
+                                    </div>
                                 </div>
                                 <table class="invoice-list-table table dataTable no-footer dtr-column" id="DataTables_Table_0" role="grid" aria-describedby="DataTables_Table_0_info">
                                     
@@ -549,6 +550,9 @@
     <!-- BEGIN: Page Vendor JS-->
     <script src="app-assets/vendors/js/charts/apexcharts.min.js"></script>
     <script src="app-assets/vendors/js/extensions/toastr.min.js"></script>
+
+    <script src="app-assets/vendors/js/pickers/flatpickr/flatpickr.min.js"></script>
+    <script src="app-assets/js/scripts/forms/pickers/form-pickers.js"></script>
     <!-- END: Page Vendor JS-->
 
     <!-- BEGIN: Theme JS-->
