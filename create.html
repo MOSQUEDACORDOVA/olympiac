@@ -18,6 +18,8 @@
     <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/vendors.min.css">
     <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/charts/apexcharts.css">
     <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/extensions/toastr.min.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css/plugins/forms/form-validation.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css/plugins/forms/pickers/form-flat-pickr.css">
     <!-- END: Vendor CSS-->
 
     <!-- BEGIN: Theme CSS-->
@@ -212,7 +214,7 @@
                     <span class="menu-title text-truncate" data-i18n="Accesos">Accesos</span></a>
                 </li>
 
-                <li class=" nav-item"><a class="d-flex align-items-center" href="#"><i data-feather="copy"></i><span class="menu-title text-truncate" data-i18n="Form Elements">Clientes</span></a>
+                <li class="active nav-item"><a class="d-flex align-items-center" href="#"><i data-feather="copy"></i><span class="menu-title text-truncate" data-i18n="Form Elements">Clientes</span></a>
                     <ul class="menu-content">
                         <li><a class="d-flex align-items-center" href="clientes.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Input">Lista</span></a>
                         </li>
@@ -221,7 +223,7 @@
                         
                     </ul>
                 </li>
-                <li class="active nav-item"><a class="d-flex align-items-center" href="ejercicios.html">
+                <li class=" nav-item"><a class="d-flex align-items-center" href="ejercicios.html">
                     <i data-feather="bar-chart-2"></i>
                     <span class="menu-title text-truncate" data-i18n="Ejercicios">Ejercicios</span></a>
                 </li>
@@ -279,87 +281,88 @@
         <div class="content-overlay"></div>
         <div class="header-navbar-shadow"></div>
         <div class="content-wrapper container-xxl p-0">
+            <div class="content-header row">
+            </div>
             <div class="content-body">
-                <!--List group with tabs Starts-->
-                <section id="list-group-tabs">
+                <!-- Validation -->
+                <section class="bs-validation">
                     <div class="row">
-                        <div class="col-12">
+
+                        <!-- Bootstrap Validation -->
                             <div class="card">
-                                
                                 <div class="card-header border-bottom">
-                                    <h4 class="card-title">Ejercicios</h4>
+                                    <h4 class="card-title">Crear Nuevo</h4>
                                     <div class="dt-buttons d-inline-flex"> 
-                                        <button class="dt-button create-new btn btn-primary" tabindex="0" aria-controls="DataTables_Table_0" type="button" data-bs-toggle="modal" data-bs-target="#modals-slide-in"><span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus me-50 font-small-4"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>Agregar</span></button>
+                                        <button class="dt-button create-new btn btn-primary" tabindex="0" aria-controls="DataTables_Table_0" type="button" data-bs-toggle="modal" data-bs-target="#modals-slide-in"><span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus me-50 font-small-4"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>Lista</span></button>
                                     </div>
                                 </div>
+                                <br>
                                 <div class="card-body">
-                                    <div class="row mt-1">
-                                        <div class="col-md-4 col-sm-12">
-                                            <div class="list-group" id="list-tab" role="tablist">
-                                                <a class="list-group-item list-group-item-action active" id="list-home-list" data-bs-toggle="list" href="#ejercicio1" role="tab" aria-controls="ejercicio1">jumping jacks</a>
-                                                <a class="list-group-item list-group-item-action" id="list-profile-list" data-bs-toggle="list" href="#ejercicio2" role="tab" aria-controls="ejercicio2">Bicep concentrado</a>
-                                                <a class="list-group-item list-group-item-action" id="list-messages-list" data-bs-toggle="list" href="#ejercicio3" role="tab" aria-controls="ejercicio3">Bicicleta elíptica</a>
+                                    <form class="needs-validation" >
+                                        <div class="mb-1">
+                                            <label class="form-label" for="basic-addon-name">Nombre</label>
+
+                                            <input type="text" id="basic-addon-name" class="form-control" placeholder="Nombre" aria-label="Nombre" aria-describedby="basic-addon-name" required />
+                                            <div class="valid-feedback">Se ve bien!</div>
+                                            <div class="invalid-feedback">Por favor, escriba su nombre.</div>
+                                        </div>
+                                        <div class="mb-1">
+                                            <label class="form-label" for="basic-default-email1">Email</label>
+                                            <input type="email" id="basic-default-email1" class="form-control" placeholder="john.doe@email.com" aria-label="john.doe@email.com" required />
+                                            <div class="valid-feedback">Se ve bien!</div>
+                                            <div class="invalid-feedback">Por favor, escriba su email</div>
+                                        </div>
+                                        <div class="mb-1">
+                                            <label class="form-label" for="basic-default-password1">Contraseña</label>
+                                            <input type="password" id="basic-default-password1" class="form-control" placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;" required />
+                                            <div class="valid-feedback">Se ve bien!</div>
+                                            <div class="invalid-feedback">Por favor, escriba su Contraseña.</div>
+                                        </div>
+                                        <div class="mb-1">
+                                            <label class="form-label" for="select-country1">País</label>
+                                            <select class="form-select" id="select-country1" required>
+                                                <option value="">Seleccione un País</option>
+                                                <option value="usa">Puerto Rico</option>
+                                                <option value="uk">Chile</option>
+                                                <option value="france">Ecuador</option>
+                                                <option value="australia">Venezuela</option>
+                                                <option value="spain">Estados Unidos</option>
+                                            </select>
+                                            <div class="valid-feedback">Se ve bien!</div>
+                                            <div class="invalid-feedback">Por favor, seleccione su País</div>
+                                        </div>
+                                        <div class="mb-1">
+                                            <label for="customFile1" class="form-label">Foto de Perfil</label>
+                                            <input class="form-control" type="file" id="customFile1" required />
+                                        </div>
+                                        <div class="mb-1">
+                                            <label class="form-label" class="d-block">Genero</label>
+                                            <div class="form-check my-50">
+                                                <input type="radio" id="validationRadio3" name="validationRadioBootstrap" class="form-check-input" required />
+                                                <label class="form-check-label" for="validationRadio3">Hombre</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input type="radio" id="validationRadio4" name="validationRadioBootstrap" class="form-check-input" required />
+                                                <label class="form-check-label" for="validationRadio4">Mujer</label>
                                             </div>
                                         </div>
-                                        <div class="col-md-8 col-sm-12 mt-1">
-                                            <div class="tab-content" id="nav-tabContent">
-
-                                                <div class="tab-pane fade show active" id="ejercicio1" role="tabpanel" aria-labelledby="list-home-list">
-                                                    <h4 class="card-title">Jumping jacks</h4>
-                                                    <div style="text-align: center;">
-                                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/iSSAk4XCsRA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                                    </div>
-
-                                                    <p class="card-text">
-                                                        Categoría: Cardio
-                                                        <br>
-                                                        Link: https://www.youtube.com/watch?v=iSSAk4XCsRA
-                                                    <p style="text-align: justify;">Descripción: Se trata de dar un salto en el sitio al mismo tiempo que abres las 
-                                                    piernas un poco más del ancho de los hombros y elevas los brazos hacia los laterales 
-                                                    y hacia arriba hasta dar una palmada.</p>
-                                                    </p>
-                                                </div>
-
-                                                <div class="tab-pane fade show " id="ejercicio2" role="tabpanel" aria-labelledby="list-home-list">
-                                                    <h4 class="card-title">Bicep concentrado</h4>
-                                                    <div style="text-align: center;">
-                                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/8B0mY3gknoc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                                    </div>
-
-                                                    <p class="card-text">
-                                                        Categoría: Cardio
-                                                        <br>
-                                                        Link: https://www.youtube.com/watch?v=kQ2hYZy1rTw
-                                                    <p style="text-align: justify;">Descripción: calentamiento general, ya que para pedalear implicamos todo el cuerpo al ayudarnos de piernas y brazos.</p>
-                                                    </p>
-                                                </div>
-
-                                                <div class="tab-pane fade show " id="ejercicio3" role="tabpanel" aria-labelledby="list-home-list">
-                                                    <h4 class="card-title">Bicicleta elíptica</h4>
-                                                    <div style="text-align: center;">
-                                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/kQ2hYZy1rTw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                                    </div>
-
-                                                    <p class="card-text">
-                                                        Categoría: Cardio
-                                                        <br>
-                                                        Link: https://www.youtube.com/watch?v=kQ2hYZy1rTw
-                                                    <p style="text-align: justify;">Descripción: Se trata de dar un salto en el sitio al mismo tiempo que abres las 
-                                                    piernas un poco más del ancho de los hombros y elevas los brazos hacia los laterales 
-                                                    y hacia arriba hasta dar una palmada.</p>
-                                                    </p>
-                                                </div>
-
-
+                                        <div class="mb-1">
+                                            <label for="validationCustomUsername" class="form-label">Usuario</label>
+                                            <div class="input-group has-validation">
+                                                <span class="input-group-text" id="inputGroupPrepend">@</span>
+                                                <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required />
+                                                <div class="invalid-feedback">Por favor, escriba su Usuario.</div>
                                             </div>
                                         </div>
-                                    </div>
+                                        <button type="" class="btn btn-primary">Enviar</button>
+                                    </form>
                                 </div>
                             </div>
-                        </div>
+                        <!-- /Bootstrap Validation -->
+
                     </div>
                 </section>
-                <!--List group with tabs Ends-->
+                <!-- /Validation -->
 
             </div>
         </div>
@@ -389,6 +392,9 @@
     <!-- BEGIN: Page Vendor JS-->
     <script src="app-assets/vendors/js/charts/apexcharts.min.js"></script>
     <script src="app-assets/vendors/js/extensions/toastr.min.js"></script>
+    <script src="app-assets/vendors/js/forms/select/select2.full.min.js"></script>
+    <script src="app-assets/vendors/js/forms/validation/jquery.validate.min.js"></script>
+    <script src="app-assets/js/scripts/forms/form-validation.js"></script>
     <!-- END: Page Vendor JS-->
 
     <!-- BEGIN: Theme JS-->

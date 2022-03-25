@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html class="loading bordered-layout" lang="en" data-layout="bordered-layout" data-textdirection="ltr">
+<!-- BEGIN: Head-->
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0,minimal-ui">
+    <meta name="description" content="Olympiac admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
+    <meta name="keywords" content="admin template, Olympiac admin template, dashboard template, flat admin template, responsive admin template, web app">
+    <meta name="author" content="PIXINVENT">
+    <title>Facturas | Olympiac</title>
+    <link rel="apple-touch-icon" href="app-assets/images/ico/apple-icon-120.png">
+    <link rel="shortcut icon" type="image/x-icon" href="app-assets/images/ico/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600" rel="stylesheet">
+
+    <!-- BEGIN: Vendor CSS-->
+    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/vendors.min.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/pickers/flatpickr/flatpickr.min.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/forms/select/select2.min.css">
+    <!-- END: Vendor CSS-->
+
+    <!-- BEGIN: Theme CSS-->
+    <link rel="stylesheet" type="text/css" href="app-assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css/bootstrap-extended.min.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css/colors.min.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css/components.min.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css/themes/dark-layout.min.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css/themes/bordered-layout.min.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css/themes/semi-dark-layout.min.css">
+
+    <!-- BEGIN: Page CSS-->
+    <link rel="stylesheet" type="text/css" href="app-assets/css/core/menu/menu-types/vertical-menu.min.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css/plugins/forms/pickers/form-flat-pickr.min.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css/pages/app-invoice.min.css">
+    <!-- END: Page CSS-->
+
+    <!-- BEGIN: Custom CSS-->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <!-- END: Custom CSS-->
+
+</head>
+<!-- END: Head-->
+
+<!-- BEGIN: Body-->
+
+<body class="vertical-layout vertical-menu-modern  navbar-floating footer-static  " data-open="click" data-menu="vertical-menu-modern" data-col="">
+
+    <!-- BEGIN: Header Menu Superior-->
+    <nav class="header-navbar navbar navbar-expand-lg align-items-center floating-nav navbar-light navbar-shadow container-xxl">
+        <div class="navbar-container d-flex content">
+            <!-- Iconos de acceso rapido -->
+            <div class="bookmark-wrapper d-flex align-items-center">
+                <ul class="nav navbar-nav d-xl-none">
+                    <li class="nav-item"><a class="nav-link menu-toggle" href="#"><i class="ficon" data-feather="menu"></i></a></li>
+                </ul>
+                <ul class="nav navbar-nav bookmark-icons">
+                    <li class="nav-item d-none d-lg-block"><a class="nav-link" href="app-email.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Enviar correo general"><i class="ficon" data-feather="mail"></i></a></li>
+                    <li class="nav-item d-none d-lg-block"><a class="nav-link" href="app-todo.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Accesos"><i class="ficon" data-feather="check-square"></i></a></li>
+                    <li class="nav-item d-none d-lg-block"><a class="nav-link" href="app-calendar.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Eventos"><i class="ficon" data-feather="calendar"></i></a></li>
+                </ul>
+            </div>
+            <!-- Iconos de acceso rapido fin -->
+
+            <ul class="nav navbar-nav align-items-center ms-auto">
+                <!-- Icono de Notificaciones -->
+                <li class="nav-item dropdown dropdown-notification me-25"><a class="nav-link" href="#" data-bs-toggle="dropdown"><i class="ficon" data-feather="bell"></i><span class="badge rounded-pill bg-danger badge-up">6</span></a>
+                    <!-- Menu de Notificaciones -->
+                    <ul class="dropdown-menu dropdown-menu-media dropdown-menu-end">
+                        <li class="dropdown-menu-header">
+                            <div class="dropdown-header d-flex">
+                                <h4 class="notification-title mb-0 me-auto">Alertas</h4>
+                                <div class="badge rounded-pill badge-light-primary">6 Nuevas</div>
+                            </div>
+                        </li>
+                        <li class="scrollable-container media-list">
+                            <a class="d-flex" href="#">
+                                <div class="list-item d-flex align-items-start">
+                                    <div class="me-1">
+                                        <div class="avatar"><img src="app-assets/images/portrait/small/avatar-s-15.jpg" alt="avatar" width="32" height="32"></div>
+                                    </div>
+                                    <div class="list-item-body flex-grow-1">
+                                        <p class="media-heading">
+                                            <span class="fw-bolder">Hector Pérez 🎉</span> Nuevo cliente!</p>
+                                            <small class="notification-text"> Descripción (por mejorar).</small>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="d-flex" href="#">
+                                <div class="list-item d-flex align-items-start">
+                                    <div class="me-1">
+                                        <div class="avatar"><img src="app-assets/images/portrait/small/avatar-s-3.jpg" alt="avatar" width="32" height="32"></div>
+                                    </div>
+                                    <div class="list-item-body flex-grow-1">
+                                        <p class="media-heading">
+                                            <span class="fw-bolder">Luisana Alvarado</span>&nbsp;Registrada
+                                        </p>
+                                        <small class="notification-text"> Descripción (por mejorar)</small>
+                                    </div>
+                                </div>
+                            </a>
+                            
+                            <div class="list-item d-flex align-items-center">
+                                <h6 class="fw-bolder me-auto mb-0">Alertas de rutinas</h6>
+                                <div class="form-check form-check-primary form-switch">
+                                    <input class="form-check-input" id="systemNotification" type="checkbox" checked="">
+                                    <label class="form-check-label" for="systemNotification"></label>
+                                </div>
+                            </div><a class="d-flex" href="#">
+                                <div class="list-item d-flex align-items-start">
+                                    <div class="me-1">
+                                        <div class="avatar bg-light-danger">
+                                            <div class="avatar-content"><i class="avatar-icon" data-feather="x"></i></div>
+                                        </div>
+                                    </div>
+                                    <div class="list-item-body flex-grow-1">
+                                        <p class="media-heading"><span class="fw-bolder">Ejemplo 1</span>&nbsp;</p>
+                                        <small class="notification-text"> Descripción (por mejorar)</small>
+                                    </div>
+                                </div>
+                            </a><a class="d-flex" href="#">
+                                <div class="list-item d-flex align-items-start">
+                                    <div class="me-1">
+                                        <div class="avatar bg-light-success">
+                                            <div class="avatar-content"><i class="avatar-icon" data-feather="check"></i></div>
+                                        </div>
+                                    </div>
+                                    <div class="list-item-body flex-grow-1">
+                                        <p class="media-heading"><span class="fw-bolder">Ejemplo 2</span>&nbsp;</p>
+                                        <small class="notification-text"> Descripción (por mejorar)</small>
+                                    </div>
+                                </div>
+                            </a><a class="d-flex" href="#">
+                                <div class="list-item d-flex align-items-start">
+                                    <div class="me-1">
+                                        <div class="avatar bg-light-warning">
+                                            <div class="avatar-content"><i class="avatar-icon" data-feather="alert-triangle"></i></div>
+                                        </div>
+                                    </div>
+                                    <div class="list-item-body flex-grow-1">
+                                        <p class="media-heading"><span class="fw-bolder">Ejemplo 3</span>&nbsp;</p>
+                                        <small class="notification-text"> Descripción (por mejorar)</small>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="dropdown-menu-footer"><a class="btn btn-primary w-100" href="#">Ver todas las notificaciones</a></li>
+                    </ul>
+                    <!-- Menu de Notificaciones fin -->
+                </li>
+                <!-- Perfil de Usuario -->
+                <li class="nav-item dropdown dropdown-user">
+                    <a class="nav-link dropdown-toggle dropdown-user-link" id="dropdown-user" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <div class="user-nav d-sm-flex d-none">
+                            <span class="user-name fw-bolder">Hector Perez</span>
+                            <span class="user-status">Admin</span>
+                        </div>
+                        <span class="avatar">
+                            <img class="round" src="app-assets/images/portrait/small/avatar-s-11.jpg" alt="avatar" height="40" width="40">
+                            <span class="avatar-status-online"></span>
+                        </span>
+                    </a>
+                    <!-- Menu de Usuario -->
+                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdown-user">
+                        <a class="dropdown-item" href="page-profile.html">
+                            <i class="me-50" data-feather="user"></i> Mi Perfil
+                        </a>
+                        <a class="dropdown-item" href="auth-login-cover.html">
+                            <i class="me-50" data-feather="power"></i> Salir
+                        </a>
+                    </div>
+                    <!-- Menu de Usuario fin -->
+                </li>
+                <!-- Perfil de Usuario fin -->
+            </ul>
+        </div>
+    </nav>
+    <!-- END: Header-->
+
+
+    <!-- BEGIN: Main Menu-->
+    <div class="main-menu menu-fixed menu-light menu-accordion menu-shadow" data-scroll-to-active="true">
+        <div class="navbar-header">
+            <!-- Logo Principal-->
+            <ul class="nav navbar-nav flex-row">
+                <li class="nav-item me-auto">
+                    <a class="navbar-brand" href="html/ltr/vertical-menu-template-bordered/index.html">
+                        <h2 class="brand-text">Olympiac</h2>
+                    </a></li>
+                <li class="nav-item nav-toggle"><a class="nav-link modern-nav-toggle pe-0" data-bs-toggle="collapse"><i class="d-block d-xl-none text-primary toggle-icon font-medium-4" data-feather="x"></i><i class="d-none d-xl-block collapse-toggle-icon font-medium-4  text-primary" data-feather="disc" data-ticon="disc"></i></a></li>
+            </ul>
+        </div>
+        <div class="shadow-bottom"></div>
+        <div class="main-menu-content">
+
+            <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
+                <li class="nav-item">
+                    <a class="d-flex align-items-center" href="index.html">
+                        <i data-feather="home"></i>
+                        <span class="menu-title text-truncate" data-i18n="Dashboards">Dashboards</span>
+                    </a>
+                    
+                </li>
+                <!-- Training Josuue -->
+                <li class=" navigation-header">
+                    <span data-i18n="Apps &amp; Pages">TRAINING</span>
+                    <i data-feather="more-horizontal"></i>
+                </li>
+                <li class=" nav-item"><a class="d-flex align-items-center" href="accesos.html">
+                    <i data-feather="check-square"></i>
+                    <span class="menu-title text-truncate" data-i18n="Accesos">Accesos</span></a>
+                </li>
+                <li class=" nav-item"><a class="d-flex align-items-center" href="clientes.html">
+                    <i data-feather="users"></i>
+                    <span class="menu-title text-truncate" data-i18n="Clientes">Clientes</span></a>
+                </li>
+                <li class=" nav-item"><a class="d-flex align-items-center" href="ejercicios.html">
+                    <i data-feather="bar-chart-2"></i>
+                    <span class="menu-title text-truncate" data-i18n="Ejercicios">Ejercicios</span></a>
+                </li>
+                <li class=" nav-item"><a class="d-flex align-items-center" href="programas.html">
+                    <i data-feather="clipboard"></i>
+                    <span class="menu-title text-truncate" data-i18n="Programas">Programas</span></a>
+                </li>
+                <li class=" nav-item"><a class="d-flex align-items-center" href="eventos.html">
+                    <i data-feather="calendar"></i>
+                    <span class="menu-title text-truncate" data-i18n="Eventos">Eventos</span></a>
+                </li>
+                <li class=" nav-item"><a class="d-flex align-items-center" href="wod.html">
+                    <i data-feather="award"></i>
+                    <span class="menu-title text-truncate" data-i18n="WOD">WOD</span></a>
+                </li>
+                <!-- Training Josuue fin -->
+
+                <!-- Facturacion Bod Esponja -->
+                <li class=" navigation-header"><span data-i18n="User Interface">Facturación</span><i data-feather="more-horizontal"></i>
+                </li>
+
+                <!-- Facturas -->
+                <li class="active nav-item"><a class="d-flex align-items-center" href="facturas.html">
+                    <i data-feather="file-text"></i>
+                    <span class="menu-title text-truncate" data-i18n="Facturas">Facturas</span></a>
+                </li>
+                <!-- Aprobaciones -->
+                <li class="nav-item"><a class="d-flex align-items-center" href="aprobaciones.html">
+                    <i data-feather="check-circle"></i>
+                    <span class="menu-title text-truncate" data-i18n="Aprobaciones">Aprobaciones</span></a>
+                </li>
+                <!-- Productos -->
+                <li class=" nav-item"><a class="d-flex align-items-center" href="productos.html">
+                    <i data-feather="shopping-cart"></i>
+                    <span class="menu-title text-truncate" data-i18n="Productos">Productos</span></a>
+                </li>
+                <!-- Reportes -->
+                <li class=" nav-item"><a class="d-flex align-items-center" href="reportes.html">
+                    <i data-feather="trending-up"></i>
+                    <span class="menu-title text-truncate" data-i18n="Reportes">Reportes</span></a>
+                </li>
+                <!-- Reportar problemas -->
+                <li class=" nav-item"><a class="d-flex align-items-center" href="reportar-problema.html">
+                    <i data-feather="life-buoy"></i>
+                    <span class="menu-title text-truncate" data-i18n="Reportar problema">Reportar problema</span></a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+    <!-- END: Main Menu-->
+
+   
+    <!-- BEGIN: Content -->
+    <div class="app-content content">
+        <div class="content-overlay"></div>
+        <div class="header-navbar-shadow"></div>
+        <div class="content-wrapper container-xxl p-0">
+            <div class="content-header row"></div>
+            <div class="content-body">
+                <section class="invoice-add-wrapper">
+                    <div class="row invoice-add">
+                        <!-- Invoice Add Left starts -->
+                        <div class="col-xl-9 col-md-8 col-12">
+                            <div class="card invoice-preview-card">
+                                <!-- Header starts -->
+                                <div class="card-body invoice-padding pb-0">
+                                    <div class="d-flex justify-content-between flex-md-row flex-column invoice-spacing mt-0">
+                                        <div>
+                                            <div class="logo-wrapper">
+                                                <h2 class="text-primary">
+                                                    Olympiac
+                                                </h2>
+                                            </div>
+                                            <p class="card-text mb-25">
+                                                Oficina 149, 
+                                            </p>
+                                            <p class="card-text mb-25">
+                                                Guadalajara, Costa Rica.
+                                            </p>
+                                            <p class="card-text mb-0">
+                                                (123) 456 7891, (876) 543 2198
+                                            </p>
+                                        </div>
+                                        <div class="invoice-number-date mt-md-0 mt-2">
+                                            <div class="d-flex align-items-center justify-content-md-end mb-1">
+                                                <h4 class="invoice-title">
+                                                    Factura
+                                                </h4>
+                                                <div class="input-group input-group-merge invoice-edit-input-group">
+                                                    <div class="input-group-text">
+                                                        <svg
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                            width="14"
+                                                            height="14"
+                                                            viewBox="0 0 24 24"
+                                                            fill="none"
+                                                            stroke="currentColor"
+                                                            stroke-width="2"
+                                                            stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            class="feather feather-hash"
+                                                        >
+                                                            <line x1="4" y1="9" x2="20" y2="9"></line>
+                                                            <line x1="4" y1="15" x2="20" y2="15"></line>
+                                                            <line x1="10" y1="3" x2="8" y2="21"></line>
+                                                            <line x1="16" y1="3" x2="14" y2="21"></line>
+                                                        </svg>
+                                                    </div>
+                                                    <input type="text" class="form-control invoice-edit-input" placeholder="53634" />
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-center mb-1">
+                                                <span class="title">
+                                                    Fecha:
+                                                </span>
+                                                <input type="text" class="form-control invoice-edit-input date-picker flatpickr-input" readonly="readonly" />
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <span class="title">
+                                                    Fecha de vencimiento:
+                                                </span>
+                                                <input type="text" class="form-control invoice-edit-input due-date-picker flatpickr-input" readonly="readonly" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Header ends -->
+    
+                                <hr class="invoice-spacing" />
+    
+                                <!-- Address and Contact starts -->
+                                <div class="card-body invoice-padding pt-0">
+                                    <div class="row row-bill-to invoice-spacing">
+                                        <div class="col-xl-8 mb-lg-1 col-bill-to ps-0">
+                                            <h6 class="invoice-to-title">
+                                                Factura a:
+                                            </h6>
+                                            <div class="invoice-customer">
+                                                <select class="invoiceto form-select select2-hidden-accessible" data-select2-id="3" tabindex="-1" aria-hidden="true">
+                                                    <option data-select2-id="5"></option>
+                                                    <option value="shelby">
+                                                        empresa shelby limitada
+                                                    </option>
+                                                    <option value="hunters">
+                                                        corporación de cazadores
+                                                    </option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-4 p-0 ps-xl-2 mt-xl-0 mt-2">
+                                            <h6 class="mb-2">
+                                                Detalles del pago:
+                                            </h6>
+                                            <table>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="pe-1">
+                                                            Total:
+                                                        </td>
+                                                        <td>
+                                                            <strong>
+                                                                $1,110.55
+                                                            </strong>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="pe-1">
+                                                            Banco:
+                                                        </td>
+                                                        <td>
+                                                            Banco Mundial
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="pe-1">
+                                                            País:
+                                                        </td>
+                                                        <td>
+                                                            Costa Rica
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Address and Contact ends -->
+    
+                                <!-- Product Details starts -->
+                                <div class="card-body invoice-padding invoice-product-details">
+                                    <form class="source-item">
+                                        <div data-repeater-list="group-a">
+                                            <div class="repeater-wrapper" data-repeater-item="">
+                                                <div class="row">
+                                                    <div class="col-12 d-flex product-details-border position-relative pe-0">
+                                                        <div class="row w-100 pe-lg-0 pe-1 py-2">
+                                                            <div class="col-lg-5 col-12 mb-lg-0 mb-2 mt-lg-0 mt-2">
+                                                                <p class="card-text col-title mb-md-50 mb-0">
+                                                                    Articulo
+                                                                </p>
+                                                                <select class="form-select item-details">
+                                                                    <option value="App Design">
+                                                                        Diseño de aplicaciones
+                                                                    </option>
+                                                                    <option value="App Customization" selected="">
+                                                                        Personalización de aplicaciones
+                                                                    </option>
+                                                                    <option value="ABC Template">
+                                                                        Plantilla ABC
+                                                                    </option>
+                                                                    <option value="App Development">
+                                                                        Desarrollo de aplicaciones
+                                                                    </option>
+                                                                </select>
+                                                                <textarea class="form-control mt-2" rows="1">Customization &amp; Bug Fixes</textarea>
+                                                            </div>
+                                                            <div class="col-lg-3 col-12 my-lg-0 my-2">
+                                                                <p class="card-text col-title mb-md-2 mb-0">
+                                                                    Costo
+                                                                </p>
+                                                                <input type="text" class="form-control" value="24" placeholder="24" />
+                                                                <div class="mt-2">
+                                                                    <span>
+                                                                        Descuento: 
+                                                                    </span>
+                                                                    <span class="discount">
+                                                                        0% 
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-2 col-12 my-lg-0 my-2">
+                                                                <p class="card-text col-title mb-md-2 mb-0">
+                                                                    Cantidad
+                                                                </p>
+                                                                <input type="number" class="form-control" value="1" placeholder="1" />
+                                                            </div>
+                                                            <div class="col-lg-2 col-12 mt-lg-0 mt-2">
+                                                                <p class="card-text col-title mb-md-50 mb-0">
+                                                                    Precio
+                                                                </p>
+                                                                <p class="card-text mb-0">
+                                                                    $24.00
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="d-flex flex-column align-items-center justify-content-between border-start invoice-product-actions py-50 px-25">
+                                                            <svg
+                                                                xmlns="http://www.w3.org/2000/svg"
+                                                                width="14"
+                                                                height="14"
+                                                                viewBox="0 0 24 24"
+                                                                fill="none"
+                                                                stroke="currentColor"
+                                                                stroke-width="2"
+                                                                stroke-linecap="round"
+                                                                stroke-linejoin="round"
+                                                                class="feather feather-x cursor-pointer font-medium-3"
+                                                                data-repeater-delete=""
+                                                            >
+                                                                <line x1="18" y1="6" x2="6" y2="18"></line>
+                                                                <line x1="6" y1="6" x2="18" y2="18"></line>
+                                                            </svg>
+                                                            <div class="dropdown">
+                                                                <svg
+                                                                    xmlns="http://www.w3.org/2000/svg"
+                                                                    width="14"
+                                                                    height="14"
+                                                                    viewBox="0 0 24 24"
+                                                                    fill="none"
+                                                                    stroke="currentColor"
+                                                                    stroke-width="2"
+                                                                    stroke-linecap="round"
+                                                                    stroke-linejoin="round"
+                                                                    class="feather feather-settings cursor-pointer more-options-dropdown me-0"
+                                                                    id="dropdownMenuButton"
+                                                                    role="button"
+                                                                    data-bs-toggle="dropdown"
+                                                                    aria-haspopup="true"
+                                                                    aria-expanded="false"
+                                                                >
+                                                                    <circle cx="12" cy="12" r="3"></circle>
+                                                                    <path
+                                                                        d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"
+                                                                    ></path>
+                                                                </svg>
+                                                                <div class="dropdown-menu dropdown-menu-end item-options-menu p-50" aria-labelledby="dropdownMenuButton">
+                                                                    <div class="mb-1">
+                                                                        <label for="discount-input" class="form-label">Discount(%)</label>
+                                                                        <input type="number" class="form-control" id="discount-input" />
+                                                                    </div>
+                                                                    <div class="form-row mt-50">
+                                                                        <div class="mb-1 col-md-6">
+                                                                            <label for="tax-1-input" class="form-label">Tax 1</label>
+                                                                            <select name="group-a[0][tax-1-input]" id="tax-1-input" class="form-select tax-select">
+                                                                                <option value="0%" selected="">0%</option>
+                                                                                <option value="1%">1%</option>
+                                                                                <option value="10%">10%</option>
+                                                                                <option value="18%">18%</option>
+                                                                                <option value="40%">40%</option>
+                                                                            </select>
+                                                                        </div>
+                                                                        <div class="mb-1 col-md-6">
+                                                                            <label for="tax-2-input" class="form-label">Tax 2</label>
+                                                                            <select name="group-a[0][tax-2-input]" id="tax-2-input" class="form-select tax-select">
+                                                                                <option value="0%" selected="">0%</option>
+                                                                                <option value="1%">1%</option>
+                                                                                <option value="10%">10%</option>
+                                                                                <option value="18%">18%</option>
+                                                                                <option value="40%">40%</option>
+                                                                            </select>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="dropdown-divider my-1"></div>
+                                                                    <div class="d-flex justify-content-between">
+                                                                        <button type="button" class="btn btn-outline-primary btn-apply-changes waves-effect">Apply</button>
+                                                                        <button type="button" class="btn btn-outline-secondary waves-effect">Cancel</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row mt-1">
+                                            <div class="col-12 px-0">
+                                                <button type="button" class="btn btn-primary btn-sm btn-add-new waves-effect waves-float waves-light" data-repeater-create="">
+                                                    <svg
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        width="14"
+                                                        height="14"
+                                                        viewBox="0 0 24 24"
+                                                        fill="none"
+                                                        stroke="currentColor"
+                                                        stroke-width="2"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                        class="feather feather-plus me-25"
+                                                    >
+                                                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                                                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                                                    </svg>
+                                                    <span class="align-middle">
+                                                        Añadir artículo
+                                                    </span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <!-- Product Details ends -->
+    
+                                <!-- Invoice Total starts -->
+                                <div class="card-body invoice-padding">
+                                    <div class="row invoice-sales-total-wrapper">
+                                        <div class="col-md-6 order-md-1 order-2 mt-md-0 mt-3">
+                                            <div class="d-flex align-items-center mb-1">
+                                                <label for="salesperson" class="form-label">
+                                                    Vendedor:
+                                                </label>
+                                                <input type="text" class="form-control ms-50" id="salesperson" placeholder="Eduardo Crowley" />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 d-flex justify-content-end order-md-2 order-1">
+                                            <div class="invoice-total-wrapper">
+                                                <div class="invoice-total-item">
+                                                    <p class="invoice-total-title">
+                                                        Total parcial:
+                                                    </p>
+                                                    <p class="invoice-total-amount">
+                                                        $1800
+                                                    </p>
+                                                </div>
+                                                <div class="invoice-total-item">
+                                                    <p class="invoice-total-title">
+                                                        Descuento:
+                                                    </p>
+                                                    <p class="invoice-total-amount">
+                                                        $28
+                                                    </p>
+                                                </div>
+                                                <div class="invoice-total-item">
+                                                    <p class="invoice-total-title">
+                                                        Impuesto:
+                                                    </p>
+                                                    <p class="invoice-total-amount">
+                                                        21%
+                                                    </p>
+                                                </div>
+                                                <hr class="my-50" />
+                                                <div class="invoice-total-item">
+                                                    <p class="invoice-total-title">
+                                                        Total:
+                                                    </p>
+                                                    <p class="invoice-total-amount">
+                                                        $1690
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Invoice Total ends -->
+    
+                                <hr class="invoice-spacing mt-0" />
+    
+                                <div class="card-body invoice-padding py-0">
+                                    <!-- Invoice Note starts -->
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="mb-2">
+                                                <label for="note" class="form-label fw-bold">
+                                                    Nota:
+                                                </label>
+                                                <textarea class="form-control" rows="2" id="note">"Yo entrenaba 4 años para correr solo 9 segundos. Hay personas que por no ver resultados en dos meses se rinden y lo dejan. A veces el fracaso se lo busca uno mismo". -Usain Bolt⚡</textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Invoice Note ends -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Invoice Add Left ends -->
+    
+                        <!-- Invoice Add Right starts -->
+                        <div class="col-xl-3 col-md-4 col-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <button class="btn btn-primary w-100 mb-75 waves-effect waves-float waves-light" disabled="">
+                                        Enviar la factura
+                                    </button>
+                                    <button type="button" class="btn btn-outline-primary w-100 waves-effect">
+                                        Guardar
+                                    </button>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- Invoice Add Right ends -->
+                    </div>
+    
+                    <!-- Add New Customer Sidebar -->
+                    <div class="modal modal-slide-in fade" id="add-new-customer-sidebar" aria-hidden="true">
+                        <div class="modal-dialog sidebar-lg">
+                            <div class="modal-content p-0">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">×</button>
+                                <div class="modal-header mb-1">
+                                    <h5 class="modal-title">
+                                        <span class="align-middle">Add Customer</span>
+                                    </h5>
+                                </div>
+                                <div class="modal-body flex-grow-1">
+                                    <form>
+                                        <div class="mb-1">
+                                            <label for="customer-name" class="form-label">Customer Name</label>
+                                            <input type="text" class="form-control" id="customer-name" placeholder="John Doe" />
+                                        </div>
+                                        <div class="mb-1">
+                                            <label for="customer-email" class="form-label">Email</label>
+                                            <input type="email" class="form-control" id="customer-email" placeholder="example@domain.com" />
+                                        </div>
+                                        <div class="mb-1">
+                                            <label for="customer-address" class="form-label">Customer Address</label>
+                                            <textarea class="form-control" id="customer-address" cols="2" rows="2" placeholder="1307 Lady Bug Drive New York"></textarea>
+                                        </div>
+                                        <div class="mb-1 position-relative">
+                                            <label for="customer-country" class="form-label">Country</label>
+                                            <select class="form-select select2-hidden-accessible" id="customer-country" name="customer-country" data-select2-id="customer-country" tabindex="-1" aria-hidden="true">
+                                                <option label="select country" data-select2-id="2"></option>
+                                                <option value="Australia">Australia</option>
+                                                <option value="Canada">Canada</option>
+                                                <option value="Russia">Russia</option>
+                                                <option value="Saudi Arabia">Saudi Arabia</option>
+                                                <option value="Singapore">Singapore</option>
+                                                <option value="Sweden">Sweden</option>
+                                                <option value="Switzerland">Switzerland</option>
+                                                <option value="United Kingdom">United Kingdom</option>
+                                                <option value="United Arab Emirates">United Arab Emirates</option>
+                                                <option value="United States of America">United States of America</option>
+                                            </select>
+                                            <span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="1" style="width: auto;">
+                                                <span class="selection">
+                                                    <span
+                                                        class="select2-selection select2-selection--single"
+                                                        role="combobox"
+                                                        aria-haspopup="true"
+                                                        aria-expanded="false"
+                                                        tabindex="0"
+                                                        aria-disabled="false"
+                                                        aria-labelledby="select2-customer-country-container"
+                                                    >
+                                                        <span class="select2-selection__rendered" id="select2-customer-country-container" role="textbox" aria-readonly="true">
+                                                            <span class="select2-selection__placeholder">Select country</span>
+                                                        </span>
+                                                        <span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span>
+                                                    </span>
+                                                </span>
+                                                <span class="dropdown-wrapper" aria-hidden="true"></span>
+                                            </span>
+                                        </div>
+                                        <div class="mb-1">
+                                            <label for="customer-contact" class="form-label">Contact</label>
+                                            <input type="number" class="form-control" id="customer-contact" placeholder="763-242-9206" />
+                                        </div>
+                                        <div class="mb-1 d-flex flex-wrap mt-2">
+                                            <button type="button" class="btn btn-primary me-1 waves-effect waves-float waves-light" data-bs-dismiss="modal">Add</button>
+                                            <button type="button" class="btn btn-outline-secondary waves-effect" data-bs-dismiss="modal">Cancel</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /Add New Customer Sidebar -->
+                </section>
+            </div>
+        </div>
+    </div>
+    
+    <!-- END: Content-->
+
+    <div class="sidenav-overlay"></div>
+    <div class="drag-target"></div>
+
+    <!-- BEGIN: Footer-->
+    <footer class="footer footer-static footer-light">
+        <p class="clearfix mb-0">
+            <span class="float-md-start d-block d-md-inline-block mt-25">
+                <a class="ms-25" href="https://mosquedacordova.com/" target="_blank">&copy;MC Developers
+                </a>
+                <span class="d-none d-sm-inline-block"> Todos los derechos reservados.</span>
+            </span>
+    </footer>
+    <button class="btn btn-primary btn-icon scroll-top" type="button"><i data-feather="arrow-up"></i></button>
+    <!-- END: Footer-->
+
+     <!-- BEGIN: Vendor JS-->
+     <script src="app-assets/vendors/js/vendors.min.js"></script>
+     <!-- BEGIN Vendor JS-->
+ 
+     <!-- BEGIN: Page Vendor JS-->
+     <script src="app-assets/vendors/js/forms/repeater/jquery.repeater.min.js"></script>
+     <script src="app-assets/vendors/js/forms/select/select2.full.min.js"></script>
+     <script src="app-assets/vendors/js/pickers/flatpickr/flatpickr.min.js"></script>
+     <!-- END: Page Vendor JS-->
+ 
+     <!-- BEGIN: Theme JS-->
+     <script src="app-assets/js/core/app-menu.min.js"></script>
+     <script src="app-assets/js/core/app.min.js"></script>
+     <script src="app-assets/js/scripts/customizer.min.js"></script>
+     <!-- END: Theme JS-->
+ 
+     <!-- BEGIN: Page JS-->
+     <script src="app-assets/js/scripts/pages/app-invoice.min.js"></script>
+     <!-- END: Page JS-->
+
+    <script>
+        $(window).on('load', function() {
+            if (feather) {
+                feather.replace({
+                    width: 14,
+                    height: 14
+                });
+            }
+        })
+    </script>
+</body>
+<!-- END: Body-->
+
+</html>
