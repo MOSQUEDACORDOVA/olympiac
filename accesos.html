@@ -281,7 +281,7 @@
                         <h4 class="card-title">Accesos</h4>
                     </div>
                     <!-- Buscadores -->
-                    <div class="card-body">
+                    <div class="card-body" style="padding-top: 10px; padding-bottom: 10px;">
                         <div class="row">
                             <div class="col-md-6 mb-1">
                                 <label class="form-label" for="fp-default">Fechas</label>
@@ -305,7 +305,7 @@
                     <div class="card-body">
                         <div class="avatar bg-light-success p-50 mb-1">
                             <div class="avatar-content">
-                                <i data-feather='user-check' style="height: 24px; width: 24px;"></i>
+                                <i data-feather='check' style="height: 24px; width: 24px;"></i>
                             </div>
                         </div>
                         <h2 class="fw-bolder">09</h2>
@@ -319,7 +319,7 @@
                     <div class="card-body">
                         <div class="avatar bg-light-danger p-50 mb-1">
                             <div class="avatar-content">
-                                <i data-feather='user-x' style="height: 24px; width: 24px;"></i>
+                                <i data-feather='x' style="height: 24px; width: 24px;"></i>
                             </div>
                         </div>
                         <h2 class="fw-bolder">02</h2>
@@ -345,16 +345,16 @@
                                     <thead>
                                         <tr role="row">
                                             <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1"
-                                                colspan="1" style="width: 270px;"
+                                                colspan="1" style="width: 50%;"
                                                 aria-label="Client: activate to sort column ascending">Cliente</th>
                                             <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1"
-                                                colspan="1" style="width: 73px;"
+                                                colspan="1" style="width: 20%;"
                                                 aria-label="Total: activate to sort column ascending">Tipo</th>
                                             <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1"
-                                                colspan="1" style="width: 98px;"
+                                                colspan="1" style="width: 30%;"
                                                 aria-label="Balance: activate to sort column ascending">Fecha</th>
-                                            <th class="cell-fit sorting_disabled" rowspan="1" colspan="1"
-                                                style="width: 80px;" aria-label="Actions">Opciones</th>
+                                            <th class="cell-fit sorting_disabled text-center" rowspan="1" colspan="1"
+                                                aria-label="Actions">Opciones</th>
                                         </tr>
                                     </thead>
                                     <!-- Cabezera de la tabla -->
@@ -365,14 +365,14 @@
                                             <td>
                                                 <div class="d-flex justify-content-left align-items-center">
                                                     <div class="avatar-wrapper">
-                                                        <a href="usuario.html">
+                                                        <a href="profile.html">
                                                             <div class="avatar bg-light-success me-50">
                                                                 <div class="avatar-content">JK</div>
                                                             </div>
                                                         </a>
                                                     </div>
                                                     <div class="d-flex flex-column">
-                                                        <a href="usuario.html">
+                                                        <a href="profile.html">
                                                             <h6 class="user-name text-truncate mb-0">Jamal Kerrod</h6>
                                                         </a>
                                                         <small
@@ -388,29 +388,24 @@
                                                     <a class="me-1" href="#" data-bs-toggle="tooltip"
                                                         data-bs-placement="top" title=""
                                                         data-bs-original-title="Deshabilitar" aria-label="Deshabilitar">
-                                                        <i data-feather='slash'></i>
+                                                        <i data-feather='user-x'></i>
                                                     </a>
-                                                    <a class="me-25" href="nueva-factura.html" data-bs-toggle="tooltip"
+                                                    <a class="me-1" href="nueva-factura.html" data-bs-toggle="tooltip"
                                                         data-bs-placement="top" title="" data-bs-original-title="Facturar"
                                                         aria-label="Facturar">
                                                         <i data-feather='file-text'></i>
                                                     </a>
-                                                    <div class="dropdown">
-                                                        <a class="btn btn-sm btn-icon dropdown-toggle hide-arrow"
-                                                            data-bs-toggle="dropdown">
-                                                            <i data-feather='more-vertical'></i>
-                                                        </a>
-                                                        <div class="dropdown-menu dropdown-menu-end">
-                                                            <a href="#" class="dropdown-item">
-                                                                <i data-feather='send'></i>
-                                                                Enviar Correo
-                                                            </a>
-                                                            <a href="#" class="dropdown-item">
-                                                                <i data-feather='edit-3'></i>
-                                                                Editar
-                                                            </a>
-                                                        </div>
-                                                    </div>
+                                                    <a class="me-1" href="#" data-bs-toggle="tooltip"
+                                                        data-bs-placement="top" title=""
+                                                        data-bs-original-title="Enviar correo" aria-label="Enviar correo">
+                                                        <i data-feather='send'></i>
+                                                    </a>
+                                                    <a class="me-25" href="#" data-bs-toggle="tooltip"
+                                                        data-bs-placement="top" title="" data-bs-original-title="Editar"
+                                                        aria-label="Editar">
+                                                        <i data-feather='edit-3'></i>
+                                                    </a>
+                                                </div>
                                                 </div>
                                             </td>
                                         </tr>
@@ -418,14 +413,14 @@
                                             <td>
                                                 <div class="d-flex justify-content-left align-items-center">
                                                     <div class="avatar-wrapper">
-                                                        <a href="usuario.html">
+                                                        <a href="profile.html">
                                                             <div class="avatar bg-light-success me-50">
                                                                 <div class="avatar-content">DW</div>
                                                             </div>
                                                         </a>
                                                     </div>
                                                     <div class="d-flex flex-column">
-                                                        <a href="usuario.html">
+                                                        <a href="profile.html">
                                                             <h6 class="user-name text-truncate mb-0">Devonne Wallbridge</h6>
                                                         </a>
                                                         <small
@@ -441,29 +436,24 @@
                                                     <a class="me-1" href="#" data-bs-toggle="tooltip"
                                                         data-bs-placement="top" title=""
                                                         data-bs-original-title="Deshabilitar" aria-label="Deshabilitar">
-                                                        <i data-feather='slash'></i>
+                                                        <i data-feather='user-x'></i>
                                                     </a>
-                                                    <a class="me-25" href="nueva-factura.html" data-bs-toggle="tooltip"
+                                                    <a class="me-1" href="nueva-factura.html" data-bs-toggle="tooltip"
                                                         data-bs-placement="top" title="" data-bs-original-title="Facturar"
                                                         aria-label="Facturar">
                                                         <i data-feather='file-text'></i>
                                                     </a>
-                                                    <div class="dropdown">
-                                                        <a class="btn btn-sm btn-icon dropdown-toggle hide-arrow"
-                                                            data-bs-toggle="dropdown">
-                                                            <i data-feather='more-vertical'></i>
-                                                        </a>
-                                                        <div class="dropdown-menu dropdown-menu-end">
-                                                            <a href="#" class="dropdown-item">
-                                                                <i data-feather='send'></i>
-                                                                Enviar Correo
-                                                            </a>
-                                                            <a href="#" class="dropdown-item">
-                                                                <i data-feather='edit-3'></i>
-                                                                Editar
-                                                            </a>
-                                                        </div>
-                                                    </div>
+                                                    <a class="me-1" href="#" data-bs-toggle="tooltip"
+                                                        data-bs-placement="top" title=""
+                                                        data-bs-original-title="Enviar correo" aria-label="Enviar correo">
+                                                        <i data-feather='send'></i>
+                                                    </a>
+                                                    <a class="me-25" href="#" data-bs-toggle="tooltip"
+                                                        data-bs-placement="top" title="" data-bs-original-title="Editar"
+                                                        aria-label="Editar">
+                                                        <i data-feather='edit-3'></i>
+                                                    </a>
+                                                </div>
                                                 </div>
                                             </td>
                                         </tr>
@@ -471,14 +461,14 @@
                                             <td>
                                                 <div class="d-flex justify-content-left align-items-center">
                                                     <div class="avatar-wrapper">
-                                                        <a href="usuario.html">
+                                                        <a href="profile.html">
                                                             <div class="avatar bg-light-success me-50">
                                                                 <div class="avatar-content">AF</div>
                                                             </div>
                                                         </a>
                                                     </div>
                                                     <div class="d-flex flex-column">
-                                                        <a href="usuario.html">
+                                                        <a href="profile.html">
                                                             <h6 class="user-name text-truncate mb-0">Ariella Filippyev</h6>
                                                         </a>
                                                         <small
@@ -494,29 +484,24 @@
                                                     <a class="me-1" href="#" data-bs-toggle="tooltip"
                                                         data-bs-placement="top" title=""
                                                         data-bs-original-title="Deshabilitar" aria-label="Deshabilitar">
-                                                        <i data-feather='slash'></i>
+                                                        <i data-feather='user-x'></i>
                                                     </a>
-                                                    <a class="me-25" href="nueva-factura.html" data-bs-toggle="tooltip"
+                                                    <a class="me-1" href="nueva-factura.html" data-bs-toggle="tooltip"
                                                         data-bs-placement="top" title="" data-bs-original-title="Facturar"
                                                         aria-label="Facturar">
                                                         <i data-feather='file-text'></i>
                                                     </a>
-                                                    <div class="dropdown">
-                                                        <a class="btn btn-sm btn-icon dropdown-toggle hide-arrow"
-                                                            data-bs-toggle="dropdown">
-                                                            <i data-feather='more-vertical'></i>
-                                                        </a>
-                                                        <div class="dropdown-menu dropdown-menu-end">
-                                                            <a href="#" class="dropdown-item">
-                                                                <i data-feather='send'></i>
-                                                                Enviar Correo
-                                                            </a>
-                                                            <a href="#" class="dropdown-item">
-                                                                <i data-feather='edit-3'></i>
-                                                                Editar
-                                                            </a>
-                                                        </div>
-                                                    </div>
+                                                    <a class="me-1" href="#" data-bs-toggle="tooltip"
+                                                        data-bs-placement="top" title=""
+                                                        data-bs-original-title="Enviar correo" aria-label="Enviar correo">
+                                                        <i data-feather='send'></i>
+                                                    </a>
+                                                    <a class="me-25" href="#" data-bs-toggle="tooltip"
+                                                        data-bs-placement="top" title="" data-bs-original-title="Editar"
+                                                        aria-label="Editar">
+                                                        <i data-feather='edit-3'></i>
+                                                    </a>
+                                                </div>
                                                 </div>
                                             </td>
                                         </tr>
