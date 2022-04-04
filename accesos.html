@@ -271,6 +271,7 @@
     
         <div class="content-overlay"></div>
         <div class="header-navbar-shadow"></div>
+        <div class="content-wrapper container-xxl p-0">
     
         <!-- Header Sección -->
         <div class="row match-height">
@@ -283,15 +284,24 @@
                     <!-- Buscadores -->
                     <div class="card-body" style="padding-top: 10px; padding-bottom: 10px;">
                         <div class="row">
-                            <div class="col-md-6 mb-1">
+                            <div class="col-md-4 mb-1">
                                 <label class="form-label" for="fp-default">Fechas</label>
                                 <input type="text" id="fp-range" class="form-control flatpickr-range flatpickr-input active"
                                     placeholder="DD-MM-YYYY a DD-MM-YYYY" readonly="readonly">
                             </div>
-                            <div class="col-md-6 mb-1">
+                            <div class="col-md-4 mb-1">
                                 <label class="form-label" for="fp-default">Burcador</label>
                                 <input type="busqueda" class="form-control" placeholder="Buscar"
                                     aria-controls="DataTables_Table_0">
+                            </div>
+                            <div class="col-md-4 mb-1">
+                                <label class="form-label" for="fp-default">Estados</label>
+                                
+                                <select class="invoiceto form-select">
+                                    <option value="shelby" select>Habilitado </option>
+                                    <option value="hunters">Deshabilitado</option>
+                                    <option value="hunters">Repetido</option>
+                                </select>
                             </div>
                         </div>
                     </div>
@@ -348,10 +358,9 @@
                                             <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1"
                                                 style="width: 50%;" aria-label="Client: activate to sort column ascending">Cliente</th>
                                             <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1"
-                                                style="width: 20%;" aria-label="Total: activate to sort column ascending">Tipo</th>
+                                                style="width: 20%;" aria-label="Total: activate to sort column ascending">Estado</th>
                                             <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1"
                                                 style="width: 30%;" aria-label="Balance: activate to sort column ascending">Fecha</th>
-                                            <th class="cell-fit sorting_disabled text-center" rowspan="1" colspan="1" aria-label="Actions">Opciones</th>
                                         </tr>
                                     </thead>
                                     <!-- Cabezera de la tabla -->
@@ -379,26 +388,6 @@
                                             <td><span class="badge rounded-pill badge-light-success" text-capitalized="">
                                                     Habilitado </span></td>
                                             <td><span class="d-none">20190509</span>10/03/2022 12:09PM</td>
-                                            <td>
-                                                <div class="d-flex align-items-center col-actions">
-                                                    <a class="me-1" href="#" data-bs-toggle="tooltip" data-bs-placement="top" title=""
-                                                        data-bs-original-title="Deshabilitar" aria-label="Deshabilitar">
-                                                        <i data-feather='user-x'></i>
-                                                    </a>
-                                                    <a class="me-1" href="nueva-factura.html" data-bs-toggle="tooltip" data-bs-placement="top" title=""
-                                                        data-bs-original-title="Facturar" aria-label="Facturar">
-                                                        <i data-feather='file-text'></i>
-                                                    </a>
-                                                    <a class="me-1" href="#" data-bs-toggle="tooltip" data-bs-placement="top" title=""
-                                                        data-bs-original-title="Enviar correo" aria-label="Enviar correo">
-                                                        <i data-feather='send'></i>
-                                                    </a>
-                                                    <a class="me-25" href="#" data-bs-toggle="tooltip" data-bs-placement="top" title=""
-                                                        data-bs-original-title="Editar" aria-label="Editar">
-                                                        <i data-feather='edit-3'></i>
-                                                    </a>
-                                                </div>                                               
-                                            </td>
                                         </tr>
                                         <tr class="odd">
                                             <td>
@@ -421,26 +410,6 @@
                                             <td><span class="badge rounded-pill badge-light-warning me-1" text-capitalized=""> Repetido
                                                 </span></td>
                                             <td><span class="d-none">20190509</span>10/03/2022 12:09PM</td>
-                                            <td>
-                                                <div class="d-flex align-items-center col-actions">
-                                                    <a class="me-1" href="#" data-bs-toggle="tooltip" data-bs-placement="top" title=""
-                                                        data-bs-original-title="Deshabilitar" aria-label="Deshabilitar">
-                                                        <i data-feather='user-x'></i>
-                                                    </a>
-                                                    <a class="me-1" href="nueva-factura.html" data-bs-toggle="tooltip" data-bs-placement="top" title=""
-                                                        data-bs-original-title="Facturar" aria-label="Facturar">
-                                                        <i data-feather='file-text'></i>
-                                                    </a>
-                                                    <a class="me-1" href="#" data-bs-toggle="tooltip" data-bs-placement="top" title=""
-                                                        data-bs-original-title="Enviar correo" aria-label="Enviar correo">
-                                                        <i data-feather='send'></i>
-                                                    </a>
-                                                    <a class="me-25" href="#" data-bs-toggle="tooltip" data-bs-placement="top" title=""
-                                                        data-bs-original-title="Editar" aria-label="Editar">
-                                                        <i data-feather='edit-3'></i>
-                                                    </a>
-                                                </div>
-                                            </td>
                                         </tr>
                                         <tr class="odd">
                                             <td>
@@ -463,27 +432,6 @@
                                             <td style=""><span class="badge rounded-pill badge-light-danger me-1" text-capitalized="">
                                                     Deshabilitado </span></td>
                                             <td style=""><span class="d-none">20190509</span>10/03/2022 12:09PM</td>
-                                            <td>
-                                                <div class="d-flex align-items-center col-actions">
-                                                    <a class="me-1" href="#" data-bs-toggle="tooltip" data-bs-placement="top" title=""
-                                                        data-bs-original-title="Deshabilitar" aria-label="Deshabilitar">
-                                                        <i data-feather='user-x'></i>
-                                                    </a>
-                                                    <a class="me-1" href="nueva-factura.html" data-bs-toggle="tooltip" data-bs-placement="top" title=""
-                                                        data-bs-original-title="Facturar" aria-label="Facturar">
-                                                        <i data-feather='file-text'></i>
-                                                    </a>
-                                                    <a class="me-1" href="#" data-bs-toggle="tooltip" data-bs-placement="top" title=""
-                                                        data-bs-original-title="Enviar correo" aria-label="Enviar correo">
-                                                        <i data-feather='send'></i>
-                                                    </a>
-                                                    <a class="me-25" href="#" data-bs-toggle="tooltip" data-bs-placement="top" title=""
-                                                        data-bs-original-title="Editar" aria-label="Editar">
-                                                        <i data-feather='edit-3'></i>
-                                                    </a>
-                                                </div>
-
-                                            </td>
                                         </tr>
                                     </tbody>
                                 </table>

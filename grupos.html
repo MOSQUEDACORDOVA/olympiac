@@ -18,6 +18,7 @@
     <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/vendors.min.css">
     <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/charts/apexcharts.css">
     <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/extensions/toastr.min.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/extensions/sweetalert2.min.css">
     <!-- END: Vendor CSS-->
 
     <!-- BEGIN: Theme CSS-->
@@ -272,9 +273,245 @@
     </div>
     <!-- END: Main Menu-->
 
+
     <!-- BEGIN: Content-->
+    <div class="app-content content">
     
+        <div class="content-overlay"></div>
+        <div class="header-navbar-shadow"></div>
+        <div class="content-wrapper container-xxl p-0">
+            <!-- Header Sección -->
+            <div class="row match-height">
+    
+                <div class="col-lg-8 col-12">
+                    <div class="card card-statistics">
+                        <div class="card-header border-bottom">
+                            <h4 class="card-title">Grupos</h4>
+                        </div>
+                        <!-- Buscadores -->
+                        <div class="card-body" style="padding-bottom: 0px;">
+                            <div class="row" style="padding-top: 10px;">
+                                <div class="col-md-8 mb-1">
+                                    <label class="form-label" for="fp-default">Buscador</label>
+                                    <input type="busqueda" class="form-control" placeholder="Buscar"
+                                        aria-controls="DataTables_Table_0">
+                                </div>
+                                <div class="col-md-4 mb-1">
+                                    <div class="dt-buttons d-flex" style="padding-top: 24px;"> 
+                                        <button type="button" class="btn btn-primary waves-effect waves-float waves-light" data-bs-toggle="modal" data-bs-target="#editUser"><span>
+                                                <i data-feather='plus'></i>
+                                                Agregar Grupo</span></button>
+                                            
+                                        <div class="invoice_status ms-sm-2">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Revenue Card -->
+    
+                <!-- Habilitados -->
+                <div class="col-xl-2 col-md-4 col-sm-6">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <div class="avatar bg-light-success p-50 mb-1">
+                                <div class="avatar-content">
+                                    <i data-feather='user-check' style="height: 24px; width: 24px;"></i>
+                                </div>
+                            </div>
+                            <h2 class="fw-bolder">03</h2>
+                            <p class="card-text">Habilitados</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Deshabilitados -->
+                <div class="col-xl-2 col-md-4 col-sm-6">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <div class="avatar bg-light-danger p-50 mb-1">
+                                <div class="avatar-content">
+                                    <i data-feather='user-x' style="height: 24px; width: 24px;"></i>
+                                </div>
+                            </div>
+                            <h2 class="fw-bolder">1</h2>
+                            <p class="card-text">Deshabilitados</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Tabla -->
+    
+            <div class="content-header row"></div>
+            <div class="content-body">
+                <section class="invoice-list-wrapper">
+                    <div class="card">
+                        <div class="card-datatable table-responsive">
+                            <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper dt-bootstrap5 no-footer">
+    
+                                <table class="invoice-list-table table dataTable no-footer dtr-column"
+                                    id="DataTables_Table_0" role="grid" aria-describedby="DataTables_Table_0_info">
+    
+                                    <!-- Cabezera de la tabla -->
+                                    <thead>
+                                        <tr role="row">
+                                            <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1"
+                                                colspan="1" style="width: 50%;"
+                                                aria-label="Client: activate to sort column ascending">Grupo</th>
+                                            <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1"
+                                                colspan="1" style="width: 20%;"
+                                                aria-label="Total: activate to sort column ascending">Estado</th>
+                                            <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1"
+                                                colspan="1" style="width: 30%;"
+                                                aria-label="Balance: activate to sort column ascending">Fecha Creacion</th>
+                                            <th class="cell-fit sorting_disabled text-center" rowspan="1" colspan="1"
+                                                aria-label="Actions">Opciones</th>
+                                        </tr>
+                                    </thead>
+                                    <!-- Cabezera de la tabla -->
+    
+                                    <!-- Cuerpo de la tabla-->
+                                    <tbody>
+                                        <tr class="odd">
+                                            <td>
+                                                <div class="d-flex justify-content-left align-items-center">
+                                                    <div class="d-flex flex-column">
+                                                            <h6 class="user-name text-truncate mb-0">Tarifa Basica</h6>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td><span class="badge rounded-pill badge-light-success" text-capitalized="">
+                                                    Habilitado </span></td>
+                                            <td>31/03/2022</td>                                            
+                                            <td>
+                                                <div class="d-flex align-items-center col-actions">
+                                                    <a  data-bs-toggle="modal" data-bs-target="#editUser" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-original-title="Editar" aria-label="Editar"  class="me-1" data-bs-toggle="modal" data-bs-target="#editUser"  href="#">
+                                                        <i data-feather='edit-3'></i>
+                                                    </a>
+                                                    <a href="javascript:;" class="danger suspend-user" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-original-title="Eliminar" aria-label="Eliminar" >
+                                                        <i data-feather='delete'></i>
+                                                    </a>
+                                                </div>
+                                                
+                                            </td>
+                                        </tr>
+                                        <tr class="odd">
+                                            <td>
+                                                <div class="d-flex justify-content-left align-items-center">
+                                                    <div class="d-flex flex-column">
+                                                            <h6 class="user-name text-truncate mb-0">Zumba</h6>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td><span class="badge rounded-pill badge-light-success" text-capitalized="">
+                                                    Habilitado </span></td>
+                                            <td>31/03/2022</td>                                            
+                                            <td>
+                                                <div class="d-flex align-items-center col-actions">
+                                                    <a  data-bs-toggle="modal" data-bs-target="#editUser" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-original-title="Editar" aria-label="Editar"  class="me-1" data-bs-toggle="modal" data-bs-target="#editUser"  href="#">
+                                                        <i data-feather='edit-3'></i>
+                                                    </a>
+                                                    <a href="javascript:;" class="danger suspend-user" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-original-title="Eliminar" aria-label="Eliminar" >
+                                                        <i data-feather='delete'></i>
+                                                    </a>
+                                                </div>
+                                                
+                                            </td>
+                                        </tr>
+                                        <tr class="odd">
+                                            <td>
+                                                <div class="d-flex justify-content-left align-items-center">
+                                                    <div class="d-flex flex-column">
+                                                            <h6 class="user-name text-truncate mb-0">Premium</h6>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td><span class="badge rounded-pill badge-light-success" text-capitalized="">
+                                                    Habilitado </span></td>
+                                            <td>31/03/2022</td>                                            
+                                            <td>
+                                                <div class="d-flex align-items-center col-actions">
+                                                    <a  data-bs-toggle="modal" data-bs-target="#editUser" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-original-title="Editar" aria-label="Editar"  class="me-1" data-bs-toggle="modal" data-bs-target="#editUser"  href="#">
+                                                        <i data-feather='edit-3'></i>
+                                                    </a>
+                                                    <a href="javascript:;" class="danger suspend-user" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-original-title="Eliminar" aria-label="Eliminar" >
+                                                        <i data-feather='delete'></i>
+                                                    </a>
+                                                </div>
+                                                
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+                                    <!-- Cuerpo de la tabla-->
+                                </table>
+                                <!-- Paginacion de la tabla -->
+                                <div class="d-flex justify-content-between mx-2 row">
+                                    <div class="col-sm-12 col-md-6">
+                                        <div class="dataTables_info" id="DataTables_Table_0_info" role="status"
+                                            aria-live="polite">Mostrando de 1 a 10 entradas</div>
+                                    </div>
+                                    <div class="col-sm-12 col-md-6">
+                                        <div class="dataTables_paginate paging_simple_numbers"
+                                            id="DataTables_Table_0_paginate">
+                                            <ul class="pagination">
+                                                <li class="paginate_button page-item previous disabled"
+                                                    id="DataTables_Table_0_previous">
+                                                    <a href="#" aria-controls="DataTables_Table_0" data-dt-idx="0"
+                                                        tabindex="0" class="page-link">&nbsp;</a>
+                                                </li>
+                                                <li class="paginate_button page-item active"><a href="#"
+                                                        aria-controls="DataTables_Table_0" data-dt-idx="1" tabindex="0"
+                                                        class="page-link">1</a></li>
+                                                <li class="paginate_button page-item next" id="DataTables_Table_0_next"><a
+                                                        href="#" aria-controls="DataTables_Table_0" data-dt-idx="6"
+                                                        tabindex="0" class="page-link">&nbsp;</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Paginacion de la tabla -->
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
     <!-- END: Content-->
+    
+                <!-- Edit User Modal -->
+                <div class="modal fade" id="editUser" tabindex="-1" aria-hidden="true">
+                    <div class="modal-dialog modal-lg modal-dialog-centered modal-edit-user">
+                        <div class="modal-content">
+                            <div class="modal-header bg-transparent">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body pb-5 px-sm-5 pt-50">
+                                <div class="text-center mb-2">
+                                    <h1 class="mb-1">Agregar Grupo</h1>
+                                </div>
+                                <form id="editUserForm" class="row gy-1 pt-75" onsubmit="return false">
+                                    <div class="col-12">
+                                        <label class="form-label" for="modalEditUserName">Nombre</label>
+                                        <input type="text" id="modalEditUserName" name="modalEditUserName" class="form-control" value="Zumba" placeholder="john.doe.007" />
+                                    </div>
+                                    <div class="col-12 text-center mt-2 pt-50">
+                                        <button type="submit" class="btn btn-primary me-1 waves-effect waves-float waves-light">Submit</button>
+                                        <button type="reset" class="btn btn-outline-secondary waves-effect" data-bs-dismiss="modal" aria-label="Close">
+                                          Discard
+                                        </button>
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--/ Edit User Modal -->
+
 
     <div class="sidenav-overlay"></div>
     <div class="drag-target"></div>
@@ -298,11 +535,13 @@
     <!-- BEGIN: Page Vendor JS-->
     <script src="app-assets/vendors/js/charts/apexcharts.min.js"></script>
     <script src="app-assets/vendors/js/extensions/toastr.min.js"></script>
+    <script src="app-assets/vendors/js/extensions/sweetalert2.all.min.js"></script>
     <!-- END: Page Vendor JS-->
 
     <!-- BEGIN: Theme JS-->
     <script src="app-assets/js/core/app-menu.js"></script>
     <script src="app-assets/js/core/app.js"></script>
+    <script src="app-assets/js/scripts/pages/delete_grupos.js"></script>
     <!-- END: Theme JS-->
 
     <script>

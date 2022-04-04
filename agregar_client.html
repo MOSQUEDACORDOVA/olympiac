@@ -18,6 +18,12 @@
     <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/vendors.min.css">
     <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/charts/apexcharts.css">
     <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/extensions/toastr.min.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css/plugins/forms/form-validation.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/pickers/pickadate/pickadate.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css/plugins/forms/pickers/form-flat-pickr.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/pickers/flatpickr/flatpickr.min.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css/plugins/forms/pickers/form-flat-pickr.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css/plugins/forms/pickers/form-pickadate.css">
     <!-- END: Vendor CSS-->
 
     <!-- BEGIN: Theme CSS-->
@@ -212,15 +218,11 @@
                     <span class="menu-title text-truncate" data-i18n="Accesos">Accesos</span></a>
                 </li>
 
-                <li class=" nav-item"><a class="d-flex align-items-center" href="clientes.html">
+                <li class="active nav-item"><a class="d-flex align-items-center" href="clientes.html">
                     <i data-feather="user"></i>
                     <span class="menu-title text-truncate" data-i18n="Clientes">Clientes</span></a>
                 </li>
-                <li class=" nav-item"><a class="d-flex align-items-center" href="grupos.html">
-                    <i data-feather="users"></i>
-                    <span class="menu-title text-truncate" data-i18n="Grupos">Grupos</span></a>
-                </li>
-                <li class="active nav-item"><a class="d-flex align-items-center" href="ejercicios.html">
+                <li class=" nav-item"><a class="d-flex align-items-center" href="ejercicios.html">
                     <i data-feather="bar-chart-2"></i>
                     <span class="menu-title text-truncate" data-i18n="Ejercicios">Ejercicios</span></a>
                 </li>
@@ -278,129 +280,170 @@
         <div class="content-overlay"></div>
         <div class="header-navbar-shadow"></div>
         <div class="content-wrapper container-xxl p-0">
-            <div class="row match-height">
-        
-                <div class="col-lg-10 col-12">
-                    <div class="card card-statistics">
-                        <div class="card-header border-bottom">
-                            <h4 class="card-title">Ejercicios</h4>
-                        </div>
-                        <!-- Buscadores -->
-                        <div class="card-body" style="padding-top: 10px; padding-bottom: 10px;">
-                            <div class="row">
-                                <div class="col-md-6 mb-1">
-                                    <label class="form-label" for="fp-default">Burcador</label>
-                                    <input type="busqueda" class="form-control" placeholder="Buscar"
-                                        aria-controls="DataTables_Table_0">
-                                </div>
-                                <div class="col-md-4 mb-1">
-                                    <div class="dt-buttons d-flex" style="padding-top: 24px;"> 
-                                        <a href="agregar_ejercicio.html">
-                                        <button class="dt-button create-new btn btn-primary" tabindex="0" aria-controls="DataTables_Table_0" type="button"
-                                            data-bs-toggle="modal" data-bs-target="#modals-slide-in"><span>
-                                                <i data-feather='plus'></i>
-                                                Agregar Ejercicio</span></button></a>
-                                            
-                                        <div class="invoice_status ms-sm-2">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Revenue Card -->
-        
-                <!-- Ingresos -->
-                <div class="col-xl-2 col-md-4 col-sm-6">
-                    <div class="card text-center">
-                        <div class="card-body">
-                            <div class="avatar bg-light-success p-50 mb-1">
-                                <div class="avatar-content">
-                                    <i data-feather='check' style="height: 24px; width: 24px;"></i>
-                                </div>
-                            </div>
-                            <h2 class="fw-bolder">09</h2>
-                            <p class="card-text">Resultados</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Denegados -->
+            <div class="content-header row">
             </div>
             <div class="content-body">
-                <!--List group with tabs Starts-->
-                <section id="list-group-tabs">
+                <!-- Validation -->
+                
+                <section id="input-group-basic">
                     <div class="row">
-                        <div class="col-12">
+                        
+                        <div class="col-md-6">
                             <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">Datos Personales</h4>
+                                </div>
                                 <div class="card-body">
-                                    <div class="row mt-1">
-                                        <div class="col-md-4 col-sm-12">
-                                            <div class="list-group" id="list-tab" role="tablist">
-                                                <a class="list-group-item list-group-item-action active" id="list-home-list" data-bs-toggle="list" href="#ejercicio1" role="tab" aria-controls="ejercicio1">jumping jacks</a>
-                                                <a class="list-group-item list-group-item-action" id="list-profile-list" data-bs-toggle="list" href="#ejercicio2" role="tab" aria-controls="ejercicio2">Bicep concentrado</a>
-                                                <a class="list-group-item list-group-item-action" id="list-messages-list" data-bs-toggle="list" href="#ejercicio3" role="tab" aria-controls="ejercicio3">Bicicleta elíptica</a>
-                                            </div>
+
+                                    <label class="form-label">Nombre</label>
+                                    <div class="input-group mb-2">
+                                        <span class="input-group-text" id="basic-addon-search1"><i data-feather="user"></i></span>
+                                        <input type="text" id="Nombre" placeholder="Nombre" name="Nombre" required="" class="form-control ng-pristine ng-valid ng-touched"><!---->
+                                     </div>
+                                     <label class="form-label">Primer apellido</label>
+                                     <div class="input-group mb-2">
+                                         <span class="input-group-text" id="basic-addon-search1"><i data-feather="user"></i></span>
+                                         <input type="text" id="Nombre" placeholder="Primer apellido" name="Nombre" required="" class="form-control ng-pristine ng-valid ng-touched"><!---->
+                                      </div>
+                                      <label class="form-label">Segundo apellido</label>
+                                      <div class="input-group mb-2">
+                                          <span class="input-group-text" id="basic-addon-search1"><i data-feather="user"></i></span>
+                                          <input type="text" id="Nombre" placeholder="Segundo apellido" name="Nombre" required="" class="form-control ng-pristine ng-valid ng-touched"><!---->
+                                       </div>
+                                       <label class="form-label">Cédula</label>
+                                       <div class="input-group mb-2">
+                                           <span class="input-group-text" id="basic-addon-search1"><i data-feather="file-text"></i></span>
+                                           <input type="number" id="Nombre" placeholder="Cédula" name="Nombre" required="" class="form-control ng-pristine ng-valid ng-touched"><!---->
                                         </div>
-                                        <div class="col-md-8 col-sm-12 mt-1">
-                                            <div class="tab-content" id="nav-tabContent">
-
-                                                <div class="tab-pane fade show active" id="ejercicio1" role="tabpanel" aria-labelledby="list-home-list">
-                                                    <h4 class="card-title">Jumping jacks</h4>
-                                                    <div style="text-align: center;">
-                                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/iSSAk4XCsRA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                                    </div>
-
-                                                    <p class="card-text">
-                                                        Categoría: Cardio
-                                                        <br>
-                                                        Link: https://www.youtube.com/watch?v=iSSAk4XCsRA
-                                                    <p style="text-align: justify;">Descripción: Se trata de dar un salto en el sitio al mismo tiempo que abres las 
-                                                    piernas un poco más del ancho de los hombros y elevas los brazos hacia los laterales 
-                                                    y hacia arriba hasta dar una palmada.</p>
-                                                    </p>
-                                                </div>
-
-                                                <div class="tab-pane fade show " id="ejercicio2" role="tabpanel" aria-labelledby="list-home-list">
-                                                    <h4 class="card-title">Bicep concentrado</h4>
-                                                    <div style="text-align: center;">
-                                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/8B0mY3gknoc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                                    </div>
-
-                                                    <p class="card-text">
-                                                        Categoría: Cardio
-                                                        <br>
-                                                        Link: https://www.youtube.com/watch?v=kQ2hYZy1rTw
-                                                    <p style="text-align: justify;">Descripción: calentamiento general, ya que para pedalear implicamos todo el cuerpo al ayudarnos de piernas y brazos.</p>
-                                                    </p>
-                                                </div>
-
-                                                <div class="tab-pane fade show " id="ejercicio3" role="tabpanel" aria-labelledby="list-home-list">
-                                                    <h4 class="card-title">Bicicleta elíptica</h4>
-                                                    <div style="text-align: center;">
-                                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/kQ2hYZy1rTw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                                    </div>
-
-                                                    <p class="card-text">
-                                                        Categoría: Cardio
-                                                        <br>
-                                                        Link: https://www.youtube.com/watch?v=kQ2hYZy1rTw
-                                                    <p style="text-align: justify;">Descripción: Se trata de dar un salto en el sitio al mismo tiempo que abres las 
-                                                    piernas un poco más del ancho de los hombros y elevas los brazos hacia los laterales 
-                                                    y hacia arriba hasta dar una palmada.</p>
-                                                    </p>
-                                                </div>
-
-
-                                            </div>
+                                        <label class="form-label">Tipo Cédula</label>
+                                        <div class="input-group mb-2">
+                                            <span class="input-group-text" id="basic-addon-search1"><i data-feather="file-text"></i></span>
+                                            <select name="status" id="status" class="form-control ng-untouched ng-pristine ng-valid">
+                                                <option>Fisica</option>
+                                                <option>Juridica</option>
+                                                <option>Dimex</option>
+                                                <option>Nite</option>
+                                             </select>
                                         </div>
-                                    </div>
+                                        <label class="form-label">Fecha de Nacimiento</label>
+                                        <div class="input-group mb-2">
+                                            <span class="input-group-text" id="basic-addon-search1"><i data-feather="calendar"></i></span>
+                                            <input type="text" id="fp-default" class="form-control flatpickr-basic flatpickr-input" placeholder="YYYY-MM-DD" readonly="readonly">
+                                        </div>
+                                        <label class="form-label">Status</label>
+                                        <div class="input-group mb-2">
+                                            <span class="input-group-text" id="basic-addon-search1"><i data-feather='alert-circle'></i></span>
+                                            <select name="status" id="status" class="form-control ng-untouched ng-pristine ng-valid">
+                                                <option>active</option>
+                                                <option>inactive</option>
+                                                <option>pending</option>
+                                             </select>
+                                        </div>
+                                        <label class="form-label">Roles</label>
+                                        <div class="input-group mb-2">
+                                            <span class="input-group-text" id="basic-addon-search1"><i data-feather="chevrons-up"></i></span>
+                                            <select name="status" id="status" class="form-control ng-untouched ng-pristine ng-valid">
+                                                <option>Maintainer</option>
+                                                <option>Subscriber</option>
+                                                <option>Author</option>
+                                                <option>Editor</option>
+                                                <option>Admin</option>
+                                             </select>
+                                        </div>
+                                        <label class="form-label">Sexo</label>
+                                        <div class="input-group mb-2">
+                                            <span class="input-group-text" id="basic-addon-search1"><i data-feather="users"></i></span>
+                                            <select name="status" id="status" class="form-control ng-untouched ng-pristine ng-valid">
+                                                <option>Mujer</option>
+                                                <option>Hombre</option>
+                                             </select>
+                                        </div>
+                                        <label class="form-label">Correo</label>
+                                        <div class="input-group mb-2">
+                                            <span class="input-group-text" id="basic-addon-search1"><i data-feather="at-sign"></i></span>
+                                            <input type="email" id="Nombre" placeholder="Correo" name="Nombre" required="" class="form-control ng-pristine ng-valid ng-touched"><!---->
+                                         </div>
+                                         <label class="form-label">Grupo(s)</label>
+                                         <div class="input-group mb-2">
+                                             <span class="input-group-text" id="basic-addon-search1"><i data-feather='user-plus'></i></span>
+                                             <select name="status" id="status" class="form-control ng-untouched ng-pristine ng-valid">
+                                                <option>Tarifa Basica</option>
+                                                <option>Fisioterapia</option>
+                                                <option>Zumba</option>
+                                                <option>Premium</option>
+                                              </select>
+                                         </div>
+                                         <div class="input-group input-group-merge">
+                                             <span class="input-group-text">Descripcion</span>
+                                             <textarea class="form-control" aria-label="With textarea"></textarea>
+                                         </div>
+
+
                                 </div>
                             </div>
                         </div>
+
+                        <!-- Merged -->
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">Detalles de pago</h4>
+                                </div>
+                                <div class="card-body">
+                                    <label class="form-label">Próximo Pago</label>
+                                    <div class="input-group mb-2">
+                                        <span class="input-group-text" id="basic-addon-search1"><i data-feather="calendar"></i></span>
+                                        <input type="text" id="fp-default" class="form-control flatpickr-basic flatpickr-input" placeholder="YYYY-MM-DD" readonly="readonly">
+                                    </div>
+                                    <label class="form-label">Membresia</label>
+                                    <div class="input-group mb-2">
+                                        <span class="input-group-text" id="basic-addon-search1"><i data-feather='user-plus'></i></span>
+                                        <select name="status" id="status" class="form-control ng-untouched ng-pristine ng-valid">
+                                            <option>Mensual</option>
+                                            <option>Trimensual</option>
+                                            <option>Semestral</option>
+                                            <option>Anual</option>
+                                         </select>
+                                    </div>
+                                    <label class="form-label">Precio</label>
+                                    <div class="input-group input-group-merge mb-2">
+                                        <span class="input-group-text">$</span>
+                                        <input type="text" class="form-control" placeholder="100" aria-label="Amount (to the nearest dollar)" />
+                                        <span class="input-group-text">.00</span>
+                                    </div>
+                                     <label class="form-label">Dias de gracia</label>
+                                     <div class="input-group mb-2">
+                                         <span class="input-group-text" id="basic-addon-search1"><i data-feather='plus'></i></span>
+                                         <input type="text" id="Nombre" placeholder="Dias de gracia" name="Nombre" required="" class="form-control ng-pristine ng-valid ng-touched"><!---->
+                                      </div>
+                                      <label class="form-label">Fecha de Ingresos</label>
+                                      <div class="input-group mb-2">
+                                          <span class="input-group-text" id="basic-addon-search1"><i data-feather="calendar"></i></span>
+                                          <input type="text" id="fp-default" class="form-control flatpickr-basic flatpickr-input" placeholder="YYYY-MM-DD" readonly="readonly">
+                                      </div>
+                                      <label class="form-label">Link de pago</label>
+                                      <div class="input-group mb-2">
+                                          <span class="input-group-text" id="basic-addon-search1"><i data-feather='link-2'></i></span>
+                                          <input type="text" id="Nombre" placeholder="Link de pago" name="Nombre" required="" class="form-control ng-pristine ng-valid ng-touched"><!---->
+                                       </div>
+                                       <label class="form-label">Clases Semanales</label>
+                                       <div class="input-group mb-2">
+                                           <span class="input-group-text" id="basic-addon-search1"><i data-feather='airplay'></i></span>
+                                           <input type="text" id="Nombre" placeholder="Clases Semanales" name="Nombre" required="" class="form-control ng-pristine ng-valid ng-touched"><!---->
+                                        </div>
+
+
+                                        <div class="col-12 d-flex flex-sm-row flex-column mt-2">
+                                            <button type="submit" rippleeffect="" class="btn btn-primary mb-1 mb-sm-0 mr-0 mr-sm-1 waves-effect waves-float waves-light"> Agregar </button>
+                                            <button rippleeffect="" class="btn btn-outline-secondary waves-effect"> Volver </button></div>
+
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </section>
-                <!--List group with tabs Ends-->
+                <!-- /Validation -->
 
             </div>
         </div>
@@ -429,12 +472,19 @@
     <!-- BEGIN: Page Vendor JS-->
     <script src="app-assets/vendors/js/charts/apexcharts.min.js"></script>
     <script src="app-assets/vendors/js/extensions/toastr.min.js"></script>
+    <script src="app-assets/vendors/js/forms/select/select2.full.min.js"></script>
+    <script src="app-assets/vendors/js/pickers/pickadate/picker.date.js"></script>
+    <script src="app-assets/vendors/js/forms/validation/jquery.validate.min.js"></script>
+    <script src="app-assets/js/scripts/forms/form-validation.js"></script>
+    <script src="app-assets/vendors/js/pickers/flatpickr/flatpickr.min.js"></script>
     <!-- END: Page Vendor JS-->
 
     <!-- BEGIN: Theme JS-->
     <script src="app-assets/js/core/app-menu.js"></script>
     <script src="app-assets/js/core/app.js"></script>
+    <script src="app-assets/js/scripts/forms/pickers/form-pickers.js"></script>
     <!-- END: Theme JS-->
+
 
     <script>
         $(window).on('load', function() {

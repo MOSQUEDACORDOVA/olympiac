@@ -9,15 +9,17 @@
     <meta name="description" content="Olympiac admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
     <meta name="keywords" content="admin template, Olympiac admin template, dashboard template, flat admin template, responsive admin template, web app">
     <meta name="author" content="PIXINVENT">
-    <title>Ejercicios | Olympiac</title>
+    <title>Agregar Ejercicio | Olympiac</title>
     <link rel="apple-touch-icon" href="app-assets/images/ico/apple-icon-120.png">
     <link rel="shortcut icon" type="image/x-icon" href="app-assets/images/ico/favicon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600" rel="stylesheet">
 
     <!-- BEGIN: Vendor CSS-->
     <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/vendors.min.css">
-    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/charts/apexcharts.css">
-    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/extensions/toastr.min.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/forms/select/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/editors/quill/katex.min.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/editors/quill/monokai-sublime.min.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/editors/quill/quill.snow.css">
     <!-- END: Vendor CSS-->
 
     <!-- BEGIN: Theme CSS-->
@@ -31,11 +33,13 @@
 
     <!-- BEGIN: Page CSS-->
     <link rel="stylesheet" type="text/css" href="app-assets/css/core/menu/menu-types/vertical-menu.css">
-    <link rel="stylesheet" type="text/css" href="app-assets/css/pages/dashboard-ecommerce.css">
-    <link rel="stylesheet" type="text/css" href="app-assets/css/plugins/charts/chart-apex.css">
-    <link rel="stylesheet" type="text/css" href="app-assets/css/plugins/extensions/ext-component-toastr.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css/plugins/forms/form-quill-editor.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css/pages/page-blog.css">
     <!-- END: Page CSS-->
 
+    <!-- BEGIN: Custom CSS-->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <!-- END: Custom CSS-->
     <!-- BEGIN: Custom CSS-->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <!-- END: Custom CSS-->
@@ -211,7 +215,6 @@
                     <i data-feather="check-square"></i>
                     <span class="menu-title text-truncate" data-i18n="Accesos">Accesos</span></a>
                 </li>
-
                 <li class=" nav-item"><a class="d-flex align-items-center" href="clientes.html">
                     <i data-feather="user"></i>
                     <span class="menu-title text-truncate" data-i18n="Clientes">Clientes</span></a>
@@ -243,12 +246,12 @@
                 </li>
 
                 <!-- Facturas -->
-                <li class="nav-item"><a class="d-flex align-items-center" href="facturas.html">
+                <li class=" nav-item"><a class="d-flex align-items-center" href="facturas.html">
                     <i data-feather="file-text"></i>
                     <span class="menu-title text-truncate" data-i18n="Facturas">Facturas</span></a>
                 </li>
                 <!-- Aprobaciones -->
-                <li class=" nav-item"><a class="d-flex align-items-center" href="aprobaciones.html">
+                <li class="nav-item"><a class="d-flex align-items-center" href="aprobaciones.html">
                     <i data-feather="check-circle"></i>
                     <span class="menu-title text-truncate" data-i18n="Aprobaciones">Aprobaciones</span></a>
                 </li>
@@ -273,138 +276,108 @@
     </div>
     <!-- END: Main Menu-->
 
+   
+    <!-- BEGIN: Content -->
+
+    
     <!-- BEGIN: Content-->
     <div class="app-content content ">
         <div class="content-overlay"></div>
         <div class="header-navbar-shadow"></div>
         <div class="content-wrapper container-xxl p-0">
-            <div class="row match-height">
-        
-                <div class="col-lg-10 col-12">
-                    <div class="card card-statistics">
-                        <div class="card-header border-bottom">
-                            <h4 class="card-title">Ejercicios</h4>
-                        </div>
-                        <!-- Buscadores -->
-                        <div class="card-body" style="padding-top: 10px; padding-bottom: 10px;">
-                            <div class="row">
-                                <div class="col-md-6 mb-1">
-                                    <label class="form-label" for="fp-default">Burcador</label>
-                                    <input type="busqueda" class="form-control" placeholder="Buscar"
-                                        aria-controls="DataTables_Table_0">
-                                </div>
-                                <div class="col-md-4 mb-1">
-                                    <div class="dt-buttons d-flex" style="padding-top: 24px;"> 
-                                        <a href="agregar_ejercicio.html">
-                                        <button class="dt-button create-new btn btn-primary" tabindex="0" aria-controls="DataTables_Table_0" type="button"
-                                            data-bs-toggle="modal" data-bs-target="#modals-slide-in"><span>
-                                                <i data-feather='plus'></i>
-                                                Agregar Ejercicio</span></button></a>
-                                            
-                                        <div class="invoice_status ms-sm-2">
-                                        </div>
-                                    </div>
-                                </div>
+            <div class="content-header row">
+                <div class="content-header-left col-md-9 col-12 mb-2">
+                    <div class="row breadcrumbs-top">
+                        <div class="col-12">
+                            <h2 class="content-header-title float-start mb-0">Agregar Ejercicio</h2>
+                            <div class="breadcrumb-wrapper">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="index.html">Inicio</a>
+                                    </li>
+                                    <li class="breadcrumb-item"><a href="ejercicios.html">ejercicios</a>
+                                    </li>
+                                    <li class="breadcrumb-item active">Agregar
+                                    </li>
+                                </ol>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- Revenue Card -->
-        
-                <!-- Ingresos -->
-                <div class="col-xl-2 col-md-4 col-sm-6">
-                    <div class="card text-center">
-                        <div class="card-body">
-                            <div class="avatar bg-light-success p-50 mb-1">
-                                <div class="avatar-content">
-                                    <i data-feather='check' style="height: 24px; width: 24px;"></i>
-                                </div>
-                            </div>
-                            <h2 class="fw-bolder">09</h2>
-                            <p class="card-text">Resultados</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Denegados -->
             </div>
             <div class="content-body">
-                <!--List group with tabs Starts-->
-                <section id="list-group-tabs">
+                <!-- Blog Edit -->
+                <div class="blog-edit-wrapper">
                     <div class="row">
                         <div class="col-12">
                             <div class="card">
                                 <div class="card-body">
-                                    <div class="row mt-1">
-                                        <div class="col-md-4 col-sm-12">
-                                            <div class="list-group" id="list-tab" role="tablist">
-                                                <a class="list-group-item list-group-item-action active" id="list-home-list" data-bs-toggle="list" href="#ejercicio1" role="tab" aria-controls="ejercicio1">jumping jacks</a>
-                                                <a class="list-group-item list-group-item-action" id="list-profile-list" data-bs-toggle="list" href="#ejercicio2" role="tab" aria-controls="ejercicio2">Bicep concentrado</a>
-                                                <a class="list-group-item list-group-item-action" id="list-messages-list" data-bs-toggle="list" href="#ejercicio3" role="tab" aria-controls="ejercicio3">Bicicleta elíptica</a>
+                                    <!-- Form -->
+                                    <form action="javascript:;" class="mt-2">
+                                        <div class="row">
+                                            <div class="col-md-6 col-12">
+                                                <div class="mb-2">
+                                                    <label class="form-label" for="blog-edit-title">Nombre</label>
+                                                    <input type="text" id="blog-edit-title" class="form-control" value="Jumping jacks" />
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-12">
+                                                <div class="mb-2">
+                                                    <label class="form-label" for="blog-edit-category">Categorias</label>
+                                                    <select id="blog-edit-category" class="select2 form-select" multiple>
+                                                        <option value="Fashion" selected>Biceps</option>
+                                                        <option value="Food">Abdominales</option>
+                                                        <option value="Gaming" selected>Cardio</option>
+                                                        <option value="Quote">Espalda</option>
+                                                        <option value="Video">Gluteos</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-12">
+                                                <div class="mb-2">
+                                                    <label class="form-label" for="blog-edit-slug">Link</label>
+                                                    <input type="text" id="blog-edit-slug" class="form-control" value="https://www.youtube.com/embed/iSSAk4XCsRA" />
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="mb-2">
+                                                    <label class="form-label">Descripcion</label>
+                                                    <div id="blog-editor-wrapper">
+                                                        <div id="blog-editor-container">
+                                                            <div class="editor">
+                                                                <p>
+                                                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/iSSAk4XCsRA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+                                                                </p>
+                                                                <p><br /></p>
+                                                                <p>
+                                                                    Categoría: Cardio<br>
+                                                                    Link: https://www.youtube.com/watch?v=iSSAk4XCsRA<br>
+
+                                                                    Descripción: Se trata de dar un salto en el sitio al mismo tiempo que abres las piernas un poco más del ancho de los hombros y elevas los brazos hacia los laterales y hacia arriba hasta dar una palmada.
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 mt-50">
+                                                <button type="submit" class="btn btn-primary me-1">Agregar</button>
+                                                <button type="reset" class="btn btn-outline-secondary">Cancelar</button>
                                             </div>
                                         </div>
-                                        <div class="col-md-8 col-sm-12 mt-1">
-                                            <div class="tab-content" id="nav-tabContent">
-
-                                                <div class="tab-pane fade show active" id="ejercicio1" role="tabpanel" aria-labelledby="list-home-list">
-                                                    <h4 class="card-title">Jumping jacks</h4>
-                                                    <div style="text-align: center;">
-                                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/iSSAk4XCsRA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                                    </div>
-
-                                                    <p class="card-text">
-                                                        Categoría: Cardio
-                                                        <br>
-                                                        Link: https://www.youtube.com/watch?v=iSSAk4XCsRA
-                                                    <p style="text-align: justify;">Descripción: Se trata de dar un salto en el sitio al mismo tiempo que abres las 
-                                                    piernas un poco más del ancho de los hombros y elevas los brazos hacia los laterales 
-                                                    y hacia arriba hasta dar una palmada.</p>
-                                                    </p>
-                                                </div>
-
-                                                <div class="tab-pane fade show " id="ejercicio2" role="tabpanel" aria-labelledby="list-home-list">
-                                                    <h4 class="card-title">Bicep concentrado</h4>
-                                                    <div style="text-align: center;">
-                                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/8B0mY3gknoc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                                    </div>
-
-                                                    <p class="card-text">
-                                                        Categoría: Cardio
-                                                        <br>
-                                                        Link: https://www.youtube.com/watch?v=kQ2hYZy1rTw
-                                                    <p style="text-align: justify;">Descripción: calentamiento general, ya que para pedalear implicamos todo el cuerpo al ayudarnos de piernas y brazos.</p>
-                                                    </p>
-                                                </div>
-
-                                                <div class="tab-pane fade show " id="ejercicio3" role="tabpanel" aria-labelledby="list-home-list">
-                                                    <h4 class="card-title">Bicicleta elíptica</h4>
-                                                    <div style="text-align: center;">
-                                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/kQ2hYZy1rTw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                                    </div>
-
-                                                    <p class="card-text">
-                                                        Categoría: Cardio
-                                                        <br>
-                                                        Link: https://www.youtube.com/watch?v=kQ2hYZy1rTw
-                                                    <p style="text-align: justify;">Descripción: Se trata de dar un salto en el sitio al mismo tiempo que abres las 
-                                                    piernas un poco más del ancho de los hombros y elevas los brazos hacia los laterales 
-                                                    y hacia arriba hasta dar una palmada.</p>
-                                                    </p>
-                                                </div>
-
-
-                                            </div>
-                                        </div>
-                                    </div>
+                                    </form>
+                                    <!--/ Form -->
                                 </div>
                             </div>
                         </div>
                     </div>
-                </section>
-                <!--List group with tabs Ends-->
+                </div>
+                <!--/ Blog Edit -->
 
             </div>
         </div>
     </div>
+    <!-- END: Content-->
+
     <!-- END: Content-->
 
     <div class="sidenav-overlay"></div>
@@ -427,8 +400,10 @@
     <!-- BEGIN Vendor JS-->
 
     <!-- BEGIN: Page Vendor JS-->
-    <script src="app-assets/vendors/js/charts/apexcharts.min.js"></script>
-    <script src="app-assets/vendors/js/extensions/toastr.min.js"></script>
+    <script src="app-assets/vendors/js/forms/select/select2.full.min.js"></script>
+    <script src="app-assets/vendors/js/editors/quill/katex.min.js"></script>
+    <script src="app-assets/vendors/js/editors/quill/highlight.min.js"></script>
+    <script src="app-assets/vendors/js/editors/quill/quill.min.js"></script>
     <!-- END: Page Vendor JS-->
 
     <!-- BEGIN: Theme JS-->
@@ -436,6 +411,10 @@
     <script src="app-assets/js/core/app.js"></script>
     <!-- END: Theme JS-->
 
+    <!-- BEGIN: Page JS-->
+    <script src="app-assets/js/scripts/pages/page-blog-edit.js"></script>
+    <!-- END: Page JS-->
+ 
     <script>
         $(window).on('load', function() {
             if (feather) {
