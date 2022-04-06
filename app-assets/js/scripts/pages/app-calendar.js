@@ -12,7 +12,7 @@
 
 // RTL Support
 var direction = 'ltr',
-  assetPath = '../../../app-assets/';
+  assetPath = 'app-assets/';
 if ($('html').data('textdirection') == 'rtl') {
   direction = 'rtl';
 }
@@ -245,11 +245,13 @@ document.addEventListener('DOMContentLoaded', function () {
     // }
   }
 
+  var initialLocaleCode = 'es';
   // Calendar plugins
   var calendar = new FullCalendar.Calendar(calendarEl, {
     initialView: 'dayGridMonth',
     events: fetchEvents,
     editable: true,
+    locale: initialLocaleCode,
     dragScroll: true,
     dayMaxEvents: 2,
     eventResizableFromStart: true,

@@ -459,22 +459,12 @@
     <!-- END: Theme JS-->
 
     <!-- BEGIN: Page JS-->
-    <script src="app-assets/js/scripts/pages/app-calendar-events.min.js"></script>
-    <script src="app-assets/js/scripts/pages/app-calendar.min.js"></script>
-    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@3.10.2/dist/locale/es.js'></script>
+    <script src="app-assets/js/scripts/pages/app-calendar-events.js"></script>
+    <script src="app-assets/js/scripts/pages/app-calendar.js"></script>
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.10.2/locales-all.min.js'></script>
     <!-- END: Page JS-->
 
     <script>
-
-$(function() {
-  $('#calendar').fullCalendar({
-    header: {
-      left: 'title',
-      right: 'prev,next today'
-    },
-    locale: 'es'
-  });
-});
         $(window).on('load', function() {
             if (feather) {
                 feather.replace({

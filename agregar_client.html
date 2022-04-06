@@ -327,16 +327,16 @@
                                                 <input type="text" id="Nombre" placeholder="Primer apellido" name="Nombre" required="" class="form-control ng-pristine ng-valid ng-touched"><!---->
                                              </div>
                                         </div>
-                                      </div>
-                                    
-                                      <div class="row g-3">
-                                          <div class="col">
+                                        <div class="col">
                                             <label class="form-label">Segundo apellido</label>
                                             <div class="input-group mb-2">
                                                 <span class="input-group-text" id="basic-addon-search1"><i data-feather="user"></i></span>
                                                 <input type="text" id="Nombre" placeholder="Segundo apellido" name="Nombre" required="" class="form-control ng-pristine ng-valid ng-touched"><!---->
                                              </div>
-                                          </div>
+                                        </div>
+                                      </div>
+                                    
+                                      <div class="row g-3">
                                           <div class="col">
                                             <label class="form-label">Cédula</label>
                                             <div class="input-group mb-2">
@@ -344,29 +344,26 @@
                                                 <input type="number" id="Nombre" placeholder="Cédula" name="Nombre" required="" class="form-control ng-pristine ng-valid ng-touched"><!---->
                                              </div>
                                           </div>
-                                        </div>
-                                    
-                                        <div class="row g-3">
-                                            <div class="col">
-                                                <label class="form-label">Tipo Cédula</label>
-                                                <div class="input-group mb-2">
-                                                    <span class="input-group-text" id="basic-addon-search1"><i data-feather="file-text"></i></span>
-                                                    <select name="status" id="status" class="form-control ng-untouched ng-pristine ng-valid">
-                                                        <option>Fisica</option>
-                                                        <option>Juridica</option>
-                                                        <option>Dimex</option>
-                                                        <option>Nite</option>
-                                                     </select>
-                                                </div>
-                                            </div>
-                                            <div class="col">
-                                                <label class="form-label">Fecha de Nacimiento</label>
-                                                <div class="input-group mb-2">
-                                                    <span class="input-group-text" id="basic-addon-search1"><i data-feather="calendar"></i></span>
-                                                    <input type="text" id="fp-default" class="form-control flatpickr-basic flatpickr-input" placeholder="YYYY-MM-DD" readonly="readonly">
-                                                </div>
+                                          <div class="col">
+                                            <label class="form-label">Tipo Cédula</label>
+                                            <div class="input-group mb-2">
+                                                <span class="input-group-text" id="basic-addon-search1"><i data-feather="file-text"></i></span>
+                                                <select name="status" id="status" class="form-control ng-untouched ng-pristine ng-valid">
+                                                    <option>Fisica</option>
+                                                    <option>Juridica</option>
+                                                    <option>Dimex</option>
+                                                    <option>Nite</option>
+                                                 </select>
                                             </div>
                                           </div>
+                                          <div class="col">
+                                            <label class="form-label">Fecha de Nacimiento</label>
+                                            <div class="input-group mb-2">
+                                                <span class="input-group-text" id="basic-addon-search1"><i data-feather="calendar"></i></span>
+                                                <input type="text" id="fp-default" class="form-control flatpickr-basic flatpickr-input" placeholder="YYYY-MM-DD" readonly="readonly">
+                                            </div>
+                                          </div>
+                                        </div>
                                     
                                           <div class="row g-3">
                                               <div class="col">
@@ -393,19 +390,19 @@
                                                      </select>
                                                 </div>
                                               </div>
+                                              <div class="col">
+                                                <label class="form-label">Sexo</label>
+                                                <div class="input-group mb-2">
+                                                    <span class="input-group-text" id="basic-addon-search1"><i data-feather="users"></i></span>
+                                                    <select name="status" id="status" class="form-control ng-untouched ng-pristine ng-valid">
+                                                        <option>Mujer</option>
+                                                        <option>Hombre</option>
+                                                     </select>
+                                                </div>
+                                              </div>
                                             </div>
                                     
                                             <div class="row g-3">
-                                                <div class="col">
-                                                    <label class="form-label">Sexo</label>
-                                                    <div class="input-group mb-2">
-                                                        <span class="input-group-text" id="basic-addon-search1"><i data-feather="users"></i></span>
-                                                        <select name="status" id="status" class="form-control ng-untouched ng-pristine ng-valid">
-                                                            <option>Mujer</option>
-                                                            <option>Hombre</option>
-                                                         </select>
-                                                    </div>
-                                                </div>
                                                 <div class="col">
                                                     <label class="form-label">Correo</label>
                                                     <div class="input-group mb-2">
@@ -413,10 +410,7 @@
                                                         <input type="email" id="Nombre" placeholder="Correo" name="Nombre" required="" class="form-control ng-pristine ng-valid ng-touched"><!---->
                                                      </div>
                                                 </div>
-                                              </div>
-                                    
-                                              <div class="row g-3">
-                                                  <div class="col">
+                                                <div class="col">
                                                     <label class="form-label">Grupo(s)</label>
                                                     <div class="input-group mb-2">
                                                         <span class="input-group-text" id="basic-addon-search1"><i data-feather='user-plus'></i></span>
@@ -427,14 +421,14 @@
                                                            <option>Premium</option>
                                                          </select>
                                                     </div>
-                                                  </div>
-                                                  <div class="col">
-                                                    <div class="input-group input-group-merge">
-                                                        <span class="input-group-text">Descripcion</span>
-                                                        <textarea class="form-control" aria-label="With textarea"></textarea>
-                                                    </div>
+                                                </div>
+                                                <div class="col">
+                                                  <div class="input-group input-group-merge">
+                                                      <span class="input-group-text">Descripcion</span>
+                                                      <textarea class="form-control" aria-label="With textarea"></textarea>
                                                   </div>
                                                 </div>
+                                              </div>
 
                                             <br>
                                     <div class="divider divider-primary">
