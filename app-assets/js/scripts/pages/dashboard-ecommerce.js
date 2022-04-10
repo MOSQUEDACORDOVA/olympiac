@@ -12,6 +12,7 @@ $(window).on('load', function () {
 
   var $barColor = '#f3f3f3';
   var $trackBgColor = '#EBEBEB';
+  var $ClientColor = '#007EA8';
   var $textMutedColor = '#b9b9c3';
   var $budgetStrokeColor2 = '#dcdae3';
   var $goalStrokeColor2 = '#51e5a8';
@@ -22,6 +23,10 @@ $(window).on('load', function () {
 
   var $statisticsOrderChart = document.querySelector('#statistics-order-chart');
   var $statisticsProfitChart = document.querySelector('#statistics-profit-chart');
+  var $statisticsClientChart = document.querySelector('#statistics-Clients');
+  var $statisticsEventsChart = document.querySelector('#statistics-Events');
+  var $statisticsFacturaChart = document.querySelector('#statistics-Factura');
+  var $statisticsReporteChart = document.querySelector('#statistics-Reporte');
   var $earningsChart = document.querySelector('#earnings-chart');
   var $revenueReportChart = document.querySelector('#revenue-report-chart');
   var $budgetChart = document.querySelector('#budget-chart');
@@ -34,6 +39,10 @@ $(window).on('load', function () {
 
   var statisticsOrderChartOptions;
   var statisticsProfitChartOptions;
+  var statisticsClientChartOptions;
+  var statisticsEventsChartOptions;
+  var statisticsFacturaChartOptions;
+  var statisticsReporteChartOptions;
   var earningsChartOptions;
   var revenueReportChartOptions;
   var budgetChartOptions;
@@ -46,6 +55,10 @@ $(window).on('load', function () {
 
   var statisticsOrderChart;
   var statisticsProfitChart;
+  var statisticsClientChart;
+  var statisticsEventsChart;
+  var statisticsFacturaChart;
+  var statisticsReporteChart;
   var earningsChart;
   var revenueReportChart;
   var budgetChart;
@@ -226,6 +239,372 @@ $(window).on('load', function () {
   statisticsProfitChart = new ApexCharts($statisticsProfitChart, statisticsProfitChartOptions);
   statisticsProfitChart.render();
 
+
+  //------------ Statistics Line Client ------------
+  //-----------------------------------------------
+  statisticsClientChartOptions = {
+    chart: {
+      height: 70,
+      type: 'line',
+      toolbar: {
+        show: false
+      },
+      zoom: {
+        enabled: false
+      }
+    },
+    grid: {
+      borderColor: $trackBgColor,
+      strokeDashArray: 5,
+      xaxis: {
+        lines: {
+          show: true
+        }
+      },
+      yaxis: {
+        lines: {
+          show: false
+        }
+      },
+      padding: {
+        top: -30,
+        bottom: -10
+      }
+    },
+    stroke: {
+      width: 3
+    },
+    colors: [window.colors.solid.info],
+    series: [
+      {
+        data: [0, 20, 5, 30, 15, 45]
+      }
+    ],
+    markers: {
+      size: 2,
+      colors: window.colors.solid.info,
+      strokeColors: window.colors.solid.info,
+      strokeWidth: 2,
+      strokeOpacity: 1,
+      strokeDashArray: 0,
+      fillOpacity: 1,
+      discrete: [
+        {
+          seriesIndex: 0,
+          dataPointIndex: 5,
+          fillColor: '#ffffff',
+          strokeColor: window.colors.solid.info,
+          size: 5
+        }
+      ],
+      shape: 'circle',
+      radius: 2,
+      hover: {
+        size: 3
+      }
+    },
+    xaxis: {
+      labels: {
+        show: true,
+        style: {
+          fontSize: '0px'
+        }
+      },
+      axisBorder: {
+        show: false
+      },
+      axisTicks: {
+        show: false
+      }
+    },
+    yaxis: {
+      show: false
+    },
+    tooltip: {
+      x: {
+        show: false
+      }
+    }
+  };
+  statisticsClientChart = new ApexCharts($statisticsClientChart, statisticsClientChartOptions);
+  statisticsClientChart.render();
+
+
+  //------------ Statistics Line Event ------------
+  //-----------------------------------------------
+  statisticsEventsChartOptions = {
+    chart: {
+      height: 70,
+      type: 'line',
+      toolbar: {
+        show: false
+      },
+      zoom: {
+        enabled: false
+      }
+    },
+    grid: {
+      borderColor: $trackBgColor,
+      strokeDashArray: 5,
+      xaxis: {
+        lines: {
+          show: true
+        }
+      },
+      yaxis: {
+        lines: {
+          show: false
+        }
+      },
+      padding: {
+        top: -30,
+        bottom: -10
+      }
+    },
+    stroke: {
+      width: 3
+    },
+    colors: [window.colors.solid.info],
+    series: [
+      {
+        data: [0, 20, 5, 30, 15, 45]
+      }
+    ],
+    markers: {
+      size: 2,
+      colors: window.colors.solid.info,
+      strokeColors: window.colors.solid.info,
+      strokeWidth: 2,
+      strokeOpacity: 1,
+      strokeDashArray: 0,
+      fillOpacity: 1,
+      discrete: [
+        {
+          seriesIndex: 0,
+          dataPointIndex: 5,
+          fillColor: '#ffffff',
+          strokeColor: window.colors.solid.info,
+          size: 5
+        }
+      ],
+      shape: 'circle',
+      radius: 2,
+      hover: {
+        size: 3
+      }
+    },
+    xaxis: {
+      labels: {
+        show: true,
+        style: {
+          fontSize: '0px'
+        }
+      },
+      axisBorder: {
+        show: false
+      },
+      axisTicks: {
+        show: false
+      }
+    },
+    yaxis: {
+      show: false
+    },
+    tooltip: {
+      x: {
+        show: false
+      }
+    }
+  };
+  statisticsEventsChart = new ApexCharts($statisticsEventsChart, statisticsEventsChartOptions);
+  statisticsEventsChart.render();
+
+
+
+  //------------ Statistics Line Factura ------------
+  //-----------------------------------------------
+  statisticsFacturaChartOptions = {
+    chart: {
+      height: 70,
+      type: 'line',
+      toolbar: {
+        show: false
+      },
+      zoom: {
+        enabled: false
+      }
+    },
+    grid: {
+      borderColor: $trackBgColor,
+      strokeDashArray: 5,
+      xaxis: {
+        lines: {
+          show: true
+        }
+      },
+      yaxis: {
+        lines: {
+          show: false
+        }
+      },
+      padding: {
+        top: -30,
+        bottom: -10
+      }
+    },
+    stroke: {
+      width: 3
+    },
+    colors: [window.colors.solid.info],
+    series: [
+      {
+        data: [0, 20, 5, 30, 15, 45]
+      }
+    ],
+    markers: {
+      size: 2,
+      colors: window.colors.solid.info,
+      strokeColors: window.colors.solid.info,
+      strokeWidth: 2,
+      strokeOpacity: 1,
+      strokeDashArray: 0,
+      fillOpacity: 1,
+      discrete: [
+        {
+          seriesIndex: 0,
+          dataPointIndex: 5,
+          fillColor: '#ffffff',
+          strokeColor: window.colors.solid.info,
+          size: 5
+        }
+      ],
+      shape: 'circle',
+      radius: 2,
+      hover: {
+        size: 3
+      }
+    },
+    xaxis: {
+      labels: {
+        show: true,
+        style: {
+          fontSize: '0px'
+        }
+      },
+      axisBorder: {
+        show: false
+      },
+      axisTicks: {
+        show: false
+      }
+    },
+    yaxis: {
+      show: false
+    },
+    tooltip: {
+      x: {
+        show: false
+      }
+    }
+  };
+  statisticsFacturaChart = new ApexCharts($statisticsFacturaChart, statisticsFacturaChartOptions);
+  statisticsFacturaChart.render();
+
+
+
+
+  //------------ Statistics Line Factura ------------
+  //-----------------------------------------------
+  statisticsReporteChartOptions = {
+    chart: {
+      height: 70,
+      type: 'line',
+      toolbar: {
+        show: false
+      },
+      zoom: {
+        enabled: false
+      }
+    },
+    grid: {
+      borderColor: $trackBgColor,
+      strokeDashArray: 5,
+      xaxis: {
+        lines: {
+          show: true
+        }
+      },
+      yaxis: {
+        lines: {
+          show: false
+        }
+      },
+      padding: {
+        top: -30,
+        bottom: -10
+      }
+    },
+    stroke: {
+      width: 3
+    },
+    colors: [window.colors.solid.info],
+    series: [
+      {
+        data: [0, 20, 5, 30, 15, 45]
+      }
+    ],
+    markers: {
+      size: 2,
+      colors: window.colors.solid.info,
+      strokeColors: window.colors.solid.info,
+      strokeWidth: 2,
+      strokeOpacity: 1,
+      strokeDashArray: 0,
+      fillOpacity: 1,
+      discrete: [
+        {
+          seriesIndex: 0,
+          dataPointIndex: 5,
+          fillColor: '#ffffff',
+          strokeColor: window.colors.solid.info,
+          size: 5
+        }
+      ],
+      shape: 'circle',
+      radius: 2,
+      hover: {
+        size: 3
+      }
+    },
+    xaxis: {
+      labels: {
+        show: true,
+        style: {
+          fontSize: '0px'
+        }
+      },
+      axisBorder: {
+        show: false
+      },
+      axisTicks: {
+        show: false
+      }
+    },
+    yaxis: {
+      show: false
+    },
+    tooltip: {
+      x: {
+        show: false
+      }
+    }
+  };
+  statisticsReporteChart = new ApexCharts($statisticsReporteChart, statisticsReporteChartOptions);
+  statisticsReporteChart.render();
+
+
+
+  
   //--------------- Earnings Chart ---------------
   //----------------------------------------------
   earningsChartOptions = {

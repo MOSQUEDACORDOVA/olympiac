@@ -214,7 +214,7 @@
                     <i data-feather="users"></i>
                     <span class="menu-title text-truncate" data-i18n="Clientes">Clientes</span></a>
                 </li>
-                
+
                 <li class=" nav-item"><a class="d-flex align-items-center" href="grupos.html">
                     <i data-feather="users"></i>
                     <span class="menu-title text-truncate" data-i18n="Grupos">Grupos</span></a>
@@ -471,6 +471,31 @@
                 </section>
             </div>
         </div> 
+        <!--table -->
+
+        <section id="ajax-datatable">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header border-bottom">
+                            <h4 class="card-title">Ajax Sourced Server-side</h4>
+                        </div>
+                        <div class="card-datatable">
+                            <table class="datatables-accesos table table-responsive">
+                                <thead>
+                                    <tr>
+                                        <th>Cliente</th>
+                                        <th>Correo Electronico</th>
+                                        <th>Estado</th>
+                                        <th>Fecha</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>     
     <!-- END: Content-->
 
@@ -494,10 +519,10 @@
     <!-- BEGIN Vendor JS-->
 
     <!-- BEGIN: Page Vendor JS-->
-    <script src="app-assets/vendors/js/pickers/pickadate/picker.js"></script>
-    <script src="app-assets/vendors/js/pickers/pickadate/picker.date.js"></script>
-    <script src="app-assets/vendors/js/pickers/pickadate/picker.time.js"></script>
-    <script src="app-assets/vendors/js/pickers/pickadate/legacy.js"></script>
+    <script src="app-assets/vendors/js/tables/datatable/jquery.dataTables.min.js"></script>
+    <script src="app-assets/vendors/js/tables/datatable/dataTables.bootstrap5.min.js"></script>
+    <script src="app-assets/vendors/js/tables/datatable/dataTables.responsive.min.js"></script>
+    <script src="app-assets/vendors/js/tables/datatable/responsive.bootstrap5.js"></script>
     <script src="app-assets/vendors/js/pickers/flatpickr/flatpickr.min.js"></script>
     <!-- END: Page Vendor JS-->
 
@@ -508,6 +533,7 @@
     <!-- END: Theme JS-->
 
     <!-- BEGIN: Page JS-->
+    <script src="app-assets/js/scripts/tables/table-datatables-advanced.js"></script>
     <script src="app-assets/js/scripts/forms/pickers/form-pickers.min.js"></script>
     <!-- END: Page JS-->
 
