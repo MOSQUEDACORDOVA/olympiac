@@ -19,6 +19,8 @@
     <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/forms/select/select2.min.css">
     <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/animate/animate.min.css">
     <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/extensions/sweetalert2.min.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/fontawesome/css/all.css">
+    
     <!-- END: Vendor CSS-->
 
     <!-- BEGIN: Theme CSS-->
@@ -295,22 +297,7 @@
                                     </div>
                                     <div class="d-flex justify-content-around my-2 pt-75">
                                         <div class="d-flex align-items-start me-2">
-                                            <span class="badge bg-light-primary p-75 rounded">
-                                                <i data-feather="check" class="font-medium-2"></i>
-                                            </span>
-                                            <div class="ms-75">
-                                                <h4 class="mb-0">1.23k</h4>
-                                                <small>Tasks Done</small>
-                                            </div>
-                                        </div>
-                                        <div class="d-flex align-items-start">
-                                            <span class="badge bg-light-primary p-75 rounded">
-                                                <i data-feather="briefcase" class="font-medium-2"></i>
-                                            </span>
-                                            <div class="ms-75">
-                                                <h4 class="mb-0">568</h4>
-                                                <small>Projects Done</small>
-                                            </div>
+                                                <a href="javascript:;" data-bs-target="#mostrarqr" data-bs-toggle="modal" class=" me-1badge bg-light-primary p-75 rounded"> <i class="fa-solid fa-qrcode font-medium-2"></i></a>
                                         </div>
                                     </div>
                                     <h4 class="fw-bolder border-bottom pb-50 mb-1">Detalles</h4>
@@ -380,15 +367,15 @@
                                         <span class="fw-bold">Cuenta</span></a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" id="list-profile-list" data-bs-toggle="list" href="#seguridad" role="tab" aria-controls="seguridad">
-                                        <i data-feather="lock" class="font-medium-3 me-50"></i>
-                                        <span class="fw-bold">Seguridad</span>
+                                    <a class="nav-link" id="list-profile-list" data-bs-toggle="list" href="#billing" role="tab" aria-controls="billing">
+                                        <i data-feather="bookmark" class="font-medium-3 me-50"></i>
+                                        <span class="fw-bold">Planes</span>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" id="list-profile-list" data-bs-toggle="list" href="#billing" role="tab" aria-controls="billing">
-                                        <i data-feather="bookmark" class="font-medium-3 me-50"></i>
-                                        <span class="fw-bold">Facturación y Planes</span>
+                                    <a class="nav-link" id="list-profile-list" data-bs-toggle="list" href="#seguridad" role="tab" aria-controls="seguridad">
+                                        <i data-feather="lock" class="font-medium-3 me-50"></i>
+                                        <span class="fw-bold">Plan de entrenamiento</span>
                                     </a>
                                 </li>
                                 <li class="nav-item">
@@ -409,6 +396,8 @@
                                 
                             <!-- Cuenta -->
                             <div class="card tab-pane fade show active" id="cuenta" role="tabpanel" aria-labelledby="list-home-list">
+                                
+                            <div class="card">
                                 <h4 class="card-header">Cronología de la actividad del usuario</h4>
                                 <div class="card-body pt-1">
                                     <ul class="timeline ms-50">
@@ -467,12 +456,8 @@
                                         </li>
                                     </ul>
                                 </div>
-                            </div>
-                            <!-- /Cuenta -->
-
-                            <!-- Seguridad -->
-                            <div class="card tab-pane fade show"  id="seguridad" role="tabpanel" aria-labelledby="list-home-list">
-                            
+                            </div>   
+                                
                             <!-- Change Password -->
                             <div class="card">
                                 <h4 class="card-header">Cambia la contraseña</h4>
@@ -509,8 +494,14 @@
                                 </div>
                             </div>
                             <!--/ Change Password -->
+                            </div>
+                            <!-- /Cuenta -->
 
-                            <!-- recent device -->
+                            <!-- Seguridad -->
+                            <div class="card tab-pane fade show"  id="seguridad" role="tabpanel" aria-labelledby="list-home-list">
+                            
+
+                            <!-- recent device 
                             <div class="card">
                                 <div class="card-header">
                                     <h4 class="card-title">Dispositivos recientes</h4>
@@ -574,7 +565,7 @@
                                     </table>
                                 </div>
                             </div>
-                            <!-- / recent device -->
+                            < recent device -->
                             </div>
                             <!-- /Seguridad -->
 
@@ -584,7 +575,7 @@
                             <!-- current plan -->
                             <div class="card">
                                 <div class="card-header">
-                                    <h4 class="card-title">Plan actual</h4>
+                                    <h4 class="card-title">Fecha de Ingreso</h4>
                                 </div>
                                 <div class="card-body">
                                     <div class="row">
@@ -630,7 +621,7 @@
                             <!-- / current plan -->
 
                             <!-- payment methods -->
-                            <div class="card">
+                            <!--<div class="card">
                                 <div class="card-header">
                                     <h4 class="card-title mb-50">Métodos de pago</h4>
                                     <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#addNewCard">
@@ -699,11 +690,11 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                             <!-- / payment methods -->
 
                             <!-- Billing Address -->
-                            <div class="card">
+                            <!--<div class="card">
                                 <div class="card-header">
                                     <h4 class="card-title mb-50">Dirección de Envio</h4>
                                     <button class="btn btn-primary btn-sm edit-address" type="button" data-bs-toggle="modal" data-bs-target="#addNewAddressModal">
@@ -747,7 +738,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div>-->
                             <!--/ Billing Address -->
                             </div>
                             <!-- /Billing -->
@@ -999,6 +990,23 @@
                     </div>
                 </div>
                 <!--/ Edit User Modal -->
+                <!-- QR -->
+                <div class="modal fade" id="mostrarqr" tabindex="-1" aria-hidden="true">
+                    <div class="modal-dialog modal-lg modal-dialog-centered modal-edit-user">
+                        <div class="modal-content">
+                            <div class="modal-header bg-transparent">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body pb-5 px-sm-5 pt-50">
+                                <div class="text-center mb-2">
+                                    <h1 class="mb-1">Escanea este código:</h1>
+                                    <img src="data:image/png;base64,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">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--/ Edit User Modal -->
                 <!-- upgrade your plan Modal -->
                 <div class="modal fade" id="upgradePlanModal" tabindex="-1" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered modal-upgrade-plan">
@@ -1074,6 +1082,7 @@
     <script src="app-assets/vendors/js/forms/validation/jquery.validate.min.js"></script>
     <script src="app-assets/vendors/js/extensions/sweetalert2.all.min.js"></script>
     <script src="app-assets/vendors/js/extensions/polyfill.min.js"></script>
+    <script src="app-assets/fontawesome/css/all.css"></script>
     <!-- END: Page Vendor JS-->
 
     <!-- BEGIN: Theme JS-->

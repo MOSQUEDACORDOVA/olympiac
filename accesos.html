@@ -18,6 +18,7 @@
         <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/vendors.min.css">
         <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/pickers/pickadate/pickadate.css">
         <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/pickers/flatpickr/flatpickr.min.css">
+        <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/charts/apexcharts.css">
         <!-- END: Vendor CSS-->
     
         <!-- BEGIN: Theme CSS-->
@@ -28,6 +29,8 @@
         <link rel="stylesheet" type="text/css" href="app-assets/css/themes/dark-layout.min.css">
         <link rel="stylesheet" type="text/css" href="app-assets/css/themes/bordered-layout.min.css">
         <link rel="stylesheet" type="text/css" href="app-assets/css/themes/semi-dark-layout.min.css">
+        <link rel="stylesheet" type="text/css" href="app-assets/css/plugins/charts/chart-apex.css">
+        <link rel="stylesheet" type="text/css" href="app-assets/css/plugins/extensions/ext-component-toastr.css">
     
         <!-- BEGIN: Page CSS-->
         <link rel="stylesheet" type="text/css" href="app-assets/css/core/menu/menu-types/vertical-menu.min.css">
@@ -281,36 +284,22 @@
         <!-- Header Sección -->
         <div class="row match-height">
     
-            <div class="col-lg-8 col-12">
-                <div class="card card-statistics">
-                    <div class="card-header border-bottom">
-                        <h4 class="card-title">Accesos</h4>
-                    </div>
-                    <!-- Buscadores -->
-                    <div class="card-body" style="padding-top: 10px; padding-bottom: 10px;">
-                        <div class="row">
-                            <div class="col-md-4 mb-1">
-                                <label class="form-label" for="fp-default">Fechas</label>
-                                <input type="text" id="fp-range" class="form-control flatpickr-range flatpickr-input active"
-                                    placeholder="DD-MM-YYYY a DD-MM-YYYY" readonly="readonly">
+            <div class="col-lg-8 col-12 revenue-report-wrapper">
+                    <div class="d-sm-flex justify-content-between align-items-center mb-3">
+                        <h4 class="card-title mb-50 mb-sm-0">Reportes de Acceos</h4>
+                        <div class="d-flex align-items-center">
+                            <div class="d-flex align-items-center me-2">
+                                <span class="bullet bullet-success font-small-3 me-50 cursor-pointer"></span>
+                                <span>Ingresos</span>
                             </div>
-                            <div class="col-md-4 mb-1">
-                                <label class="form-label" for="fp-default">Burcador</label>
-                                <input type="busqueda" class="form-control" placeholder="Buscar"
-                                    aria-controls="DataTables_Table_0">
-                            </div>
-                            <div class="col-md-4 mb-1">
-                                <label class="form-label" for="fp-default">Estados</label>
-                                
-                                <select class="invoiceto form-select">
-                                    <option value="shelby" select>Habilitado </option>
-                                    <option value="hunters">Deshabilitado</option>
-                                    <option value="hunters">Repetido</option>
-                                </select>
+                            <div class="d-flex align-items-center ms-75">
+                                <span class="bullet bullet-danger font-small-3 me-50 cursor-pointer"></span>
+                                <span>Denegados</span>
                             </div>
                         </div>
                     </div>
-                </div>
+                    <div id="Accesos-report"></div>
+                
             </div>
             <!-- Revenue Card -->
     
@@ -473,29 +462,6 @@
         </div> 
         <!--table -->
 
-        <section id="ajax-datatable">
-            <div class="row">
-                <div class="col-12">
-                    <div class="card">
-                        <div class="card-header border-bottom">
-                            <h4 class="card-title">Ajax Sourced Server-side</h4>
-                        </div>
-                        <div class="card-datatable">
-                            <table class="datatables-accesos table table-responsive">
-                                <thead>
-                                    <tr>
-                                        <th>Cliente</th>
-                                        <th>Correo Electronico</th>
-                                        <th>Estado</th>
-                                        <th>Fecha</th>
-                                    </tr>
-                                </thead>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
     </div>     
     <!-- END: Content-->
 
@@ -530,11 +496,14 @@
     <script src="app-assets/js/core/app-menu.min.js"></script>
     <script src="app-assets/js/core/app.min.js"></script>
     <script src="app-assets/js/scripts/customizer.min.js"></script>
+    <script src="app-assets/vendors/js/charts/apexcharts.min.js"></script>
+    <script src="app-assets/vendors/js/extensions/toastr.min.js"></script>
     <!-- END: Theme JS-->
 
     <!-- BEGIN: Page JS-->
     <script src="app-assets/js/scripts/tables/table-datatables-advanced.js"></script>
     <script src="app-assets/js/scripts/forms/pickers/form-pickers.min.js"></script>
+    <script src="app-assets/js/scripts/pages/dashboard-ecommerce.js"></script>
     <!-- END: Page JS-->
 
 

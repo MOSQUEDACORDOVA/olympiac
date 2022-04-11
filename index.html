@@ -57,7 +57,7 @@
                 </ul>
                 <ul class="nav navbar-nav bookmark-icons">
                     <li class="nav-item d-none d-lg-block"><a class="nav-link" href="app-email.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Enviar correo general"><i class="ficon" data-feather="mail"></i></a></li>
-                    <li class="nav-item d-none d-lg-block"><a class="nav-link" href="app-todo.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Accesos"><i class="ficon" data-feather="check-square"></i></a></li>
+                    <li class="active  nav-item d-none d-lg-block"><a class="nav-link" href="app-todo.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Accesos"><i class="ficon" data-feather="check-square"></i></a></li>
                     <li class="nav-item d-none d-lg-block"><a class="nav-link" href="app-calendar.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Eventos"><i class="ficon" data-feather="calendar"></i></a></li>
                 </ul>
             </div>
@@ -65,13 +65,13 @@
 
             <ul class="nav navbar-nav align-items-center ms-auto">
                 <!-- Icono de Notificaciones -->
-                <li class="nav-item dropdown dropdown-notification me-25"><a class="nav-link" href="#" data-bs-toggle="dropdown"><i class="ficon" data-feather="bell"></i><span class="badge rounded-pill bg-danger badge-up">6</span></a>
+                <li class="nav-item dropdown dropdown-notification me-25"><a class="nav-link" href="#" data-bs-toggle="dropdown"><i class="ficon" data-feather="bell"></i><span class="badge rounded-pill bg-danger badge-up">5</span></a>
                     <!-- Menu de Notificaciones -->
                     <ul class="dropdown-menu dropdown-menu-media dropdown-menu-end">
                         <li class="dropdown-menu-header">
                             <div class="dropdown-header d-flex">
                                 <h4 class="notification-title mb-0 me-auto">Alertas</h4>
-                                <div class="badge rounded-pill badge-light-primary">6 Nuevas</div>
+                                <div class="badge rounded-pill badge-light-primary">5 Nuevas</div>
                             </div>
                         </li>
                         <li class="scrollable-container media-list">
@@ -164,20 +164,7 @@
                     <!-- Menu de Usuario -->
                     <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdown-user">
                         <a class="dropdown-item" href="page-profile.html">
-                            <i class="me-50" data-feather="user"></i> Profile
-                        </a>
-                        <a class="dropdown-item" href="app-email.html">
-                            <i class="me-50" data-feather="mail"></i> Correos
-                        </a>
-                        <a class="dropdown-item" href="app-todo.html">
-                            <i class="me-50" data-feather="check-square"></i> Task
-                        </a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="page-pricing.html">
-                            <i class="me-50" data-feather="credit-card"></i> Precios
-                        </a>
-                        <a class="dropdown-item" href="page-faq.html">
-                            <i class="me-50" data-feather="help-circle"></i> FAQ
+                            <i class="me-50" data-feather="user"></i> Mi Perfil
                         </a>
                         <a class="dropdown-item" href="auth-login-cover.html">
                             <i class="me-50" data-feather="power"></i> Salir
@@ -190,7 +177,6 @@
         </div>
     </nav>
     <!-- END: Header-->
-
 
     <!-- BEGIN: Main Menu-->
     <div class="main-menu menu-fixed menu-light menu-accordion menu-shadow" data-scroll-to-active="true">
@@ -211,7 +197,7 @@
                 <li class="active nav-item">
                     <a class="d-flex align-items-center" href="index.html">
                         <i data-feather="home"></i>
-                        <span class="menu-title text-truncate" data-i18n="Dashboards">Dashboards</span>
+                        <span class="menu-title text-truncate" data-i18n="Dashboards">Dashboard</span>
                     </a>
                     
                 </li>
@@ -220,17 +206,34 @@
                     <span data-i18n="Apps &amp; Pages">TRAINING</span>
                     <i data-feather="more-horizontal"></i>
                 </li>
-                <li class=" nav-item"><a class="d-flex align-items-center" href="#"><i data-feather="check-square"></i><span class="menu-title text-truncate" data-i18n="Email">Accesos</span></a>
+                <li class=" nav-item"><a class="d-flex align-items-center" href="accesos.html">
+                    <i data-feather="check-square"></i>
+                    <span class="menu-title text-truncate" data-i18n="Accesos">Accesos</span></a>
                 </li>
-                <li class=" nav-item"><a class="d-flex align-items-center" href="#"><i data-feather="users"></i><span class="menu-title text-truncate" data-i18n="Chat">Clientes</span></a>
+                <li class=" nav-item"><a class="d-flex align-items-center" href="clientes.html">
+                    <i data-feather="users"></i>
+                    <span class="menu-title text-truncate" data-i18n="Clientes">Clientes</span></a>
                 </li>
-                <li class=" nav-item"><a class="d-flex align-items-center" href="#"><i data-feather="bar-chart-2"></i><span class="menu-title text-truncate" data-i18n="Todo">Ejercicios</span></a>
+
+                <li class=" nav-item"><a class="d-flex align-items-center" href="grupos.html">
+                    <i data-feather="users"></i>
+                    <span class="menu-title text-truncate" data-i18n="Grupos">Grupos</span></a>
                 </li>
-                <li class=" nav-item"><a class="d-flex align-items-center" href="#"><i data-feather="clipboard"></i><span class="menu-title text-truncate" data-i18n="Calendar">Programas</span></a>
+                <li class=" nav-item"><a class="d-flex align-items-center" href="ejercicios.html">
+                    <i data-feather="bar-chart-2"></i>
+                    <span class="menu-title text-truncate" data-i18n="Ejercicios">Ejercicios</span></a>
                 </li>
-                <li class=" nav-item"><a class="d-flex align-items-center" href="#"><i data-feather="calendar"></i><span class="menu-title text-truncate" data-i18n="Kanban">Eventos</span></a>
+                <li class=" nav-item"><a class="d-flex align-items-center" href="programas.html">
+                    <i data-feather="clipboard"></i>
+                    <span class="menu-title text-truncate" data-i18n="Programas">Programas</span></a>
                 </li>
-                <li class=" nav-item"><a class="d-flex align-items-center" href="#"><i data-feather="award"></i><span class="menu-title text-truncate" data-i18n="Kanban">WOD</span></a>
+                <li class=" nav-item"><a class="d-flex align-items-center" href="eventos.html">
+                    <i data-feather="calendar"></i>
+                    <span class="menu-title text-truncate" data-i18n="Eventos">Eventos</span></a>
+                </li>
+                <li class=" nav-item"><a class="d-flex align-items-center" href="wod.html">
+                    <i data-feather="award"></i>
+                    <span class="menu-title text-truncate" data-i18n="WOD">WOD</span></a>
                 </li>
                 <!-- Training Josuue fin -->
 
@@ -239,29 +242,29 @@
                 </li>
 
                 <!-- Facturas -->
-                <li class=" nav-item"><a class="d-flex align-items-center" href="facturas.html">
+                <li class="nav-item"><a class="d-flex align-items-center" href="facturas.html">
                     <i data-feather="file-text"></i>
-                    <span class="menu-title text-truncate" data-i18n="facturas">Facturas</span></a>
+                    <span class="menu-title text-truncate" data-i18n="Facturas">Facturas</span></a>
                 </li>
                 <!-- Aprobaciones -->
                 <li class=" nav-item"><a class="d-flex align-items-center" href="aprobaciones.html">
                     <i data-feather="check-circle"></i>
-                    <span class="menu-title text-truncate" data-i18n="Feather">Aprobaciones</span></a>
+                    <span class="menu-title text-truncate" data-i18n="Aprobaciones">Aprobaciones</span></a>
                 </li>
                 <!-- Productos -->
                 <li class=" nav-item"><a class="d-flex align-items-center" href="productos.html">
                     <i data-feather="shopping-cart"></i>
-                    <span class="menu-title text-truncate" data-i18n="Feather">Productos</span></a>
+                    <span class="menu-title text-truncate" data-i18n="Productos">Productos</span></a>
                 </li>
                 <!-- Reportes -->
-                <li class=" nav-item"><a class="d-flex align-items-center" href="reportes.html">
+                <li class="nav-item"><a class="d-flex align-items-center" href="reportes.html">
                     <i data-feather="trending-up"></i>
-                    <span class="menu-title text-truncate" data-i18n="Feather">Reportes</span></a>
+                    <span class="menu-title text-truncate" data-i18n="Reportes">Reportes</span></a>
                 </li>
                 <!-- Reportar problemas -->
-                <li class=" nav-item"><a class="d-flex align-items-center" href="#">
+                <li class=" nav-item"><a class="d-flex align-items-center" href="reportar-problema.html">
                     <i data-feather="life-buoy"></i>
-                    <span class="menu-title text-truncate" data-i18n="Feather">Reportar problema</span></a>
+                    <span class="menu-title text-truncate" data-i18n="Reportar problema">Reportar problema</span></a>
                 </li>
 
             </ul>

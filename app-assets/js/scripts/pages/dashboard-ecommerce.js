@@ -29,6 +29,7 @@ $(window).on('load', function () {
   var $statisticsReporteChart = document.querySelector('#statistics-Reporte');
   var $earningsChart = document.querySelector('#earnings-chart');
   var $revenueReportChart = document.querySelector('#revenue-report-chart');
+  var $AccesosChart = document.querySelector('#Accesos-report');
   var $budgetChart = document.querySelector('#budget-chart');
   var $browserStateChartPrimary = document.querySelector('#browser-state-chart-primary');
   var $browserStateChartWarning = document.querySelector('#browser-state-chart-warning');
@@ -45,6 +46,7 @@ $(window).on('load', function () {
   var statisticsReporteChartOptions;
   var earningsChartOptions;
   var revenueReportChartOptions;
+  var AccesosChartOptions;
   var budgetChartOptions;
   var browserStatePrimaryChartOptions;
   var browserStateWarningChartOptions;
@@ -61,6 +63,7 @@ $(window).on('load', function () {
   var statisticsReporteChart;
   var earningsChart;
   var revenueReportChart;
+  var AccesosChart;
   var budgetChart;
   var browserStatePrimaryChart;
   var browserStateDangerChart;
@@ -695,7 +698,10 @@ $(window).on('load', function () {
   };
   earningsChart = new ApexCharts($earningsChart, earningsChartOptions);
   earningsChart.render();
+  
 
+
+  
   //------------ Revenue Report Chart ------------
   //----------------------------------------------
   revenueReportChartOptions = {
@@ -764,6 +770,80 @@ $(window).on('load', function () {
   };
   revenueReportChart = new ApexCharts($revenueReportChart, revenueReportChartOptions);
   revenueReportChart.render();
+
+  
+  
+  //------------ Revenue Accesos Chart ------------
+  //----------------------------------------------
+  AccesosChartOptions = {
+    chart: {
+      height: 230,
+      stacked: true,
+      type: 'bar',
+      toolbar: { show: false }
+    },
+    plotOptions: {
+      bar: {
+        columnWidth: '17%',
+        endingShape: 'rounded'
+      },
+      distributed: true
+    },
+    colors: [window.colors.solid.success, window.colors.solid.danger],
+    series: [
+      {
+        name: 'Ingresos',
+        data: [15, 10, 20, 40, 35, 32, 28]
+      },
+      {
+        name: 'Denegados',
+        data: [-1, -3, -4, 0, -1, -3, -5]
+      }
+    ],
+    dataLabels: {
+      enabled: false
+    },
+    legend: {
+      show: false
+    },
+    grid: {
+      padding: {
+        top: -20,
+        bottom: -10
+      },
+      yaxis: {
+        lines: { show: false }
+      }
+    },
+    xaxis: {
+      categories: ['Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado', 'Domingo'],
+      labels: {
+        style: {
+          colors: $textMutedColor,
+          fontSize: '0.86rem'
+        }
+      },
+      axisTicks: {
+        show: false
+      },
+      axisBorder: {
+        show: false
+      }
+    },
+    yaxis: {
+      labels: {
+        style: {
+          colors: $textMutedColor,
+          fontSize: '0.86rem'
+        }
+      }
+    }
+  };
+  AccesosChart = new ApexCharts($AccesosChart, AccesosChartOptions);
+  AccesosChart.render();
+
+
+
 
   //---------------- Budget Chart ----------------
   //----------------------------------------------
