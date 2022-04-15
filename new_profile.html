@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html class="loading bordered-layout" lang="en" data-layout="bordered-layout" data-textdirection="ltr">
+<!-- BEGIN: Head-->
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0,minimal-ui">
+    <meta name="description" content="Olympiac admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
+    <meta name="keywords" content="admin template, Olympiac admin template, dashboard template, flat admin template, responsive admin template, web app">
+    <meta name="author" content="PIXINVENT">
+    <title>Accesos | Olympiac</title>
+    <link rel="apple-touch-icon" href="app-assets/images/ico/apple-icon-120.png">
+    <link rel="shortcut icon" type="image/x-icon" href="app-assets/images/ico/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600" rel="stylesheet">
+
+    <!-- BEGIN: Vendor CSS-->
+    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/vendors.min.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/forms/select/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/extensions/sweetalert2.min.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/fontawesome/css/all.css">
+    
+    <!-- END: Vendor CSS-->
+
+    <!-- BEGIN: Theme CSS-->
+    <link rel="stylesheet" type="text/css" href="app-assets/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css/bootstrap-extended.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css/colors.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css/components.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css/themes/dark-layout.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css/themes/bordered-layout.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css/themes/semi-dark-layout.css">
+
+    <!-- BEGIN: Page CSS-->
+    <link rel="stylesheet" type="text/css" href="app-assets/css/core/menu/menu-types/vertical-menu.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css/plugins/forms/form-validation.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css/plugins/extensions/ext-component-sweet-alerts.css">
+    <!-- END: Page CSS-->
+
+        <!-- BEGIN: Custom CSS-->
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+        <!-- END: Custom CSS-->
+
+</head>
+<!-- END: Head-->
+
+<!-- BEGIN: Body-->
+
+<body class="vertical-layout vertical-menu-modern  navbar-floating footer-static  " data-open="click" data-menu="vertical-menu-modern" data-col="">
+
+    <!-- BEGIN: Header Menu Superior-->
+    <nav class="header-navbar navbar navbar-expand-lg align-items-center floating-nav navbar-light navbar-shadow container-xxl">
+        <div class="navbar-container d-flex content">
+            <!-- Iconos de acceso rapido -->
+            <div class="bookmark-wrapper d-flex align-items-center">
+                <ul class="nav navbar-nav d-xl-none">
+                    <li class="nav-item"><a class="nav-link menu-toggle" href="#"><i class="ficon" data-feather="menu"></i></a></li>
+                </ul>
+                <ul class="nav navbar-nav bookmark-icons">
+                    <li class="nav-item d-none d-lg-block"><a class="nav-link" href="app-email.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Enviar correo general"><i class="ficon" data-feather="mail"></i></a></li>
+                    <li class="active  nav-item d-none d-lg-block"><a class="nav-link" href="app-todo.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Accesos"><i class="ficon" data-feather="check-square"></i></a></li>
+                    <li class="nav-item d-none d-lg-block"><a class="nav-link" href="app-calendar.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Eventos"><i class="ficon" data-feather="calendar"></i></a></li>
+                </ul>
+            </div>
+            <!-- Iconos de acceso rapido fin -->
+
+            <ul class="nav navbar-nav align-items-center ms-auto">
+                <!-- Icono de Notificaciones -->
+                <li class="nav-item dropdown dropdown-notification me-25"><a class="nav-link" href="#" data-bs-toggle="dropdown"><i class="ficon" data-feather="bell"></i><span class="badge rounded-pill bg-danger badge-up">5</span></a>
+                    <!-- Menu de Notificaciones -->
+                    <ul class="dropdown-menu dropdown-menu-media dropdown-menu-end">
+                        <li class="dropdown-menu-header">
+                            <div class="dropdown-header d-flex">
+                                <h4 class="notification-title mb-0 me-auto">Alertas</h4>
+                                <div class="badge rounded-pill badge-light-primary">5 Nuevas</div>
+                            </div>
+                        </li>
+                        <li class="scrollable-container media-list">
+                            <a class="d-flex" href="#">
+                                <div class="list-item d-flex align-items-start">
+                                    <div class="me-1">
+                                        <div class="avatar"><img src="app-assets/images/portrait/small/avatar-s-15.jpg" alt="avatar" width="32" height="32"></div>
+                                    </div>
+                                    <div class="list-item-body flex-grow-1">
+                                        <p class="media-heading">
+                                            <span class="fw-bolder">Hector Pérez 🎉</span> Nuevo cliente!</p>
+                                            <small class="notification-text"> Descripción (por mejorar).</small>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="d-flex" href="#">
+                                <div class="list-item d-flex align-items-start">
+                                    <div class="me-1">
+                                        <div class="avatar"><img src="app-assets/images/portrait/small/avatar-s-3.jpg" alt="avatar" width="32" height="32"></div>
+                                    </div>
+                                    <div class="list-item-body flex-grow-1">
+                                        <p class="media-heading">
+                                            <span class="fw-bolder">Luisana Alvarado</span>&nbsp;Registrada
+                                        </p>
+                                        <small class="notification-text"> Descripción (por mejorar)</small>
+                                    </div>
+                                </div>
+                            </a>
+                            
+                            <div class="list-item d-flex align-items-center">
+                                <h6 class="fw-bolder me-auto mb-0">Alertas de rutinas</h6>
+                                <div class="form-check form-check-primary form-switch">
+                                    <input class="form-check-input" id="systemNotification" type="checkbox" checked="">
+                                    <label class="form-check-label" for="systemNotification"></label>
+                                </div>
+                            </div><a class="d-flex" href="#">
+                                <div class="list-item d-flex align-items-start">
+                                    <div class="me-1">
+                                        <div class="avatar bg-light-danger">
+                                            <div class="avatar-content"><i class="avatar-icon" data-feather="x"></i></div>
+                                        </div>
+                                    </div>
+                                    <div class="list-item-body flex-grow-1">
+                                        <p class="media-heading"><span class="fw-bolder">Ejemplo 1</span>&nbsp;</p>
+                                        <small class="notification-text"> Descripción (por mejorar)</small>
+                                    </div>
+                                </div>
+                            </a><a class="d-flex" href="#">
+                                <div class="list-item d-flex align-items-start">
+                                    <div class="me-1">
+                                        <div class="avatar bg-light-success">
+                                            <div class="avatar-content"><i class="avatar-icon" data-feather="check"></i></div>
+                                        </div>
+                                    </div>
+                                    <div class="list-item-body flex-grow-1">
+                                        <p class="media-heading"><span class="fw-bolder">Ejemplo 2</span>&nbsp;</p>
+                                        <small class="notification-text"> Descripción (por mejorar)</small>
+                                    </div>
+                                </div>
+                            </a><a class="d-flex" href="#">
+                                <div class="list-item d-flex align-items-start">
+                                    <div class="me-1">
+                                        <div class="avatar bg-light-warning">
+                                            <div class="avatar-content"><i class="avatar-icon" data-feather="alert-triangle"></i></div>
+                                        </div>
+                                    </div>
+                                    <div class="list-item-body flex-grow-1">
+                                        <p class="media-heading"><span class="fw-bolder">Ejemplo 3</span>&nbsp;</p>
+                                        <small class="notification-text"> Descripción (por mejorar)</small>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="dropdown-menu-footer"><a class="btn btn-primary w-100" href="#">Ver todas las notificaciones</a></li>
+                    </ul>
+                    <!-- Menu de Notificaciones fin -->
+                </li>
+                <!-- Perfil de Usuario -->
+                <li class="nav-item dropdown dropdown-user">
+                    <a class="nav-link dropdown-toggle dropdown-user-link" id="dropdown-user" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <div class="user-nav d-sm-flex d-none">
+                            <span class="user-name fw-bolder">Hector Perez</span>
+                            <span class="user-status">Admin</span>
+                        </div>
+                        <span class="avatar">
+                            <img class="round" src="app-assets/images/portrait/small/avatar-s-11.jpg" alt="avatar" height="40" width="40">
+                            <span class="avatar-status-online"></span>
+                        </span>
+                    </a>
+                    <!-- Menu de Usuario -->
+                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdown-user">
+                        <a class="dropdown-item" href="page-profile.html">
+                            <i class="me-50" data-feather="user"></i> Mi Perfil
+                        </a>
+                        <a class="dropdown-item" href="auth-login-cover.html">
+                            <i class="me-50" data-feather="power"></i> Salir
+                        </a>
+                    </div>
+                    <!-- Menu de Usuario fin -->
+                </li>
+                <!-- Perfil de Usuario fin -->
+            </ul>
+        </div>
+    </nav>
+    <!-- END: Header-->
+
+    <!-- BEGIN: Main Menu-->
+    <div class="main-menu menu-fixed menu-light menu-accordion menu-shadow" data-scroll-to-active="true">
+        <div class="navbar-header">
+            <!-- Logo Principal-->
+            <ul class="nav navbar-nav flex-row">
+                <li class="nav-item me-auto">
+                    <a class="navbar-brand" href="html/ltr/vertical-menu-template-bordered/index.html">
+                        <h2 class="brand-text">Olympiac</h2>
+                    </a></li>
+                <li class="nav-item nav-toggle"><a class="nav-link modern-nav-toggle pe-0" data-bs-toggle="collapse"><i class="d-block d-xl-none text-primary toggle-icon font-medium-4" data-feather="x"></i><i class="d-none d-xl-block collapse-toggle-icon font-medium-4  text-primary" data-feather="disc" data-ticon="disc"></i></a></li>
+            </ul>
+        </div>
+        <div class="shadow-bottom"></div>
+        <div class="main-menu-content">
+
+            <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
+                <li class="nav-item">
+                    <a class="d-flex align-items-center" href="index.html">
+                        <i data-feather="home"></i>
+                        <span class="menu-title text-truncate" data-i18n="Dashboards">Dashboard</span>
+                    </a>
+                    
+                </li>
+                <!-- Training Josuue -->
+                <li class=" navigation-header">
+                    <span data-i18n="Apps &amp; Pages">TRAINING</span>
+                    <i data-feather="more-horizontal"></i>
+                </li>
+                <li class="nav-item"><a class="d-flex align-items-center" href="accesos.html">
+                    <i data-feather="check-square"></i>
+                    <span class="menu-title text-truncate" data-i18n="Accesos">Accesos</span></a>
+                </li>
+                <li class="active nav-item"><a class="d-flex align-items-center" href="clientes.html">
+                    <i data-feather="users"></i>
+                    <span class="menu-title text-truncate" data-i18n="Clientes">Clientes</span></a>
+                </li>
+                <li class=" nav-item"><a class="d-flex align-items-center" href="ejercicios.html">
+                    <i data-feather="bar-chart-2"></i>
+                    <span class="menu-title text-truncate" data-i18n="Ejercicios">Ejercicios</span></a>
+                </li>
+                <li class=" nav-item"><a class="d-flex align-items-center" href="programas.html">
+                    <i data-feather="clipboard"></i>
+                    <span class="menu-title text-truncate" data-i18n="Programas">Programas</span></a>
+                </li>
+                <li class=" nav-item"><a class="d-flex align-items-center" href="eventos.html">
+                    <i data-feather="calendar"></i>
+                    <span class="menu-title text-truncate" data-i18n="Eventos">Eventos</span></a>
+                </li>
+                <li class=" nav-item"><a class="d-flex align-items-center" href="wod.html">
+                    <i data-feather="award"></i>
+                    <span class="menu-title text-truncate" data-i18n="WOD">WOD</span></a>
+                </li>
+                <!-- Training Josuue fin -->
+
+                <!-- Facturacion Bod Esponja -->
+                <li class=" navigation-header"><span data-i18n="User Interface">Facturación</span><i data-feather="more-horizontal"></i>
+                </li>
+
+                <!-- Facturas -->
+                <li class="nav-item"><a class="d-flex align-items-center" href="facturas.html">
+                    <i data-feather="file-text"></i>
+                    <span class="menu-title text-truncate" data-i18n="Facturas">Facturas</span></a>
+                </li>
+                <!-- Aprobaciones -->
+                <li class=" nav-item"><a class="d-flex align-items-center" href="aprobaciones.html">
+                    <i data-feather="check-circle"></i>
+                    <span class="menu-title text-truncate" data-i18n="Aprobaciones">Aprobaciones</span></a>
+                </li>
+                <!-- Productos -->
+                <li class=" nav-item"><a class="d-flex align-items-center" href="productos.html">
+                    <i data-feather="shopping-cart"></i>
+                    <span class="menu-title text-truncate" data-i18n="Productos">Productos</span></a>
+                </li>
+                <!-- Reportes -->
+                <li class="nav-item"><a class="d-flex align-items-center" href="reportes.html">
+                    <i data-feather="trending-up"></i>
+                    <span class="menu-title text-truncate" data-i18n="Reportes">Reportes</span></a>
+                </li>
+                <!-- Reportar problemas -->
+                <li class=" nav-item"><a class="d-flex align-items-center" href="reportar-problema.html">
+                    <i data-feather="life-buoy"></i>
+                    <span class="menu-title text-truncate" data-i18n="Reportar problema">Reportar problema</span></a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+    <!-- END: Main Menu-->
+    <!-- BEGIN: Content-->
+
+    <!-- BEGIN: Content-->
+    <div class="app-content content ">
+        <div class="content-overlay"></div>
+        <div class="header-navbar-shadow"></div>
+        <div class="content-wrapper container-xxl p-0">
+            <div class="content-header row">
+            </div>
+            <div class="content-body">
+                <div class="row match-height">
+
+                    <div class="col-md-8 col-12">
+                        <div class="card card-developer-meetup">
+
+                            <div class="card-header pb-2 align-items-start">
+                                <div class="col-4 d-flex justify-content-between align-items-center">
+                                    <div class="d-flex flex-row align-items-center">
+                                        <div class="avatar me-1">
+                                            <img src="../../../app-assets/images/portrait/small/avatar-s-20.jpg" alt="Avatar" width="72" height="72" />
+                                        </div>
+                                        <div>
+                                            <h3 class="mb-0 ">Mittie Evans</h3>
+                                            <small class="text-muted">Cliente</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="heading-elements">
+                                    <ul class="list-inline mb-0">
+                                        <li class="btn-group dropstart" data-bs-toggle="tooltip" data-popup="tooltip-custom" title="Código QR">
+                                            <a class="text-secondary" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <i class="fa-qrcode fa-solid "></i>
+                                            </a>
+                                            <div class="dropdown-menu p-50">
+                                                <img src="../../../app-assets/images/qr_example.png" class="rounded" width="100%" height="auto" alt="Avatar" />
+                                            </div>
+                                        </li>
+                                        <li data-bs-toggle="tooltip" data-popup="tooltip-custom" title="Editar Perfil">
+                                            <a href="#" class="text-secondary">
+                                                <i class="fa-solid fa-user-pen"></i>
+                                            </a>
+                                        </li>
+                                        <li data-bs-toggle="tooltip" data-popup="tooltip-custom" title="Enviar Correo">
+                                            <a href="#" class="text-secondary">
+                                                <i class="fa-solid fa-envelope"></i>
+                                            </a>
+                                        </li>
+                                        <li data-bs-toggle="tooltip" data-popup="tooltip-custom" title="Deshabilitar Perfil">
+                                            <a href="#" class="text-secondary">
+                                                <i class="fa-solid fa-ban"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="row mb-1">
+                                    <div class="col-4">
+                                        <div class="d-flex flex-row meetings">
+                                            <div class="avatar bg-light-primary rounded me-1 align-items-center" data-bs-toggle="tooltip" data-popup="tooltip-custom" title="Cédula y Tipo de Cédula">
+                                                <div class="avatar-content">
+                                                    <i class="fa-regular fa-id-card font-medium-3"></i>
+                                                </div>
+                                            </div>
+                                            <div class="content-body">
+                                                <h6 class="mb-0" data-bs-toggle="tooltip" data-popup="tooltip-custom" title="Cédula">co29283992250</h6>
+                                                <small data-bs-toggle="tooltip" data-popup="tooltip-custom" title="Tipo de Cédula">Física</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="mb-0">Edad</div>
+                                        <h5 class="mb-0">29 Años</h5>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="mb-0">Sexo</div>
+                                        <h5 class="mb-0">Femenino</h5>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="d-flex flex-row meetings ">
+                                            <div class="avatar bg-light-primary rounded me-1 align-items-center">
+                                                <div class="avatar-content">
+                                                    <i class="fa-solid fa-phone font-medium-3"></i>
+                                                </div>
+                                            </div>
+                                            <div class="content-body">
+                                                <h6 class="mb-0">80901001</h6>
+                                                <small>camila@ejemplo.com</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-12 design-group mb-1">
+                                    <h6 class="text-capitalize fw-normal">
+                                        <i class="fa-solid fa-user-group font-small-2 text-primary"></i>
+                                        Grupo(s)
+                                    </h6>
+                                    <span class="badge badge-light-secondary">Tarifa Basica</span>
+                                    <span class="badge badge-light-secondary">Fisioterapia... +3</span>
+                                </div>
+                                
+                                <div class="demo-spacing-0 mb-1">
+                                    <div class="alert alert-success" role="alert" data-bs-toggle="tooltip" data-popup="tooltip-custom" title="Historia Clínica">
+                                        <div class="alert-body d-flex align-items-center">
+                                            <i class="fa-solid fa-clipboard me-50"></i>
+                                            <span> No presenta ninguna complicación médica</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <div class="card card-apply-job card-transaction">
+                            <div class="card-header pb-1">
+                                <h4 class="card-title">Membresía</h4>
+                                <div class="font-small-2">
+                                    <span>Fecha de ingreso:</span>
+                                    <span class="text-success me-25">06 Jun, 22</span>
+                                </div>
+                            </div>
+                            <div class="card-body">
+
+                                <div class="apply-job-package bg-light-primary rounded">
+                                    <div>
+                                        <sup class="text-body"><small>$</small></sup>
+                                        <h2 class="d-inline me-25">30,000</h2>
+                                        <sub class="text-body"><small>/ mensual</small></sub>
+                                    </div>
+                                    <span class="badge rounded-pill badge-light-primary">En 5 días</span>
+                                </div>
+
+                                <div class="row mb-1">
+                                    <div class="col-6">
+                                        <p class="font-small-2 mb-25">Días de Gracia</p>
+                                        <h2>0 días</h2>
+                                    </div>
+                                    <div class="col-6">
+                                        <p class="font-small-2 mb-25">Clases por Semana</p>
+                                        <h2>6 clases</h2>
+                                    </div>
+                                </div>
+
+                                <div class="transaction-item">
+                                    <div class="d-flex flex-row">
+                                        <div class="avatar bg-light-primary rounded">
+                                            <div class="avatar-content">
+                                                <i data-feather="link" class="avatar-icon font-medium-3"></i>
+                                            </div>
+                                        </div>
+                                        <div class="transaction-info">
+                                            <h6 class="transaction-title">Link de pago</h6>
+                                            <a href="#" class="font-small-2">https://cuanto.app/olympiac/p/1d5677</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="d-grid">
+                                    <button type="button" class="btn btn-primary">Facturar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                
+                <section class="app-user-view-account">
+                    <div class="row">
+                        <!-- User Content -->
+                        <div class="col-12 " id="list-tab" role="tablist">
+                            <!-- User Pills -->
+                            <ul class="nav nav-pills mb-2">
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="list-home-list" data-bs-toggle="list" href="#cuenta" role="tab" aria-controls="cuenta">
+                                        <i data-feather="user" class="font-medium-3 me-50"></i>
+                                        <span class="fw-bold">Cuenta</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="list-profile-list" data-bs-toggle="list" href="#billing" role="tab" aria-controls="billing">
+                                        <i data-feather="bookmark" class="font-medium-3 me-50"></i>
+                                        <span class="fw-bold">Planes</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="list-profile-list" data-bs-toggle="list" href="#seguridad" role="tab" aria-controls="seguridad">
+                                        <i data-feather="lock" class="font-medium-3 me-50"></i>
+                                        <span class="fw-bold">Plan de entrenamiento</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="list-profile-list" data-bs-toggle="list" href="#medidas" role="tab" aria-controls="medidas">
+                                        <i data-feather="edit-2" class="font-medium-3 me-50"></i><span class="fw-bold">Medidas</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="list-profile-list" data-bs-toggle="list" href="#nutricion" role="tab" aria-controls="nutricion">
+                                        <i data-feather="link" class="font-medium-3 me-50"></i><span class="fw-bold">Nutricion</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <!--/ User Pills -->
+
+                            <div class="tab-content" id="nav-tabContent">
+                                
+                                <!-- Cuenta -->
+                                <div class="card tab-pane fade show active" id="cuenta" role="tabpanel" aria-labelledby="list-home-list">
+                                    
+                                    <div class="card-header">
+                                        <h4 class="card-title">Cronología de la actividad del usuario</h4>
+                                    </div>
+    
+                                    <div class="card">
+                                        <h4 class="card-header">Cronología de la actividad del usuario</h4>
+                                    </div>   
+                                    
+                                </div>
+                                <!-- /Cuenta -->
+
+                                <!-- Seguridad -->
+                                <div class="card tab-pane fade show"  id="seguridad" role="tabpanel" aria-labelledby="list-home-list">
+                                
+
+                                <!-- recent device 
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h4 class="card-title">Dispositivos recientes</h4>
+                                    </div>
+                                    <div class="table-responsive">
+                                        <table class="table text-nowrap text-center">
+                                            <thead>
+                                                <tr>
+                                                    <th class="text-start">NAVEGADOR</th>
+                                                    <th>DISPOSITIVO</th>
+                                                    <th>UBICACIÓN</th>
+                                                    <th>ACTIVIDAD RECIENTE</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="text-start">
+                                                        <div class="avatar me-25">
+                                                            <img src="app-assets/images/icons/google-chrome.png" alt="avatar" width="20" height="20" />
+                                                        </div>
+                                                        <span class="fw-bolder">Chrome on Windows</span>
+                                                    </td>
+                                                    <td>Dell XPS 15</td>
+                                                    <td>United States</td>
+                                                    <td>10, Jan 2021 20:07</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-start">
+                                                        <div class="avatar me-25">
+                                                            <img src="app-assets/images/icons/google-chrome.png" alt="avatar" width="20" height="20" />
+                                                        </div>
+                                                        <span class="fw-bolder">Chrome on Android</span>
+                                                    </td>
+                                                    <td>Google Pixel 3a</td>
+                                                    <td>Ghana</td>
+                                                    <td>11, Jan 2021 10:16</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-start">
+                                                        <div class="avatar me-25">
+                                                            <img src="app-assets/images/icons/google-chrome.png" alt="avatar" width="20" height="20" />
+                                                        </div>
+                                                        <span class="fw-bolder">Chrome on MacOS</span>
+                                                    </td>
+                                                    <td>Apple iMac</td>
+                                                    <td>Mayotte</td>
+                                                    <td>11, Jan 2021 12:10</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-start">
+                                                        <div class="avatar me-25">
+                                                            <img src="app-assets/images/icons/google-chrome.png" alt="avatar" width="20" height="20" />
+                                                        </div>
+                                                        <span class="fw-bolder">Chrome on iPhone</span>
+                                                    </td>
+                                                    <td>Apple iPhone XR</td>
+                                                    <td>Mauritania</td>
+                                                    <td>12, Jan 2021 8:29</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                < recent device -->
+                                </div>
+                                <!-- /Seguridad -->
+
+                                <!-- Billing -->
+                                <div class="card tab-pane fade show" id="billing" role="tabpanel" aria-labelledby="list-home-list">
+                                
+                                    <!-- current plan -->
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h4 class="card-title">Fecha de Ingreso</h4>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="mb-2 pb-50">
+                                                        <h5>Su plan actual es  <strong>Basico</strong></h5>
+                                                        <span>Un comienzo simple para todos.</span>
+                                                    </div>
+                                                    <div class="mb-2 pb-50">
+                                                        <h5>Activo hasta el 09 de diciembre 2021</h5>
+                                                        <span>Le enviaremos una notificación al vencimiento de la Suscripción </span>
+                                                    </div>
+                                                    <div class="mb-2 mb-md-1">
+                                                        <h5>$99 por mes <span class="badge badge-light-primary ms-50">Popular</span></h5>
+                                                        <span>Plan estándar para pequeñas y medianas empresas </span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="alert alert-warning mb-2" role="alert">
+                                                        <h6 class="alert-heading">¡Necesitamos su atención! </h6>
+                                                        <div class="alert-body fw-normal">su plan requiere actualización </div>
+                                                    </div>
+                                                    <div class="plan-statistics pt-1">
+                                                        <div class="d-flex justify-content-between">
+                                                            <h5 class="fw-bolder">Dias</h5>
+                                                            <h5 class="fw-bolder">4 de 30 Dias</h5>
+                                                        </div>
+                                                        <div class="progress">
+                                                            <div class="progress-bar w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        </div>
+                                                        <p class="mt-50">4 días restantes hasta que su plan requiera actualización</p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <button class="btn btn-primary me-1 mt-1" data-bs-toggle="modal" data-bs-target="#upgradePlanModal">
+                                                        Plan de actualización 
+                                                    </button>
+                                                    <button class="btn btn-outline-danger cancel-subscription mt-1">Cancelar suscripción</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- / current plan -->
+
+                                </div>
+                                <!-- /Billing -->
+                            
+                                <!-- Medidas -->
+                                <div class="card tab-pane fade show" id="medidas" role="tabpanel" aria-labelledby="list-home-list">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h4 class="card-title mb-50">Medidas</h4>
+                                            <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#addNewCard">
+                                                <i data-feather="plus"></i>
+                                                <span>Agregar Medidas </span>
+                                            </button>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="added-cards">
+                                                
+                                                <div class="table-responsive">
+                                                    <table class="table table-striped">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>Altura</th>
+                                                                <th>Peso</th>
+                                                                <th>Edad Metabolica</th>
+                                                                <th>Indice de Masa Corporal</th>
+                                                                <th>% Grasa Visceral</th>
+                                                                <th>% Agua</th>
+                                                                <th>Masa Ósea</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>1</td>
+                                                                <td>1 Kilos</td>
+                                                                <td>1</td>
+                                                                <td>1</td>
+                                                                <td>1</td>
+                                                                <td>1</td>
+                                                                <td>1</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>1</td>
+                                                                <td>1 Kilos</td>
+                                                                <td>1</td>
+                                                                <td>1</td>
+                                                                <td>1</td>
+                                                                <td>1</td>
+                                                                <td>1</td>
+                                                            </tr>
+                                                    </table>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /Medidas -->
+
+                                <!-- Nutricion -->
+                                <div class="card tab-pane fade show" id="medidas" role="tabpanel" aria-labelledby="list-home-list">
+                                    
+                                </div>
+                                <!-- /Nutricion -->
+                            
+                            </div>
+
+                            <!-- /Invoice table -->
+                        </div>
+                        <!--/ User Content -->
+                    </div>
+                </section>
+                
+                <!-- edit card modal  -->
+                <div class="modal fade" id="editCard" tabindex="-1" aria-labelledby="editCardTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header bg-transparent">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body px-sm-5 mx-50 pb-5">
+                                <h1 class="text-center mb-1" id="editCardTitle">Edit Card</h1>
+                                <p class="text-center">Edit your saved card details</p>
+
+                                <!-- form -->
+                                <form id="editCardValidation" class="row gy-1 gx-2 mt-75" onsubmit="return false">
+                                    <div class="col-12">
+                                        <label class="form-label" for="modalEditCardNumber">Card Number</label>
+                                        <div class="input-group input-group-merge">
+                                            <input id="modalEditCardNumber" name="modalEditCard" class="form-control credit-card-mask" type="text" placeholder="1356 3215 6548 7898" value="5637 8172 1290 7898" aria-describedby="modalEditCard2" data-msg="Please enter your credit card number" />
+                                            <span class="input-group-text cursor-pointer p-25" id="modalEditCard2">
+                                                <span class="edit-card-type"></span>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <label class="form-label" for="modalEditCardName">Name On Card</label>
+                                        <input type="text" id="modalEditCardName" class="form-control" placeholder="John Doe" />
+                                    </div>
+
+                                    <div class="col-6 col-md-3">
+                                        <label class="form-label" for="modalEditCardExpiryDate">Exp. Date</label>
+                                        <input type="text" id="modalEditCardExpiryDate" class="form-control expiry-date-mask" placeholder="MM/YY" />
+                                    </div>
+
+                                    <div class="col-6 col-md-3">
+                                        <label class="form-label" for="modalEditCardCvv">CVV</label>
+                                        <input type="text" id="modalEditCardCvv" class="form-control cvv-code-mask" maxlength="3" placeholder="654" />
+                                    </div>
+
+                                    <div class="col-12">
+                                        <div class="d-flex align-items-center">
+                                            <div class="form-check form-switch form-check-primary me-25">
+                                                <input type="checkbox" class="form-check-input" id="editSaveCard" checked />
+                                                <label class="form-check-label" for="editSaveCard">
+                                                    <span class="switch-icon-left"><i data-feather="check"></i></span>
+                                                    <span class="switch-icon-right"><i data-feather="x"></i></span>
+                                                </label>
+                                            </div>
+                                            <label class="form-check-label fw-bolder" for="editSaveCard">Save Card for future billing?</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 text-center">
+                                        <button type="submit" class="btn btn-primary me-1 mt-1">Submit</button>
+                                        <button type="reset" class="btn btn-outline-secondary mt-1" data-bs-dismiss="modal" aria-label="Close">
+                                            Cancel
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--/ edit card modal  -->
+                <!-- Edit User Modal -->
+                <div class="modal fade" id="editUser" tabindex="-1" aria-hidden="true">
+                    <div class="modal-dialog modal-lg modal-dialog-centered modal-edit-user">
+                        <div class="modal-content">
+                            <div class="modal-header bg-transparent">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body pb-5 px-sm-5 pt-50">
+                                <div class="text-center mb-2">
+                                    <h1 class="mb-1">Editar información de usuario</h1>
+                                    <p>La actualización de los detalles del usuario recibirá una auditoría de privacidad. </p>
+                                </div>
+                                <form id="editUserForm" class="row gy-1 pt-75" onsubmit="return false">
+                                    <div class="col-12 col-md-6">
+                                        <label class="form-label" for="modalEditUserFirstName">Primer nombre</label>
+                                        <input type="text" id="modalEditUserFirstName" name="modalEditUserFirstName" class="form-control" placeholder="John" value="Gertrude" data-msg="Please enter your first name" />
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <label class="form-label" for="modalEditUserLastName">Apellido</label>
+                                        <input type="text" id="modalEditUserLastName" name="modalEditUserLastName" class="form-control" placeholder="Doe" value="Barton" data-msg="Please enter your last name" />
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="form-label" for="modalEditUserName">Username</label>
+                                        <input type="text" id="modalEditUserName" name="modalEditUserName" class="form-control" value="gertrude.dev" placeholder="john.doe.007" />
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <label class="form-label" for="modalEditUserEmail">Correo Electrónico de Facturas :</label>
+                                        <input type="text" id="modalEditUserEmail" name="modalEditUserEmail" class="form-control" value="gertrude@gmail.com" placeholder="example@domain.com" />
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <label class="form-label" for="modalEditUserStatus">Status</label>
+                                        <select id="modalEditUserStatus" name="modalEditUserStatus" class="form-select" aria-label="Default select example">
+                                            <option selected>Status</option>
+                                            <option value="1">Active</option>
+                                            <option value="2">Inactive</option>
+                                            <option value="3">Suspended</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <label class="form-label" for="modalEditTaxID">Tax ID</label>
+                                        <input type="text" id="modalEditTaxID" name="modalEditTaxID" class="form-control modal-edit-tax-id" placeholder="Tax-8894" value="Tax-8894" />
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <label class="form-label" for="modalEditUserPhone">Contacto </label>
+                                        <input type="text" id="modalEditUserPhone" name="modalEditUserPhone" class="form-control phone-number-mask" placeholder="+1 (609) 933-44-22" value="+1 (609) 933-44-22" />
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <label class="form-label" for="modalEditUserLanguage">Language</label>
+                                        <select id="modalEditUserLanguage" name="modalEditUserLanguage" class="select2 form-select" multiple>
+                                            <option value="english">English</option>
+                                            <option value="spanish">Spanish</option>
+                                            <option value="french">French</option>
+                                            <option value="german">German</option>
+                                            <option value="dutch">Dutch</option>
+                                            <option value="hebrew">Hebrew</option>
+                                            <option value="sanskrit">Sanskrit</option>
+                                            <option value="hindi">Hindi</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <label class="form-label" for="modalEditUserCountry">País </label>
+                                        <select id="modalEditUserCountry" name="modalEditUserCountry" class="select2 form-select">
+                                            <option value="">Select Value</option>
+                                            <option value="Australia">Australia</option>
+                                            <option value="Bangladesh">Bangladesh</option>
+                                            <option value="Belarus">Belarus</option>
+                                            <option value="Brazil">Brazil</option>
+                                            <option value="Canada">Canada</option>
+                                            <option value="China">China</option>
+                                            <option value="France">France</option>
+                                            <option value="Germany">Germany</option>
+                                            <option value="India">India</option>
+                                            <option value="Indonesia">Indonesia</option>
+                                            <option value="Israel">Israel</option>
+                                            <option value="Italy">Italy</option>
+                                            <option value="Japan">Japan</option>
+                                            <option value="Korea">Korea, Republic of</option>
+                                            <option value="Mexico">Mexico</option>
+                                            <option value="Philippines">Philippines</option>
+                                            <option value="Russia">Russian Federation</option>
+                                            <option value="South Africa">South Africa</option>
+                                            <option value="Thailand">Thailand</option>
+                                            <option value="Turkey">Turkey</option>
+                                            <option value="Ukraine">Ukraine</option>
+                                            <option value="United Arab Emirates">United Arab Emirates</option>
+                                            <option value="United Kingdom">United Kingdom</option>
+                                            <option value="United States">United States</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="d-flex align-items-center mt-1">
+                                            <div class="form-check form-switch form-check-primary">
+                                                <input type="checkbox" class="form-check-input" id="customSwitch10" checked />
+                                                <label class="form-check-label" for="customSwitch10">
+                                                    <span class="switch-icon-left"><i data-feather="check"></i></span>
+                                                    <span class="switch-icon-right"><i data-feather="x"></i></span>
+                                                </label>
+                                            </div>
+                                            <label class="form-check-label fw-bolder" for="customSwitch10">Utilizar como dirección de facturación ?</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 text-center mt-2 pt-50">
+                                        <button type="submit" class="btn btn-primary me-1">Enviar</button>
+                                        <button type="reset" class="btn btn-outline-secondary" data-bs-dismiss="modal" aria-label="Close">
+                                            Salir
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--/ Edit User Modal -->
+                <!-- QR -->
+                <div class="modal fade" id="mostrarqr" tabindex="-1" aria-hidden="true">
+                    <div class="modal-dialog modal-lg modal-dialog-centered modal-edit-user">
+                        <div class="modal-content">
+                            <div class="modal-header bg-transparent">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body pb-5 px-sm-5 pt-50">
+                                <div class="text-center mb-2">
+                                    <h1 class="mb-1">Escanea este código:</h1>
+                                    <img src="data:image/png;base64,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">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--/ Edit User Modal -->
+                <!-- upgrade your plan Modal -->
+                <div class="modal fade" id="upgradePlanModal" tabindex="-1" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-upgrade-plan">
+                        <div class="modal-content">
+                            <div class="modal-header bg-transparent">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body px-5 pb-2">
+                                <div class="text-center mb-2">
+                                    <h1 class="mb-1">Plan de actualización </h1>
+                                    <p>Elige el mejor plan para el usuario.</p>
+                                </div>
+                                <form id="upgradePlanForm" class="row pt-50" onsubmit="return false">
+                                    <div class="col-sm-8">
+                                        <label class="form-label" for="choosePlan">Elija Plan </label>
+                                        <select id="choosePlan" name="choosePlan" class="form-select" aria-label="Choose Plan">
+                                            <option selected>Elija Plan </option>
+                                            <option value="standard">Standard - $99/month</option>
+                                            <option value="exclusive">Exclusive - $249/month</option>
+                                            <option value="Enterprise">Enterprise - $499/month</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-4 text-sm-end">
+                                        <button type="submit" class="btn btn-primary mt-2">Actualizar</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <hr />
+                            <div class="modal-body px-5 pb-3">
+                                <h6>El plan actual del usuario es un plan estándar</h6>
+                                <div class="d-flex justify-content-between align-items-center flex-wrap">
+                                    <div class="d-flex justify-content-center me-1 mb-1">
+                                        <sup class="h5 pricing-currency pt-1 text-primary">$</sup>
+                                        <h1 class="fw-bolder display-4 mb-0 text-primary me-25">99</h1>
+                                        <sub class="pricing-duration font-small-4 mt-auto mb-2">/Mensual</sub>
+                                    </div>
+                                    <button class="btn btn-outline-danger cancel-subscription mb-1">Cancelar suscripción</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--/ upgrade your plan Modal -->
+
+            </div>
+        </div>
+    </div>
+    <!-- END: Content-->
+    <!-- END: Content-->
+
+    <div class="sidenav-overlay"></div>
+    <div class="drag-target"></div>
+
+    <!-- BEGIN: Footer-->
+    <footer class="footer footer-static footer-light">
+        <p class="clearfix mb-0">
+            <span class="float-md-start d-block d-md-inline-block mt-25">
+                <a class="ms-25" href="https://www.olympiac.com/" target="_blank">Olympiac </a>
+                <span class="d-none d-sm-inline-block"> Todos los derechos reservados.</span>
+            </span>
+    </footer>
+    <button class="btn btn-primary btn-icon scroll-top" type="button"><i data-feather="arrow-up"></i></button>
+    <!-- END: Footer-->
+
+    <!-- BEGIN: Vendor JS-->
+    <script src="app-assets/vendors/js/vendors.min.js"></script>
+    <!-- BEGIN Vendor JS-->
+
+    <!-- BEGIN: Page Vendor JS-->
+    <script src="app-assets/vendors/js/forms/select/select2.full.min.js"></script>
+    <script src="app-assets/vendors/js/forms/cleave/cleave.min.js"></script>
+    <script src="app-assets/vendors/js/forms/cleave/addons/cleave-phone.us.js"></script>
+    <script src="app-assets/vendors/js/forms/validation/jquery.validate.min.js"></script>
+    <script src="app-assets/vendors/js/extensions/sweetalert2.all.min.js"></script>
+    <script src="app-assets/vendors/js/extensions/polyfill.min.js"></script>
+    <script src="app-assets/fontawesome/css/all.css"></script>
+    <!-- END: Page Vendor JS-->
+
+    <!-- BEGIN: Theme JS-->
+    <script src="app-assets/js/core/app-menu.js"></script>
+    <script src="app-assets/js/core/app.js"></script>
+    <!-- END: Theme JS-->
+
+    <!-- BEGIN: Page JS-->
+    <script src="app-assets/js/scripts/pages/modal-edit-user.js"></script>
+    <script src="app-assets/js/scripts/pages/modal-add-new-cc.js"></script>
+    <script src="app-assets/js/scripts/pages/modal-edit-cc.js"></script>
+    <script src="app-assets/js/scripts/pages/modal-add-new-address.js"></script>
+    <script src="app-assets/js/scripts/pages/app-user-view-billing.js"></script>
+    <script src="app-assets/js/scripts/pages/app-user-view.js"></script>
+    <script src="../../../app-assets/js/scripts/components/components-popovers.js"></script>
+    <!-- END: Page JS-->
+    
+    <script>
+        $(window).on('load', function() {
+            if (feather) {
+                feather.replace({
+                    width: 14,
+                    height: 14
+                });
+            }
+        })
+    </script>
+</body>
+<!-- END: Body-->
+
+</html>
