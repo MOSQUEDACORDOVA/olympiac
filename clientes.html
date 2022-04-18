@@ -280,27 +280,38 @@
         <div class="header-navbar-shadow"></div>
         <div class="content-wrapper container-xxl p-0">
             <!-- Header Sección -->
-            
-        <div class="row match-height">
+            <div class="row match-height">
     
-            <div class="col-lg-8 col-12 revenue-report-wrapper">
-                    <div class="d-sm-flex justify-content-between align-items-center mb-3">
-                        <h4 class="card-title mb-50 mb-sm-0">Reportes de Clientes Semanales</h4>
-                        <div class="d-flex align-items-center">
-                            <div class="d-flex align-items-center me-2">
-                                <span class="bullet bullet-success font-small-3 me-50 cursor-pointer"></span>
-                                <span>Habilitados</span>
-                            </div>
-                            <div class="d-flex align-items-center ms-75">
-                                <span class="bullet bullet-danger font-small-3 me-50 cursor-pointer"></span>
-                                <span>Deshabilitados</span>
+                <div class="col-lg-8 col-12">
+                    <div class="card card-statistics">
+                        <div class="card-header border-bottom">
+                            <h4 class="card-title">Clientes</h4>
+                        </div>
+                        <!-- Buscadores -->
+                        <div class="card-body" style="padding-bottom: 0px;">
+                            <div class="row align-items-center" style="padding-top: 10px;">
+                                <div class="col-md-8 mb-1">
+                                    <label class="form-label" for="fp-default">Buscador</label>
+                                    <input type="busqueda" class="form-control" placeholder="Buscar"
+                                        aria-controls="DataTables_Table_0">
+                                </div>
+                                <div class="col-md-4 mb-1 mb-md-0">
+                                    <div class="dt-buttons d-flex align-items-center"> 
+                                        <a href="agregar_client.html">
+                                        <button class="dt-button create-new btn btn-primary" tabindex="0" aria-controls="DataTables_Table_0" type="button"
+                                            data-bs-toggle="modal" data-bs-target="#modals-slide-in"><span>
+                                                <i data-feather='plus'></i>
+                                                Agregar Cliente</span></button></a>
+                                            
+                                        <div class="invoice_status ms-sm-2">
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div id="Accesos-report"></div>
-                
-            </div>
-            <!-- Revenue Card -->
+                </div>
+                <!-- Revenue Card -->
     
                 <!-- Habilitados -->
                 <div class="col-xl-2 col-md-4 col-sm-6">
@@ -330,7 +341,7 @@
                         </div>
                     </div>
                 </div>
-        </div>
+            </div>
     
             <!-- Tabla -->
     
@@ -573,7 +584,6 @@
     <!-- BEGIN: Theme JS-->
     <script src="app-assets/js/core/app-menu.js"></script>
     <script src="app-assets/js/core/app.js"></script>
-    <script src="app-assets/js/scripts/pages/dashboard-ecommerce.js"></script>
     <!-- END: Theme JS-->
     <script>
         $(window).on('load', function() {

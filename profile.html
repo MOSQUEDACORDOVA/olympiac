@@ -16,11 +16,17 @@
 
     <!-- BEGIN: Vendor CSS-->
     <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/vendors.min.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/calendars/fullcalendar.min.css">
     <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/forms/select/select2.min.css">
     <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/animate/animate.min.css">
     <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/extensions/sweetalert2.min.css">
     <link rel="stylesheet" type="text/css" href="app-assets/fontawesome/css/all.css">
-    
+    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/pickers/pickadate/pickadate.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/pickers/flatpickr/flatpickr.min.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/extensions/dragula.min.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/editors/quill/katex.min.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/editors/quill/monokai-sublime.min.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/editors/quill/quill.snow.css">
     <!-- END: Vendor CSS-->
 
     <!-- BEGIN: Theme CSS-->
@@ -36,11 +42,30 @@
     <link rel="stylesheet" type="text/css" href="app-assets/css/core/menu/menu-types/vertical-menu.css">
     <link rel="stylesheet" type="text/css" href="app-assets/css/plugins/forms/form-validation.css">
     <link rel="stylesheet" type="text/css" href="app-assets/css/plugins/extensions/ext-component-sweet-alerts.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css/plugins/forms/pickers/form-flat-pickr.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css/pages/app-calendar.min.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css/plugins/forms/pickers/form-pickadate.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css/plugins/extensions/ext-component-drag-drop.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css/plugins/forms/form-quill-editor.css">
     <!-- END: Page CSS-->
 
         <!-- BEGIN: Custom CSS-->
         <link rel="stylesheet" type="text/css" href="assets/css/style.css">
         <!-- END: Custom CSS-->
+    <style>
+        .fc-view-harness {
+            height: 100%!important;
+        }
+        .fc-col-header , .fc-daygrid-body  {
+            width: 100%!important;
+            height: 100%!important;
+        }
+        .fc-scrollgrid-sync-table{
+            width: 100%!important;
+            height: 100%!important;
+        }
+
+    </style>
 
 </head>
 <!-- END: Head-->
@@ -180,7 +205,6 @@
     </nav>
     <!-- END: Header-->
 
-
     <!-- BEGIN: Main Menu-->
     <div class="main-menu menu-fixed menu-light menu-accordion menu-shadow" data-scroll-to-active="true">
         <div class="navbar-header">
@@ -279,540 +303,1126 @@
             <div class="content-header row">
             </div>
             <div class="content-body">
-                <section class="app-user-view-account">
-                    <div class="row">
-                        <!-- User Sidebar -->
-                        <div class="col-xl-4 col-lg-5 col-md-5 order-1 order-md-0">
-                            <!-- User Card -->
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="user-avatar-section">
-                                        <div class="d-flex align-items-center flex-column">
-                                            <img class="img-fluid rounded mt-3 mb-2" src="app-assets/images/portrait/small/avatar-s-2.jpg" height="110" width="110" alt="User avatar" />
-                                            <div class="user-info text-center">
-                                                <h4>Gertrude Barton</h4>
-                                                <span class="badge bg-light-secondary">Author</span>
+                
+                <div class="row match-height">
+
+                    <div class="col-md-8 col-12">
+                        <div class="card card-developer-meetup">
+
+                            <div class="card-header pb-2 align-items-start">
+                                <div class="col-4 d-flex justify-content-between align-items-center">
+                                    <div class="d-flex flex-row align-items-center">
+                                        <div class="avatar me-1">
+                                            <img src="app-assets/images/portrait/small/avatar-s-20.jpg" alt="Avatar" width="72" height="72" />
+                                        </div>
+                                        <div>
+                                            <h3 class="mb-0 ">Mittie Evans</h3>
+                                            <small class="text-muted">Cliente</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="heading-elements">
+                                    <ul class="list-inline mb-0">
+                                        <li class="btn-group dropstart" data-bs-toggle="tooltip" data-popup="tooltip-custom" title="Código QR">
+                                            <a class="text-secondary" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <i class="fa-qrcode fa-solid "></i>
+                                            </a>
+                                            <div class="dropdown-menu p-50">
+                                                <img src="app-assets/images/qr_example.png" class="rounded" width="100%" height="auto" alt="Avatar" />
+                                            </div>
+                                        </li>
+                                        <li data-bs-toggle="tooltip" data-popup="tooltip-custom" title="Editar Perfil">
+                                            <a href="#" class="text-secondary">
+                                                <i class="fa-solid fa-user-pen"></i>
+                                            </a>
+                                        </li>
+                                        <li data-bs-toggle="tooltip" data-popup="tooltip-custom" title="Enviar Correo">
+                                            <a href="#" class="text-secondary">
+                                                <i class="fa-solid fa-envelope"></i>
+                                            </a>
+                                        </li>
+                                        <li data-bs-toggle="tooltip" data-popup="tooltip-custom" title="Deshabilitar Perfil">
+                                            <a href="#" class="text-secondary">
+                                                <i class="fa-solid fa-ban"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="row mb-1">
+                                    <div class="col-4">
+                                        <div class="d-flex flex-row meetings">
+                                            <div class="avatar bg-light-primary rounded me-1 align-items-center" data-bs-toggle="tooltip" data-popup="tooltip-custom" title="Cédula y Tipo de Cédula">
+                                                <div class="avatar-content">
+                                                    <i class="fa-regular fa-id-card font-medium-3"></i>
+                                                </div>
+                                            </div>
+                                            <div class="content-body">
+                                                <h6 class="mb-0" data-bs-toggle="tooltip" data-popup="tooltip-custom" title="Cédula">co29283992250</h6>
+                                                <small data-bs-toggle="tooltip" data-popup="tooltip-custom" title="Tipo de Cédula">Física</small>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="d-flex justify-content-around my-2 pt-75">
-                                        <div class="d-flex align-items-start me-2">
-                                                <a href="javascript:;" data-bs-target="#mostrarqr" data-bs-toggle="modal" class=" me-1badge bg-light-primary p-75 rounded"> <i class="fa-solid fa-qrcode font-medium-2"></i></a>
+                                    <div class="col-2">
+                                        <div class="mb-0">Edad</div>
+                                        <h5 class="mb-0">29 Años</h5>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="mb-0">Sexo</div>
+                                        <h5 class="mb-0">Femenino</h5>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="d-flex flex-row meetings ">
+                                            <div class="avatar bg-light-primary rounded me-1 align-items-center">
+                                                <div class="avatar-content">
+                                                    <i class="fa-solid fa-phone font-medium-3"></i>
+                                                </div>
+                                            </div>
+                                            <div class="content-body">
+                                                <h6 class="mb-0">80901001</h6>
+                                                <small>camila@ejemplo.com</small>
+                                            </div>
                                         </div>
                                     </div>
-                                    <h4 class="fw-bolder border-bottom pb-50 mb-1">Detalles</h4>
-                                    <div class="info-container">
-                                        <ul class="list-unstyled">
-                                            <li class="mb-75">
-                                                <span class="fw-bolder me-25">Cédula:</span>
-                                                <span>123456789</span>
-                                            </li>
-                                            <li class="mb-75">
-                                                <span class="fw-bolder me-25">Fecha de nacimiento:</span>
-                                                <span>06-04-1998</span>
-                                            </li>
-                                            <li class="mb-75">
-                                                <span class="fw-bolder me-25">Sexo:</span>
-                                                <span>Mujer</span>
-                                            </li>
-                                            <li class="mb-75">
-                                                <span class="fw-bolder me-25">Correo:</span>
-                                                <span>vafgot@vultukir.org</span>
-                                            </li>
-                                            <li class="mb-75">
-                                                <span class="fw-bolder me-25">Estado:</span>
-                                                <span class="badge bg-light-success">Activo</span>
-                                            </li>
-                                            <li class="mb-75">
-                                                <span class="fw-bolder me-25">Rol:</span>
-                                                <span>Gimnasio</span>
-                                            </li>
-                                            <li class="mb-75">
-                                                <span class="fw-bolder me-25">ID User:</span>
-                                                <span>8965</span>
-                                            </li>
-                                            <li class="mb-75">
-                                                <span class="fw-bolder me-25">Numero:</span>
-                                                <span>+1 (609) 933-44-22</span>
-                                            </li>
-                                            <li class="mb-75">
-                                                <span class="fw-bolder me-25">Lenguaje:</span>
-                                                <span>Español</span>
-                                            </li>
-                                            <li class="mb-75">
-                                                <span class="fw-bolder me-25">Pais:</span>
-                                                <span>Peru</span>
-                                            </li>
-                                        </ul>
-                                        <div class="d-flex justify-content-center pt-2">
-                                            <a href="javascript:;" class="btn btn-primary me-1" data-bs-target="#editUser" data-bs-toggle="modal">
-                                                Editar
-                                            </a>
-                                            <a href="javascript:;" class="btn btn-outline-danger suspend-user">Suspender</a>
+                                </div>
+                                
+                                <div class="col-12 design-group mb-1">
+                                    <h6 class="text-capitalize fw-normal">
+                                        <i class="fa-solid fa-user-group font-small-2 text-primary"></i>
+                                        Grupo(s)
+                                    </h6>
+                                    <span class="badge badge-light-secondary">Tarifa Basica</span>
+                                    <span class="badge badge-light-secondary">Fisioterapia... +3</span>
+                                </div>
+                                
+                                <div class="demo-spacing-0 mb-1">
+                                    <div class="alert alert-success" role="alert" data-bs-toggle="tooltip" data-popup="tooltip-custom" title="Historia Clínica">
+                                        <div class="alert-body d-flex align-items-center">
+                                            <i class="fa-solid fa-clipboard me-50"></i>
+                                            <span> No presenta ninguna complicación médica</span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <!-- /User Card -->
                         </div>
-                        <!--/ User Sidebar -->
+                    </div>
 
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <div class="card card-apply-job card-transaction">
+                            <div class="card-header pb-1">
+                                <h4 class="card-title">Membresía</h4>
+                                <div class="font-small-2">
+                                    <span>Fecha de ingreso:</span>
+                                    <span class="text-success me-25">06 Jun, 22</span>
+                                </div>
+                            </div>
+                            <div class="card-body">
+
+                                <div class="apply-job-package bg-light-primary rounded">
+                                    <div>
+                                        <sup class="text-body"><small>$</small></sup>
+                                        <h2 class="d-inline me-25">30,000</h2>
+                                        <sub class="text-body"><small>/ mensual</small></sub>
+                                    </div>
+                                    <span class="badge rounded-pill badge-light-primary">En 5 días</span>
+                                </div>
+
+                                <div class="row mb-1">
+                                    <div class="col-6">
+                                        <p class="font-small-2 mb-25">Días de Gracia</p>
+                                        <h2>0 días</h2>
+                                    </div>
+                                    <div class="col-6">
+                                        <p class="font-small-2 mb-25">Clases por Semana</p>
+                                        <h2>6 clases</h2>
+                                    </div>
+                                </div>
+
+                                <div class="transaction-item">
+                                    <div class="d-flex flex-row">
+                                        <div class="avatar bg-light-primary rounded">
+                                            <div class="avatar-content">
+                                                <i data-feather="link" class="avatar-icon font-medium-3"></i>
+                                            </div>
+                                        </div>
+                                        <div class="transaction-info">
+                                            <h6 class="transaction-title">Link de pago</h6>
+                                            <a href="#" class="font-small-2">https://cuanto.app/olympiac/p/1d5677</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="d-grid">
+                                    <button type="button" class="btn btn-primary">Facturar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <section class="app-user-view-account">
+                    <div class="row">
                         <!-- User Content -->
-                        <div class="col-xl-8 col-lg-7 col-md-7 order-0 order-md-1" id="list-tab" role="tablist">
+                        <div class="col-12 " id="list-tab" role="tablist">
                             <!-- User Pills -->
                             <ul class="nav nav-pills mb-2">
                                 <li class="nav-item">
                                     <a class="nav-link active" id="list-home-list" data-bs-toggle="list" href="#cuenta" role="tab" aria-controls="cuenta">
-                                        <i data-feather="user" class="font-medium-3 me-50"></i>
+                                        <i class="fa-solid fa-user font-medium-3 me-50"></i>
                                         <span class="fw-bold">Cuenta</span></a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" id="list-profile-list" data-bs-toggle="list" href="#billing" role="tab" aria-controls="billing">
-                                        <i data-feather="bookmark" class="font-medium-3 me-50"></i>
+                                        <i class="fa-solid fa-file-lines font-medium-3 me-50"></i>
                                         <span class="fw-bold">Planes</span>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" id="list-profile-list" data-bs-toggle="list" href="#seguridad" role="tab" aria-controls="seguridad">
-                                        <i data-feather="lock" class="font-medium-3 me-50"></i>
+                                    <a class="nav-link" id="list-profile-list" data-bs-toggle="list" href="#calendario" role="tab" aria-controls="calendario">
+                                        <i class="fa-solid fa-calendar font-medium-3 me-50"></i>
                                         <span class="fw-bold">Plan de entrenamiento</span>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" id="list-profile-list" data-bs-toggle="list" href="#medidas" role="tab" aria-controls="medidas">
-                                        <i data-feather="edit-2" class="font-medium-3 me-50"></i><span class="fw-bold">Medidas</span>
+                                        <i class="fa-solid fa-pencil font-medium-3 me-50"></i>
+                                        <span class="fw-bold">Medidas</span>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" id="list-profile-list" data-bs-toggle="list" href="#nutricion" role="tab" aria-controls="nutricion">
-                                        <i data-feather="link" class="font-medium-3 me-50"></i><span class="fw-bold">Nutricion</span>
+                                        <i class="fa-solid fa-apple-whole font-medium-3 me-50"></i>
+                                        <span class="fw-bold">Nutricion</span>
                                     </a>
                                 </li>
                             </ul>
                             <!--/ User Pills -->
 
-
-                            <div class="tab-content" id="nav-tabContent">
-                                
-                            <!-- Cuenta -->
-                            <div class="card tab-pane fade show active" id="cuenta" role="tabpanel" aria-labelledby="list-home-list">
-                                
-                            <div class="card">
-                                <h4 class="card-header">Cronología de la actividad del usuario</h4>
-                                <div class="card-body pt-1">
-                                    <ul class="timeline ms-50">
-                                        <li class="timeline-item">
-                                            <span class="timeline-point timeline-point-indicator"></span>
-                                            <div class="timeline-event">
-                                                <div class="d-flex justify-content-between flex-sm-row flex-column mb-sm-0 mb-1">
-                                                    <h6>Inicio de sesión de usuario</h6>
-                                                    <span class="timeline-event-time me-1">hace 12 minutos </span>
-                                                </div>
-                                                <p>Inicio de sesión de usuario a las 2:12 p. m. </p>
-                                            </div>
-                                        </li>
-                                        <li class="timeline-item">
-                                            <span class="timeline-point timeline-point-warning timeline-point-indicator"></span>
-                                            <div class="timeline-event">
-                                                <div class="d-flex justify-content-between flex-sm-row flex-column mb-sm-0 mb-1">
-                                                    <h6>Meeting with john</h6>
-                                                    <span class="timeline-event-time me-1">hace 45 minutos </span>
-                                                </div>
-                                                <p>Reunión del Proyecto React con John a las 10:15 a. m. </p>
-                                                <div class="d-flex flex-row align-items-center mb-50">
-                                                    <div class="avatar me-50">
-                                                        <img src="app-assets/images/portrait/small/avatar-s-7.jpg" alt="Avatar" width="38" height="38" />
-                                                    </div>
-                                                    <div class="user-info">
-                                                        <h6 class="mb-0">Leona Watkins (Client)</h6>
-                                                        <p class="mb-0">CEO of pixinvent</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="timeline-item">
-                                            <span class="timeline-point timeline-point-info timeline-point-indicator"></span>
-                                            <div class="timeline-event">
-                                                <div class="d-flex justify-content-between flex-sm-row flex-column mb-sm-0 mb-1">
-                                                    <h6>Create a new react project for client</h6>
-                                                    <span class="timeline-event-time me-1">Hace 2 días</span>
-                                                </div>
-                                                <p>Add files to new design folder</p>
-                                            </div>
-                                        </li>
-                                        <li class="timeline-item">
-                                            <span class="timeline-point timeline-point-danger timeline-point-indicator"></span>
-                                            <div class="timeline-event">
-                                                <div class="d-flex justify-content-between flex-sm-row flex-column mb-sm-0 mb-1">
-                                                    <h6>Crear facturas para el cliente</h6>
-                                                    <span class="timeline-event-time me-1">12 min ago</span>
-                                                </div>
-                                                <p class="mb-0">Crear nuevas facturas y enviarlas a Leona Watkins </p>
-                                                <div class="d-flex flex-row align-items-center mt-50">
-                                                    <img class="me-1" src="app-assets/images/icons/pdf.png" alt="data.json" height="25" />
-                                                    <h6 class="mb-0">Invoices.pdf</h6>
-                                                </div>
-                                            </div>
-                                        </li>
+        <!-- Tab Content -->
+        <div class="tab-content" id="nav-tabContent">
+            <!-- Cuenta -->
+            <div class=" row tab-pane fade show active" id="cuenta" role="tabpanel" aria-labelledby="list-home-list">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Cronología de la actividad del usuario</h4>
+                    </div>
+                    <div class="card-body">
+                        <ul class="timeline">
+                        <li class="timeline-item">
+                            <span class="timeline-point timeline-point-indicator"></span>
+                            <div class="timeline-event">
+                                <div class="d-flex justify-content-between flex-sm-row flex-column mb-sm-0 mb-1">
+                                    <h6>12 Invoices have been paid</h6>
+                                    <span class="timeline-event-time">12 min ago</span>
+                                </div>
+                                <p>Invoices have been paid to the company.</p>
+                                <div class="d-flex flex-row align-items-center">
+                                    <img class="me-1" src="app-assets/images/icons/file-icons/pdf.png" alt="invoice" height="23" />
+                                    <span>invoice.pdf</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-item">
+                            <span class="timeline-point timeline-point-secondary timeline-point-indicator"></span>
+                            <div class="timeline-event">
+                                <div class="d-flex justify-content-between flex-sm-row flex-column mb-sm-0 mb-1">
+                                    <h6>Client Meeting</h6>
+                                    <span class="timeline-event-time">45 min ago</span>
+                                </div>
+                                <p>Project meeting with john @10:15am.</p>
+                                <div class="d-flex flex-row align-items-center">
+                                    <div class="avatar">
+                                    <img src="app-assets/images/avatars/12-small.png" alt="avatar" height="38" width="38" />
+                                    </div>
+                                    <div class="ms-50">
+                                    <h6 class="mb-0">John Doe (Client)</h6>
+                                    <span>CEO of Infibeam</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-item">
+                            <span class="timeline-point timeline-point-success timeline-point-indicator"></span>
+                            <div class="timeline-event">
+                                <div class="d-flex justify-content-between flex-sm-row flex-column mb-sm-0 mb-1">
+                                    <h6>Financial Report</h6>
+                                    <span class="timeline-event-time">2 hours ago</span>
+                                </div>
+                                <p class="mb-50">Click the button below to read financial reports</p>
+                                <button class="btn btn-outline-primary btn-sm" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="true" aria-controls="collapseExample">
+                                Show Report
+                                </button>
+                                <div class="collapse" id="collapseExample">
+                                    <ul class="list-group list-group-flush mt-1">
+                                    <li class="list-group-item d-flex justify-content-between flex-wrap">
+                                        <span>Last Year's Profit : <span class="fw-bold">$20000</span></span>
+                                        <i data-feather="share-2" class="cursor-pointer font-medium-2"></i>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between flex-wrap">
+                                        <span> This Year's Profit : <span class="fw-bold">$25000</span></span>
+                                        <i data-feather="share-2" class="cursor-pointer font-medium-2"></i>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between flex-wrap">
+                                        <span> Last Year's Commission : <span class="fw-bold">$5000</span></span>
+                                        <i data-feather="share-2" class="cursor-pointer font-medium-2"></i>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between flex-wrap">
+                                        <span> This Year's Commission : <span class="fw-bold">$7000</span></span>
+                                        <i data-feather="share-2" class="cursor-pointer font-medium-2"></i>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between flex-wrap">
+                                        <span> This Year's Total Balance : <span class="fw-bold">$70000</span></span>
+                                        <i data-feather="share-2" class="cursor-pointer font-medium-2"></i>
+                                    </li>
                                     </ul>
                                 </div>
-                            </div>   
-                                
-                            <!-- Change Password -->
-                            <div class="card">
-                                <h4 class="card-header">Cambia la contraseña</h4>
-                                <div class="card-body">
-                                    <form id="formChangePassword" method="POST" onsubmit="return false">
-                                        <div class="alert alert-warning mb-2" role="alert">
-                                            <h6 class="alert-heading">Asegúrese de que se cumplan estos requisitos</h6>
-                                            <div class="alert-body fw-normal">Mínimo 8 caracteres de largo, mayúsculas y símbolos </div>
+                            </div>
+                        </li>
+                        <li class="timeline-item">
+                            <span class="timeline-point timeline-point-warning timeline-point-indicator"></span>
+                            <div class="timeline-event">
+                                <div class="d-flex justify-content-between flex-sm-row flex-column mb-sm-0 mb-1">
+                                    <h6 class="mb-50">Interview Schedule</h6>
+                                    <span class="timeline-event-time">03:00 PM</span>
+                                </div>
+                                <p>Have to interview Katy Turner for the developer job.</p>
+                                <hr />
+                                <div class="d-flex justify-content-between flex-sm-row flex-column mb-sm-0 mb-1">
+                                    <div class="d-flex flex-row align-items-center">
+                                    <div class="avatar me-1">
+                                        <img src="app-assets/images/avatars/1-small.png" alt="Avatar" height="32" width="32" />
+                                    </div>
+                                    <span>
+                                        <p class="mb-0">Katy Turner</p>
+                                        <span class="text-muted">Javascript Developer</span>
+                                    </span>
+                                    </div>
+                                    <div class="d-flex align-items-center cursor-pointer mt-sm-0 mt-50">
+                                    <i data-feather="message-square" class="me-1"></i>
+                                    <i data-feather="phone-call"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-item">
+                            <span class="timeline-point timeline-point-danger timeline-point-indicator"></span>
+                            <div class="timeline-event">
+                                <div class="d-flex justify-content-between flex-sm-row flex-column mb-sm-0 mb-1">
+                                    <h6>Online Store</h6>
+                                    <span class="timeline-event-time">03:00PM</span>
+                                </div>
+                                <p>
+                                    Develop an online store of electronic devices for the provided layout, as well as develop a mobile
+                                    version of it. The must be compatible with any CMS.
+                                </p>
+                                <div class="d-flex justify-content-between flex-wrap flex-sm-row flex-column">
+                                    <div>
+                                    <p class="text-muted mb-50">Developers</p>
+                                    <div class="d-flex align-items-center">
+                                        <div class="avatar bg-light-primary avatar-sm me-50">
+                                            <span class="avatar-content">A</span>
                                         </div>
-
+                                        <div class="avatar bg-light-success avatar-sm me-50">
+                                            <span class="avatar-content">B</span>
+                                        </div>
+                                        <div class="avatar bg-light-danger avatar-sm">
+                                            <span class="avatar-content">C</span>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    <div class="mt-sm-0 mt-1">
+                                    <p class="text-muted mb-50">Deadline</p>
+                                    <p class="mb-0">20 Dec 2077</p>
+                                    </div>
+                                    <div class="mt-sm-0 mt-1">
+                                    <p class="text-muted mb-50">Budget</p>
+                                    <p class="mb-0">$50000</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-item">
+                            <span class="timeline-point timeline-point-info timeline-point-indicator"></span>
+                            <div class="timeline-event">
+                                <div class="d-flex justify-content-between align-items-center mb-50">
+                                    <h6>Designing UI</h6>
+                                    <div>
+                                    <span class="badge rounded-pill badge-light-primary">Design</span>
+                                    </div>
+                                </div>
+                                <p>
+                                    Our main goal is to design a new mobile application for our client. The customer wants a clean & flat
+                                    design.
+                                </p>
+                                <div>
+                                    <span class="text-muted">Participants</span>
+                                    <div class="avatar-group mt-50">
+                                    <div data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="bottom" title="Vinnie Mostowy" class="avatar pull-up">
+                                        <img src="app-assets/images/portrait/small/avatar-s-5.jpg" alt="Avatar" height="30" width="30" />
+                                    </div>
+                                    <div data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="bottom" title="Elicia Rieske" class="avatar pull-up">
+                                        <img src="app-assets/images/portrait/small/avatar-s-7.jpg" alt="Avatar" height="30" width="30" />
+                                    </div>
+                                    <div data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="bottom" title="Julee Rossignol" class="avatar pull-up">
+                                        <img src="app-assets/images/portrait/small/avatar-s-10.jpg" alt="Avatar" height="30" width="30" />
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Change Password -->
+            <div class="col-12">
+                <div class="card">
+                    <h4 class="card-header">Cambia la contraseña</h4>
+                    <div class="card-body">
+                        <form id="formChangePassword" method="POST" onsubmit="return false">
+                        <div class="alert alert-warning mb-2" role="alert">
+                            <h6 class="alert-heading">Asegúrese de que se cumplan estos requisitos</h6>
+                            <div class="alert-body fw-normal">Mínimo 8 caracteres de largo, mayúsculas y símbolos </div>
+                        </div>
+                        <div class="row">
+                            <div class="mb-2 col-md-6 form-password-toggle">
+                                <label class="form-label" for="newPassword">Nueva contraseña</label>
+                                <div class="input-group input-group-merge form-password-toggle">
+                                    <input class="form-control" type="password" id="newPassword" name="newPassword" placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;" />
+                                    <span class="input-group-text cursor-pointer">
+                                    <i data-feather="eye"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="mb-2 col-md-6 form-password-toggle">
+                                <label class="form-label" for="confirmPassword">Confirmar nueva contraseña </label>
+                                <div class="input-group input-group-merge">
+                                    <input class="form-control" type="password" name="confirmPassword" id="confirmPassword" placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;" />
+                                    <span class="input-group-text cursor-pointer"><i data-feather="eye"></i></span>
+                                </div>
+                            </div>
+                            <div>
+                                <button type="submit" class="btn btn-primary me-2">Cambia la contraseña</button>
+                            </div>
+                        </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!--/ Change Password -->
+            </div>
+            <!-- /Cuenta -->
+            <!-- Calendario -->
+            <div class="row tab-pane show"   id="calendario" role="tabpanel" aria-labelledby="list-home-list">
+            <div class="col-12">
+                <div class="card">
+                    <!-- Full calendar start -->
+                    <div class="app-calendar mb-0 overflow-hidden ">
+                        <div class="row g-0">
+                        <!-- Sidebar -->
+                        <div class="col app-calendar-sidebar flex-grow-0 overflow-hidden d-flex flex-column" id="app-calendar-sidebar">
+                            <div class="sidebar-wrapper">
+                                <div class="card-body d-flex justify-content-center">
+                                    <button class="btn btn-primary btn-toggle-sidebar w-100" data-bs-toggle="modal" data-bs-target="#add-new-sidebar">
+                                    <span class="align-middle">Agregar Programa</span>
+                                    </button>
+                                </div>
+                                <div class="card-body pb-0">
+                                    <h5 class="section-label mb-1">
+                                    <span class="align-middle">Filtros</span>
+                                    </h5>
+                                    <div class="form-check mb-1">
+                                    <input type="checkbox" class="form-check-input select-all" id="select-all" checked />
+                                    <label class="form-check-label" for="select-all">Ver Todos</label>
+                                    </div>
+                                    <div class="calendar-events-filter">
+                                    <div class="form-check form-check-danger mb-1">
+                                        <input type="checkbox" class="form-check-input input-filter" id="personal" data-value="personal" checked />
+                                        <label class="form-check-label" for="personal">Biceps</label>
+                                    </div>
+                                    <div class="form-check form-check-primary mb-1">
+                                        <input type="checkbox" class="form-check-input input-filter" id="business" data-value="business" checked />
+                                        <label class="form-check-label" for="business">Cardio</label>
+                                    </div>
+                                    <div class="form-check form-check-warning mb-1">
+                                        <input type="checkbox" class="form-check-input input-filter" id="family" data-value="family" checked />
+                                        <label class="form-check-label" for="family">Espalda</label>
+                                    </div>
+                                    <div class="form-check form-check-success mb-1">
+                                        <input type="checkbox" class="form-check-input input-filter" id="holiday" data-value="holiday" checked />
+                                        <label class="form-check-label" for="holiday">Glúteos</label>
+                                    </div>
+                                    <div class="form-check form-check-info">
+                                        <input type="checkbox" class="form-check-input input-filter" id="etc" data-value="etc" checked />
+                                        <label class="form-check-label" for="etc">Hombro</label>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-auto">
+                                <img src="app-assets/images/pages/calendar-illustration.png" alt="Calendar illustration" class="img-fluid" />
+                            </div>
+                        </div>
+                        <!-- /Sidebar -->
+                        <!-- Calendar -->
+                        <div class="col position-relative">
+                            <div class="card shadow-none border-0 mb-0 rounded-0">
+                                <div class="card-body pb-0">
+                                    <div id="calendar" ></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /Calendar -->
+                        <div class="body-content-overlay"></div>
+                        </div>
+                    </div>
+                    <!-- Calendar Add/Update/Delete event modal-->
+                    <div class="modal event-sidebar fade" id="add-new-sidebar" tabindex="-1" aria-labelledby="pricingModalTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-xl">
+                        <div class="modal-content">
+                            <div class="modal-header bg-transparent">
+                                <h3 class="modal-title text-primary" id="exampleModalCenterTitle">Agregar Programa</h3>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body px-sm-5 mx-50 pb-5">
+                                <div class="row">
+                                    <div class="col-8">
+                                    <div class="blog-edit-wrapper">
                                         <div class="row">
-                                            <div class="mb-2 col-md-6 form-password-toggle">
-                                                <label class="form-label" for="newPassword">Nueva contraseña</label>
-                                                <div class="input-group input-group-merge form-password-toggle">
-                                                    <input class="form-control" type="password" id="newPassword" name="newPassword" placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;" />
-                                                    <span class="input-group-text cursor-pointer">
-                                                        <i data-feather="eye"></i>
-                                                    </span>
-                                                </div>
-                                            </div>
+                                            <div class="col-12">
+                                                <div class="card">
+                                                <div class="card-body">
+                                                    <div class="card-header pb-2 align-items-start">
+                                                        <div class="col-4 d-flex justify-content-between align-items-center">
 
-                                            <div class="mb-2 col-md-6 form-password-toggle">
-                                                <label class="form-label" for="confirmPassword">Confirmar nueva contraseña </label>
-                                                <div class="input-group input-group-merge">
-                                                    <input class="form-control" type="password" name="confirmPassword" id="confirmPassword" placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;" />
-                                                    <span class="input-group-text cursor-pointer"><i data-feather="eye"></i></span>
-                                                </div>
-                                            </div>
-                                            <div>
-                                                <button type="submit" class="btn btn-primary me-2">Cambia la contraseña</button>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                            <!--/ Change Password -->
-                            </div>
-                            <!-- /Cuenta -->
+                                                            <div>
+                                                                <h3 class="mb-0 ">Mittie Evans</h3>
+                                                                <small class="text-muted">Cliente</small>
+                                                            </div>
 
-                            <!-- Seguridad -->
-                            <div class="card tab-pane fade show"  id="seguridad" role="tabpanel" aria-labelledby="list-home-list">
-                            
 
-                            <!-- recent device 
-                            <div class="card">
-                                <div class="card-header">
-                                    <h4 class="card-title">Dispositivos recientes</h4>
-                                </div>
-                                <div class="table-responsive">
-                                    <table class="table text-nowrap text-center">
-                                        <thead>
-                                            <tr>
-                                                <th class="text-start">NAVEGADOR</th>
-                                                <th>DISPOSITIVO</th>
-                                                <th>UBICACIÓN</th>
-                                                <th>ACTIVIDAD RECIENTE</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td class="text-start">
-                                                    <div class="avatar me-25">
-                                                        <img src="app-assets/images/icons/google-chrome.png" alt="avatar" width="20" height="20" />
+                                                        </div>
+                                                        <div class="heading-elements col-6">
+                                                            <select id="blog-edit-category3" class="select2 form-select" >
+                                                                <option value="1" selected>Seleccione programa global</option>
+                                                                <option value="1" >Biceps</option>
+                                                                <option value="3" >Cardio</option>
+                                                                <option value="6">Espalda</option>
+                                                                <option value="9">Glúteos</option>
+                                                                <option value="8">Hombro</option>
+                                                                <option value="10">Pantorrilas</option>
+                                                                <option value="7">Pecho</option>
+                                                                <option value="2">Piernas</option>
+                                                                <option value="4">Triceps</option>
+                                                            </select>
+                                                        </div>
                                                     </div>
-                                                    <span class="fw-bolder">Chrome on Windows</span>
-                                                </td>
-                                                <td>Dell XPS 15</td>
-                                                <td>United States</td>
-                                                <td>10, Jan 2021 20:07</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="text-start">
-                                                    <div class="avatar me-25">
-                                                        <img src="app-assets/images/icons/google-chrome.png" alt="avatar" width="20" height="20" />
-                                                    </div>
-                                                    <span class="fw-bolder">Chrome on Android</span>
-                                                </td>
-                                                <td>Google Pixel 3a</td>
-                                                <td>Ghana</td>
-                                                <td>11, Jan 2021 10:16</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="text-start">
-                                                    <div class="avatar me-25">
-                                                        <img src="app-assets/images/icons/google-chrome.png" alt="avatar" width="20" height="20" />
-                                                    </div>
-                                                    <span class="fw-bolder">Chrome on MacOS</span>
-                                                </td>
-                                                <td>Apple iMac</td>
-                                                <td>Mayotte</td>
-                                                <td>11, Jan 2021 12:10</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="text-start">
-                                                    <div class="avatar me-25">
-                                                        <img src="app-assets/images/icons/google-chrome.png" alt="avatar" width="20" height="20" />
-                                                    </div>
-                                                    <span class="fw-bolder">Chrome on iPhone</span>
-                                                </td>
-                                                <td>Apple iPhone XR</td>
-                                                <td>Mauritania</td>
-                                                <td>12, Jan 2021 8:29</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                            < recent device -->
-                            </div>
-                            <!-- /Seguridad -->
-
-                            <!-- Billing -->
-                            <div class="card tab-pane fade show" id="billing" role="tabpanel" aria-labelledby="list-home-list">
-                                
-                            <!-- current plan -->
-                            <div class="card">
-                                <div class="card-header">
-                                    <h4 class="card-title">Fecha de Ingreso</h4>
-                                </div>
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="mb-2 pb-50">
-                                                <h5>Su plan actual es  <strong>Basico</strong></h5>
-                                                <span>Un comienzo simple para todos.</span>
-                                            </div>
-                                            <div class="mb-2 pb-50">
-                                                <h5>Activo hasta el 09 de diciembre 2021</h5>
-                                                <span>Le enviaremos una notificación al vencimiento de la Suscripción </span>
-                                            </div>
-                                            <div class="mb-2 mb-md-1">
-                                                <h5>$99 por mes <span class="badge badge-light-primary ms-50">Popular</span></h5>
-                                                <span>Plan estándar para pequeñas y medianas empresas </span>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="alert alert-warning mb-2" role="alert">
-                                                <h6 class="alert-heading">¡Necesitamos su atención! </h6>
-                                                <div class="alert-body fw-normal">su plan requiere actualización </div>
-                                            </div>
-                                            <div class="plan-statistics pt-1">
-                                                <div class="d-flex justify-content-between">
-                                                    <h5 class="fw-bolder">Dias</h5>
-                                                    <h5 class="fw-bolder">4 de 30 Dias</h5>
+                                                    <!-- Form -->
+                                                    <form action="javascript:;" class="mt-2">
+                                                        <div class="row align-items-center">
+                                                            <div class="col-md-5 col-12">
+                                                            <div class="mb-2">
+                                                                <label class="form-label" for="blog-edit-title">Titulo</label>
+                                                                <input type="text" id="blog-edit-title" class="form-control" value="Tren inferior" />
+                                                            </div>
+                                                            </div>
+                                                            <div class="col-md-5 col-12">
+                                                            <div class="mb-2">
+                                                                <label class="form-label" for="blog-edit-category">Categorias</label>
+                                                                <select id="blog-edit-category" class="select2 form-select" multiple>
+                                                                    <option value="1" selected>Biceps</option>
+                                                                    <option value="3" selected>Cardio</option>
+                                                                    <option value="6">Espalda</option>
+                                                                    <option value="9">Glúteos</option>
+                                                                    <option value="8">Hombro</option>
+                                                                    <option value="10">Pantorrilas</option>
+                                                                    <option value="7">Pecho</option>
+                                                                    <option value="2">Piernas</option>
+                                                                    <option value="4">Triceps</option>
+                                                                </select>
+                                                            </div>
+                                                            </div>
+                                                            <div class="col-md-2 mb-2 mb-md-0">
+                                                                <div class="form-check form-check-inline">
+                                                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="checked" checked="">
+                                                                    <label class="form-check-label" for="inlineCheckbox1">Repetir</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12">
+                                                            <div class="mb-2">
+                                                                <label class="form-label">Content</label>
+                                                                <div id="blog-editor-wrapper">
+                                                                    <div id="blog-editor-container">
+                                                                        <div class="editor">
+                                                                        <p>
+                                                                            <iframe width="560" height="315" src="https://www.youtube.com/embed/iSSAk4XCsRA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+                                                                        </p>
+                                                                        <p><br /></p>
+                                                                        <p>
+                                                                            Categoría: Cardio<br>
+                                                                            Link: https://www.youtube.com/watch?v=iSSAk4XCsRA<br>
+                                                                            Descripción: Se trata de dar un salto en el sitio al mismo tiempo que abres las piernas un poco más del ancho de los hombros y elevas los brazos hacia los laterales y hacia arriba hasta dar una palmada.
+                                                                        </p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            </div>
+                                                            <div class="col-12 mb-2">
+                                                            <div class="border rounded p-2">
+                                                                <h4 class="mb-1">Subir Archivo</h4>
+                                                                <div class="d-flex flex-column flex-md-row">
+                                                                    <div class="featured-info">
+                                                                        <div class="d-inline-block">
+                                                                        <input class="form-control" type="file" id="blogCustomFile" accept="image/*" />
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            </div>
+                                                            <div class="col-12 mt-50">
+                                                            <button type="submit" class="btn btn-primary me-1">Guardar</button>
+                                                            <button type="reset" class="btn btn-outline-secondary">Cancelar</button>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                    <!--/ Form -->
                                                 </div>
-                                                <div class="progress">
-                                                    <div class="progress-bar w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                                                </div>
-                                                <p class="mt-50">4 días restantes hasta que su plan requiera actualización</p>
-                                            </div>
-                                        </div>
-                                        <div class="col-12">
-                                            <button class="btn btn-primary me-1 mt-1" data-bs-toggle="modal" data-bs-target="#upgradePlanModal">
-                                                Plan de actualización 
-                                            </button>
-                                            <button class="btn btn-outline-danger cancel-subscription mt-1">Cancelar suscripción</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- / current plan -->
-
-                            <!-- payment methods -->
-                            <!--<div class="card">
-                                <div class="card-header">
-                                    <h4 class="card-title mb-50">Métodos de pago</h4>
-                                    <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#addNewCard">
-                                        <i data-feather="plus"></i>
-                                        <span>Agregar tarjeta </span>
-                                    </button>
-                                </div>
-                                <div class="card-body">
-                                    <div class="added-cards">
-                                        <div class="cardMaster rounded border p-2 mb-1">
-                                            <div class="d-flex justify-content-between flex-sm-row flex-column">
-                                                <div class="card-information">
-                                                    <img class="mb-1 img-fluid" src="app-assets/images/icons/payments/mastercard.png" alt="Master Card" />
-                                                    <div class="d-flex align-items-center mb-50">
-                                                        <h6 class="mb-0">Tom McBride</h6>
-                                                        <span class="badge badge-light-primary ms-50">Primario</span>
-                                                    </div>
-                                                    <span class="card-number">∗∗∗∗ ∗∗∗∗ 9856</span>
-                                                </div>
-                                                <div class="d-flex flex-column text-start text-lg-end">
-                                                    <div class="d-flex order-sm-0 order-1 mt-1 mt-sm-0">
-                                                        <button class="btn btn-outline-primary me-75" data-bs-toggle="modal" data-bs-target="#editCard">
-                                                            Edit
-                                                        </button>
-                                                        <button class="btn btn-outline-secondary">Borrar </button>
-                                                    </div>
-                                                    <span class="mt-2">Tarjeta expira en 12/24</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="cardMaster border rounded p-2 mb-1">
-                                            <div class="d-flex justify-content-between flex-sm-row flex-column">
-                                                <div class="card-information">
-                                                    <img class="mb-1 img-fluid" src="app-assets/images/icons/payments/visa.png" alt="Visa Card" />
-                                                    <h6>Mildred Wagner</h6>
-                                                    <span class="card-number">∗∗∗∗ ∗∗∗∗ 5896</span>
-                                                </div>
-                                                <div class="d-flex flex-column text-start text-lg-end">
-                                                    <div class="d-flex order-sm-0 order-1 mt-1 mt-sm-0">
-                                                        <button class="btn btn-outline-primary me-75" data-bs-toggle="modal" data-bs-target="#editCard">
-                                                            Editar
-                                                        </button>
-                                                        <button class="btn btn-outline-secondary">Borrar</button>
-                                                    </div>
-                                                    <span class="mt-2">Card expires at 02/24</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="cardMaster border rounded p-2">
-                                            <div class="d-flex justify-content-between flex-sm-row flex-column">
-                                                <div class="card-information">
-                                                    <img class="mb-1 img-fluid" src="app-assets/images/icons/payments/american-ex.png" alt="Visa Card" />
-                                                    <h6>Mildred Wagner</h6>
-                                                    <span class="card-number">∗∗∗∗ ∗∗∗∗ 5896</span>
-                                                </div>
-                                                <div class="d-flex flex-column text-start text-lg-end">
-                                                    <div class="d-flex order-sm-0 order-1 mt-1 mt-sm-0">
-                                                        <button class="btn btn-outline-primary me-75" data-bs-toggle="modal" data-bs-target="#editCard">
-                                                            Editar
-                                                        </button>
-                                                        <button class="btn btn-outline-secondary">Borrar</button>
-                                                    </div>
-                                                    <span class="mt-2">Tarjeta expira en 02/24</span>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div> -->
-                            <!-- / payment methods -->
-
-                            <!-- Billing Address -->
-                            <!--<div class="card">
-                                <div class="card-header">
-                                    <h4 class="card-title mb-50">Dirección de Envio</h4>
-                                    <button class="btn btn-primary btn-sm edit-address" type="button" data-bs-toggle="modal" data-bs-target="#addNewAddressModal">
-                                        Editar dirección 
-                                    </button>
-                                </div>
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-xl-7 col-12">
-                                            <dl class="row mb-0">
-                                                <dt class="col-sm-4 fw-bolder mb-1">Nombre de empresa :</dt>
-                                                <dd class="col-sm-8 mb-1">PIXINVENT</dd>
-
-                                                <dt class="col-sm-4 fw-bolder mb-1">Correo Electrónico de Facturas:</dt>
-                                                <dd class="col-sm-8 mb-1">themeselection@ex.com</dd>
-
-                                                <dt class="col-sm-4 fw-bolder mb-1">User ID:</dt>
-                                                <dd class="col-sm-8 mb-1">TAX-357378</dd>
-
-                                                <dt class="col-sm-4 fw-bolder mb-1">Cedula:</dt>
-                                                <dd class="col-sm-8 mb-1">SDF754K77</dd>
-
-                                                <dt class="col-sm-4 fw-bolder mb-1">Dirección de Envio:</dt>
-                                                <dd class="col-sm-8 mb-1">100 Water Plant Avenue, Building 1303 Wake Island</dd>
-                                            </dl>
-                                        </div>
-                                        <div class="col-xl-5 col-12">
-                                            <dl class="row mb-0">
-                                                <dt class="col-sm-4 fw-bolder mb-1">Contacto :</dt>
-                                                <dd class="col-sm-8 mb-1">+1 (605) 977-32-65</dd>
-
-                                                <dt class="col-sm-4 fw-bolder mb-1">País :</dt>
-                                                <dd class="col-sm-8 mb-1">Wake Island</dd>
-
-                                                <dt class="col-sm-4 fw-bolder mb-1">Estado :</dt>
-                                                <dd class="col-sm-8 mb-1">Capholim</dd>
-
-                                                <dt class="col-sm-4 fw-bolder mb-1">Código postal:</dt>
-                                                <dd class="col-sm-8 mb-1">403114</dd>
-                                            </dl>
-                                        </div>
                                     </div>
-                                </div>
-                            </div>-->
-                            <!--/ Billing Address -->
-                            </div>
-                            <!-- /Billing -->
-                            
-                            <!-- Medidas -->
-                            <div class="card tab-pane fade show" id="medidas" role="tabpanel" aria-labelledby="list-home-list">
-
-                                <div class="card">
-                                    <div class="card-header">
-                                        <h4 class="card-title mb-50">Medidas</h4>
-                                        <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#addNewCard">
-                                            <i data-feather="plus"></i>
-                                            <span>Agregar Medidas </span>
-                                        </button>
-                                    </div>
-                                    <div class="card-body">
-                                        <div class="added-cards">
-                                            
-                            <div class="table-responsive">
-                                <table class="table table-striped">
-                                    <thead>
-                                        <tr>
-                                            <th>Altura</th>
-                                            <th>Peso</th>
-                                            <th>Edad Metabolica</th>
-                                            <th>Indice de Masa Corporal</th>
-                                            <th>% Grasa Visceral</th>
-                                            <th>% Agua</th>
-                                            <th>Masa Ósea</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>1 Kilos</td>
-                                            <td>1</td>
-                                            <td>1</td>
-                                            <td>1</td>
-                                            <td>1</td>
-                                            <td>1</td>
-                                        </tr>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>1 Kilos</td>
-                                            <td>1</td>
-                                            <td>1</td>
-                                            <td>1</td>
-                                            <td>1</td>
-                                            <td>1</td>
-                                        </tr>
-                                </table>
-                            </div>
-
+                                    <div class="col-4">
+                                    <section id="dd-with-handle">
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <div class="card">
+                                                <div class="card-header">
+                                                    <h4 class="card-title">Ejercicios</h4>
+                                                </div>
+                                                <div class="card-body">
+                                                    <div class="input-group mb-2">
+                                                        <span class="input-group-text" id="basic-addon-search1">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search">
+                                                            <circle cx="11" cy="11" r="8"></circle>
+                                                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                                                            </svg>
+                                                        </span>
+                                                        <input type="text" class="form-control" placeholder="Buscar...." aria-label="Search..." aria-describedby="basic-addon-search1">
+                                                    </div>
+                                                    <div class="col-sm-12 mb-2">
+                                                        <select id="blog-edit-category2" class="select2 form-select" >
+                                                            <option value="1" selected>Categorias</option>
+                                                            <option value="1" >Biceps</option>
+                                                            <option value="3" >Cardio</option>
+                                                            <option value="6">Espalda</option>
+                                                            <option value="9">Glúteos</option>
+                                                            <option value="8">Hombro</option>
+                                                            <option value="10">Pantorrilas</option>
+                                                            <option value="7">Pecho</option>
+                                                            <option value="2">Piernas</option>
+                                                            <option value="4">Triceps</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-sm-12">
+                                                        <ul class="list-group" id="handle-list-1">
+                                                            <li class="list-group-item"><span class="handle me-50">+</span>Aperturas con TRX</li>
+                                                            <li class="list-group-item"><span class="handle me-50">+</span>Jumping jacks</li>
+                                                            <li class="list-group-item"><span class="handle me-50">+</span>Pantorrilla maquina (Smith)</li>
+                                                            <li class="list-group-item"><span class="handle me-50">+</span>Press militar sentado barra</li>
+                                                            <li class="list-group-item"><span class="handle me-50">+</span>Remo vertical mancuernas</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                </div>
+                                            </div>
                                         </div>
+                                    </section>
                                     </div>
                                 </div>
                             </div>
-                            <!-- /Medidas -->
-
-                            <!-- Nutricion -->
-                            <div class="card tab-pane fade show" id="medidas" role="tabpanel" aria-labelledby="list-home-list">
-                                
+                        </div>
+                        </div>
+                    </div>
+                    <!--/ Calendar Add/Update/Delete event modal-->
+                    <!-- Full calendar end -->
+                </div>
+            </div>
+            </div>
+            <!-- Calendario -->
+            <!-- Billing -->
+            <div class="card tab-pane fade show" id="billing" role="tabpanel" aria-labelledby="list-home-list">
+            <!-- current plan -->
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">Fecha de Ingreso</h4>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                        <div class="mb-2 pb-50">
+                            <h5>Su plan actual es  <strong>Basico</strong></h5>
+                            <span>Un comienzo simple para todos.</span>
+                        </div>
+                        <div class="mb-2 pb-50">
+                            <h5>Activo hasta el 09 de diciembre 2021</h5>
+                            <span>Le enviaremos una notificación al vencimiento de la Suscripción </span>
+                        </div>
+                        <div class="mb-2 mb-md-1">
+                            <h5>$99 por mes <span class="badge badge-light-primary ms-50">Popular</span></h5>
+                            <span>Plan estándar para pequeñas y medianas empresas </span>
+                        </div>
+                        </div>
+                        <div class="col-md-6">
+                        <div class="alert alert-warning mb-2" role="alert">
+                            <h6 class="alert-heading">¡Necesitamos su atención! </h6>
+                            <div class="alert-body fw-normal">su plan requiere actualización </div>
+                        </div>
+                        <div class="plan-statistics pt-1">
+                            <div class="d-flex justify-content-between">
+                                <h5 class="fw-bolder">Dias</h5>
+                                <h5 class="fw-bolder">4 de 30 Dias</h5>
                             </div>
-                            <!-- /Nutricion -->
-
-
-                            
+                            <div class="progress">
+                                <div class="progress-bar w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
+                            <p class="mt-50">4 días restantes hasta que su plan requiera actualización</p>
+                        </div>
+                        </div>
+                        <div class="col-12">
+                        <button class="btn btn-primary me-1 mt-1" data-bs-toggle="modal" data-bs-target="#upgradePlanModal">
+                        Plan de actualización 
+                        </button>
+                        <button class="btn btn-outline-danger cancel-subscription mt-1">Cancelar suscripción</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- / current plan -->
+            </div>
+            <!-- /Billing -->
+            <!-- Medidas -->
+            <div class="card tab-pane fade show" id="medidas" role="tabpanel" aria-labelledby="list-home-list">
+            <div class="card-header">
+                <button type="button" class="btn btn-outline-primary">
+                <i data-feather="plus" class="me-25"></i>
+                <span>Agregar Medida</span>
+                </button>
+                <div class="col-2">
+                    <select class=" w-100 select2 form-select" id="select2-basic">
+                        <option value="AK">Enero</option>
+                        <option value="HI">Febrero</option>
+                        <option value="CA">Marzo</option>
+                        <option value="NV">Abril</option>
+                        <option value="OR">Mayo</option>
+                        <option value="WA">Junio</option>
+                        <option value="AZ">Julio</option>
+                        <option value="CO">Agosto</option>
+                        <option value="ID">Septiembre</option>
+                        <option value="ID">Octubre</option>
+                        <option value="MT">Noviembre</option>
+                        <option value="NE">Diciembre</option>
+                    </select>
+                </div>
+            </div>
+            <div class="card-body">
+                <p class="card-text">
+                    Texto descriptivo (opcional). Como es unn modulo complejo recomendamos dejar una descripción de su uso en este párrafo.
+                </p>
+            </div>
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                        <th>
+                            <span class="fw-bold">General</span>
+                        </th>
+                        <th class="position-relative text-center">
+                            <div class="dropdown position-absolute end-0">
+                                <button type="button" class="btn btn-sm dropdown-toggle hide-arrow p-0" data-bs-toggle="dropdown">
+                                <i data-feather="more-vertical"></i>
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-end">
+                                    <a class="dropdown-item text-primary" href="#">
+                                    <i data-feather="bookmark" class="me-50"></i>
+                                    <span class="text-capitalize">Fijar</span>
+                                    </a>
+                                    <a class="dropdown-item" href="#">
+                                    <i data-feather="edit-2" class="me-50"></i>
+                                    <span class="text-capitalize">Editar</span>
+                                    </a>
+                                    <a class="dropdown-item" href="#">
+                                    <i data-feather="trash" class="me-50"></i>
+                                    <span class="text-capitalize">Eliminar</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="text-primary">01/04</div>
+                        </th>
+                        <th class="position-relative text-center">
+                            <div class="dropdown position-absolute end-0">
+                                <button type="button" class="btn btn-sm dropdown-toggle hide-arrow p-0" data-bs-toggle="dropdown">
+                                <i data-feather="more-vertical"></i>
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-end">
+                                    <a class="dropdown-item" href="#">
+                                    <i data-feather="bookmark" class="me-50"></i>
+                                    <span class="text-capitalize">Fijar</span>
+                                    </a>
+                                    <a class="dropdown-item" href="#">
+                                    <i data-feather="edit-2" class="me-50"></i>
+                                    <span class="text-capitalize">Editar</span>
+                                    </a>
+                                    <a class="dropdown-item" href="#">
+                                    <i data-feather="trash" class="me-50"></i>
+                                    <span class="text-capitalize">Eliminar</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div>03/04</div>
+                        </th>
+                        <th class="position-relative text-center">
+                            <div class="dropdown position-absolute end-0">
+                                <button type="button" class="btn btn-sm dropdown-toggle hide-arrow p-0" data-bs-toggle="dropdown">
+                                <i data-feather="more-vertical"></i>
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-end">
+                                    <a class="dropdown-item" href="#">
+                                    <i data-feather="bookmark" class="me-50"></i>
+                                    <span class="text-capitalize">Fijar</span>
+                                    </a>
+                                    <a class="dropdown-item" href="#">
+                                    <i data-feather="edit-2" class="me-50"></i>
+                                    <span class="text-capitalize">Editar</span>
+                                    </a>
+                                    <a class="dropdown-item" href="#">
+                                    <i data-feather="trash" class="me-50"></i>
+                                    <span class="text-capitalize">Eliminar</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div>07/04</div>
+                        </th>
+                        <th class="position-relative text-center">
+                            <div class="dropdown position-absolute end-0">
+                                <button type="button" class="btn btn-sm dropdown-toggle hide-arrow p-0" data-bs-toggle="dropdown">
+                                <i data-feather="more-vertical"></i>
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-end">
+                                    <a class="dropdown-item" href="#">
+                                    <i data-feather="bookmark" class="me-50"></i>
+                                    <span class="text-capitalize">Fijar</span>
+                                    </a>
+                                    <a class="dropdown-item" href="#">
+                                    <i data-feather="edit-2" class="me-50"></i>
+                                    <span class="text-capitalize">Editar</span>
+                                    </a>
+                                    <a class="dropdown-item" href="#">
+                                    <i data-feather="trash" class="me-50"></i>
+                                    <span class="text-capitalize">Eliminar</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div>09/04</div>
+                        </th>
+                        <th class="position-relative text-center">
+                            <div class="dropdown position-absolute end-0">
+                                <button type="button" class="btn btn-sm dropdown-toggle hide-arrow p-0" data-bs-toggle="dropdown">
+                                <i data-feather="more-vertical"></i>
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-end">
+                                    <a class="dropdown-item" href="#">
+                                    <i data-feather="bookmark" class="me-50"></i>
+                                    <span class="text-capitalize">Fijar</span>
+                                    </a>
+                                    <a class="dropdown-item" href="#">
+                                    <i data-feather="edit-2" class="me-50"></i>
+                                    <span class="text-capitalize">Editar</span>
+                                    </a>
+                                    <a class="dropdown-item" href="#">
+                                    <i data-feather="trash" class="me-50"></i>
+                                    <span class="text-capitalize">Eliminar</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div>11/04</div>
+                        </th>
+                        <th class="position-relative text-center">
+                            <div class="dropdown position-absolute end-0">
+                                <button type="button" class="btn btn-sm dropdown-toggle hide-arrow p-0" data-bs-toggle="dropdown">
+                                <i data-feather="more-vertical"></i>
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-end">
+                                    <a class="dropdown-item" href="#">
+                                    <i data-feather="bookmark" class="me-50"></i>
+                                    <span class="text-capitalize">Fijar</span>
+                                    </a>
+                                    <a class="dropdown-item" href="#">
+                                    <i data-feather="edit-2" class="me-50"></i>
+                                    <span class="text-capitalize">Editar</span>
+                                    </a>
+                                    <a class="dropdown-item" href="#">
+                                    <i data-feather="trash" class="me-50"></i>
+                                    <span class="text-capitalize">Eliminar</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div>14/04</div>
+                        </th>
+                        <th class="position-relative text-center">
+                            <div class="dropdown position-absolute end-0">
+                                <button type="button" class="btn btn-sm dropdown-toggle hide-arrow p-0" data-bs-toggle="dropdown">
+                                <i data-feather="more-vertical"></i>
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-end">
+                                    <a class="dropdown-item" href="#">
+                                    <i data-feather="bookmark" class="me-50"></i>
+                                    <span class="text-capitalize">Fijar</span>
+                                    </a>
+                                    <a class="dropdown-item" href="#">
+                                    <i data-feather="edit-2" class="me-50"></i>
+                                    <span class="text-capitalize">Editar</span>
+                                    </a>
+                                    <a class="dropdown-item" href="#">
+                                    <i data-feather="trash" class="me-50"></i>
+                                    <span class="text-capitalize">Eliminar</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div>17/04</div>
+                        </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                        <td>
+                            <span class="fw-bold">Altura</span>
+                        </td>
+                        <td class="text-center text-primary">0</td>
+                        <td class="text-center">0</td>
+                        <td class="text-center">0</td>
+                        <td class="text-center">0</td>
+                        <td class="text-center">0</td>
+                        <td class="text-center">0</td>
+                        <td class="text-center">0</td>
+                        </tr>
+                        <tr>
+                        <td>
+                            <span class="fw-bold">Peso</span>
+                        </td>
+                        <td class="text-center text-primary">0</td>
+                        <td class="text-center">0</td>
+                        <td class="text-center">0</td>
+                        <td class="text-center">0</td>
+                        <td class="text-center">0</td>
+                        <td class="text-center">0</td>
+                        <td class="text-center">0</td>
+                        </tr>
+                        <tr>
+                        <td>
+                            <span class="fw-bold">Edad Metabólica</span>
+                        </td>
+                        <td class="text-center text-primary">0</td>
+                        <td class="text-center">0</td>
+                        <td class="text-center">0</td>
+                        <td class="text-center">0</td>
+                        <td class="text-center">0</td>
+                        <td class="text-center">0</td>
+                        <td class="text-center">0</td>
+                        </tr>
+                        <tr>
+                        <td>
+                            <span class="fw-bold">Indice de Masa Corporal</span>
+                        </td>
+                        <td class="text-center text-primary">0</td>
+                        <td class="text-center">0</td>
+                        <td class="text-center">0</td>
+                        <td class="text-center">0</td>
+                        <td class="text-center">0</td>
+                        <td class="text-center">0</td>
+                        <td class="text-center">0</td>
+                        </tr>
+                        <tr>
+                        <td>
+                            <span class="fw-bold">% Grasa Corporal</span>
+                        </td>
+                        <td class="text-center text-primary">0</td>
+                        <td class="text-center">0</td>
+                        <td class="text-center">0</td>
+                        <td class="text-center">0</td>
+                        <td class="text-center">0</td>
+                        <td class="text-center">0</td>
+                        <td class="text-center">0</td>
+                        </tr>
+                        <tr>
+                        <td>
+                            <span class="fw-bold">Masa Muscular</span>
+                        </td>
+                        <td class="text-center text-primary">0</td>
+                        <td class="text-center">0</td>
+                        <td class="text-center">0</td>
+                        <td class="text-center">0</td>
+                        <td class="text-center">0</td>
+                        <td class="text-center">0</td>
+                        <td class="text-center">0</td>
+                        </tr>
+                        <tr>
+                        <td>
+                            <span class="fw-bold">% Grasa Visceral</span>
+                        </td>
+                        <td class="text-center text-primary">0</td>
+                        <td class="text-center">0</td>
+                        <td class="text-center">0</td>
+                        <td class="text-center">0</td>
+                        <td class="text-center">0</td>
+                        <td class="text-center">0</td>
+                        <td class="text-center">0</td>
+                        </tr>
+                        <tr>
+                        <td>
+                            <span class="fw-bold">% Agua</span>
+                        </td>
+                        <td class="text-center text-primary">0</td>
+                        <td class="text-center">0</td>
+                        <td class="text-center">0</td>
+                        <td class="text-center">0</td>
+                        <td class="text-center">0</td>
+                        <td class="text-center">0</td>
+                        <td class="text-center">0</td>
+                        </tr>
+                        <tr>
+                        <td>
+                            <span class="fw-bold">Masa Ósea</span>
+                        </td>
+                        <td class="text-center text-primary">0</td>
+                        <td class="text-center">0</td>
+                        <td class="text-center">0</td>
+                        <td class="text-center">0</td>
+                        <td class="text-center">0</td>
+                        <td class="text-center">0</td>
+                        <td class="text-center">0</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            </div>
+            <!-- /Medidas -->
+            <!-- Nutricion -->
+            <div class="card tab-pane fade show" id="nutricion" role="tabpanel" aria-labelledby="list-home-list">
+            <div class="card-header">
+                <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#editCard">
+                <i data-feather="plus" class="me-25"></i>
+                <span>Agregar Nutricion</span>
+                </button>
+                <div class="col-2 mb-2">
+                    <select class=" w-100 select2 form-select" id="select2-basic">
+                        <option value="AK">Enero</option>
+                        <option value="HI">Febrero</option>
+                        <option value="CA">Marzo</option>
+                        <option value="NV">Abril</option>
+                        <option value="OR">Mayo</option>
+                        <option value="WA">Junio</option>
+                        <option value="AZ">Julio</option>
+                        <option value="CO">Agosto</option>
+                        <option value="ID">Septiembre</option>
+                        <option value="ID">Octubre</option>
+                        <option value="MT">Noviembre</option>
+                        <option value="NE">Diciembre</option>
+                    </select>
+                </div>
+            </div>
+            <div class="card-header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-6 mb-2">
+                        <div id="blog-editor-wrapper">
+                            <div id="blog-editor-container">
+                                <div class="editor">
+                                    <p>
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/iSSAk4XCsRA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+                                    </p>
+                                    <p><br /></p>
+                                    <p>
+                                    Categoría: Cardio<br>
+                                    Link: https://www.youtube.com/watch?v=iSSAk4XCsRA<br>
+                                    Descripción: Se trata de dar un salto en el sitio al mismo tiempo que abres las piernas un poco más del ancho de los hombros y elevas los brazos hacia los laterales y hacia arriba hasta dar una palmada.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="col-6 mb-2">
+                        <div id="blog-editor-wrapper">
+                            <div id="blog-editor-container">
+                                <div class="editor">
+                                    <p>
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/iSSAk4XCsRA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+                                    </p>
+                                    <p><br /></p>
+                                    <p>
+                                    Categoría: Cardio<br>
+                                    Link: https://www.youtube.com/watch?v=iSSAk4XCsRA<br>
+                                    Descripción: Se trata de dar un salto en el sitio al mismo tiempo que abres las piernas un poco más del ancho de los hombros y elevas los brazos hacia los laterales y hacia arriba hasta dar una palmada.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="w-100"></div>
+                        <div class="col-6 mb-2">
+                        <div id="blog-editor-wrapper">
+                            <div id="blog-editor-container">
+                                <div class="editor">
+                                    <p>
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/iSSAk4XCsRA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+                                    </p>
+                                    <p><br /></p>
+                                    <p>
+                                    Categoría: Cardio<br>
+                                    Link: https://www.youtube.com/watch?v=iSSAk4XCsRA<br>
+                                    Descripción: Se trata de dar un salto en el sitio al mismo tiempo que abres las piernas un poco más del ancho de los hombros y elevas los brazos hacia los laterales y hacia arriba hasta dar una palmada.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="col-6 mb-2">
+                        <div id="blog-editor-wrapper">
+                            <div id="blog-editor-container">
+                                <div class="editor">
+                                    <p>
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/iSSAk4XCsRA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+                                    </p>
+                                    <p><br /></p>
+                                    <p>
+                                    Categoría: Cardio<br>
+                                    Link: https://www.youtube.com/watch?v=iSSAk4XCsRA<br>
+                                    Descripción: Se trata de dar un salto en el sitio al mismo tiempo que abres las piernas un poco más del ancho de los hombros y elevas los brazos hacia los laterales y hacia arriba hasta dar una palmada.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <!-- /Nutricion -->
+        </div>
+        <!-- /Tab Content -->
 
-                            <!-- /Invoice table -->
+
                         </div>
                         <!--/ User Content -->
                     </div>
                 </section>
+
+
                 
                 <!-- edit card modal  -->
                 <div class="modal fade" id="editCard" tabindex="-1" aria-labelledby="editCardTitle" aria-hidden="true">
@@ -1083,21 +1693,49 @@
     <script src="app-assets/vendors/js/extensions/sweetalert2.all.min.js"></script>
     <script src="app-assets/vendors/js/extensions/polyfill.min.js"></script>
     <script src="app-assets/fontawesome/css/all.css"></script>
+    <script src="app-assets/vendors/js/pickers/pickadate/picker.js"></script>
+    <script src="app-assets/vendors/js/pickers/pickadate/picker.date.js"></script>
+    <script src="app-assets/vendors/js/pickers/pickadate/picker.time.js"></script>
+    <script src="app-assets/vendors/js/pickers/pickadate/legacy.js"></script>
+    <script src="app-assets/vendors/js/pickers/flatpickr/flatpickr.min.js"></script>
+    <script src="app-assets/vendors/js/calendar/fullcalendar.min.js"></script>
+    <script src="app-assets/vendors/js/extensions/moment.min.js"></script>
+    <script src="app-assets/vendors/js/extensions/dragula.min.js"></script>
+    
+    <script src="app-assets/vendors/js/editors/quill/katex.min.js"></script>
+    <script src="app-assets/vendors/js/editors/quill/highlight.min.js"></script>
+    <script src="app-assets/vendors/js/editors/quill/quill.min.js"></script>
+
     <!-- END: Page Vendor JS-->
 
     <!-- BEGIN: Theme JS-->
     <script src="app-assets/js/core/app-menu.js"></script>
     <script src="app-assets/js/core/app.js"></script>
+    <script src="app-assets/js/core/app.min.js"></script>
+    <script src="app-assets/js/scripts/customizer.min.js"></script>
     <!-- END: Theme JS-->
 
     <!-- BEGIN: Page JS-->
+
+    <script src="app-assets/js/scripts/pages/app-calendar-events.js"></script>
+    <script src="app-assets/js/scripts/pages/app-calendar.js"></script>
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.10.2/locales-all.min.js'></script>
+
+
     <script src="app-assets/js/scripts/pages/modal-edit-user.js"></script>
+    
+    <script src="app-assets/js/scripts/extensions/ext-component-drag-drop.js"></script>
     <script src="app-assets/js/scripts/pages/modal-add-new-cc.js"></script>
     <script src="app-assets/js/scripts/pages/modal-edit-cc.js"></script>
     <script src="app-assets/js/scripts/pages/modal-add-new-address.js"></script>
     <script src="app-assets/js/scripts/pages/app-user-view-billing.js"></script>
     <script src="app-assets/js/scripts/pages/app-user-view.js"></script>
+    <script src="app-assets/js/scripts/components/components-popovers.js"></script>
+    <script src="app-assets/js/scripts/forms/pickers/form-pickers.js"></script>
+    <script src="app-assets/js/scripts/pages/page-blog-edit.js"></script>
+
     <!-- END: Page JS-->
+    
     <script>
         $(window).on('load', function() {
             if (feather) {

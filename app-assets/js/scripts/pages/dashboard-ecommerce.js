@@ -367,10 +367,10 @@ $(window).on('load', function () {
     stroke: {
       width: 3
     },
-    colors: [window.colors.solid.danger],
+    colors: [window.colors.solid.primary],
     series: [
       {
-        data: [0, 5, 0, 10, 5, 15]
+        data: [0, 20, 5, 30, 15, 45]
       }
     ],
     markers: {
@@ -458,7 +458,7 @@ $(window).on('load', function () {
     stroke: {
       width: 3
     },
-    colors: [window.colors.solid.success],
+    colors: [window.colors.solid.primary],
     series: [
       {
         data: [0, 20, 5, 30, 15, 45]
@@ -550,7 +550,7 @@ $(window).on('load', function () {
     stroke: {
       width: 3
     },
-    colors: [window.colors.solid.info],
+    colors: [window.colors.solid.primary],
     series: [
       {
         data: [0, 20, 5, 30, 15, 45]

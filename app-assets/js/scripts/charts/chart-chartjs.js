@@ -20,7 +20,8 @@ $(window).on('load', function () {
     bubbleChartEx = $('.bubble-chart-ex'),
     doughnutChartEx = $('.doughnut-chart-ex'),
     scatterChartEx = $('.scatter-chart-ex'),
-    lineAreaChartEx = $('.line-area-chart-ex');
+    lineAreaChartEx = $('.line-area-chart-ex'),
+    lineAreaAccesos = $('.line-area-accesos');
 
   // Color Variables
   var primaryColorShade = '#836AF9',
@@ -32,6 +33,8 @@ $(window).on('load', function () {
     greyColor = '#4F5D70',
     blueColor = '#2c9aff',
     blueLightColor = '#84D0FF',
+    Green = '#00B78A',
+    Red = '#C24B63',
     greyLightColor = '#EDF1F4',
     tooltipShadow = 'rgba(0, 0, 0, 0.25)',
     lineChartPrimary = '#666ee8',
@@ -1492,4 +1495,132 @@ $(window).on('load', function () {
       }
     });
   }
+
+
+  
+  // Line Accesos
+  // --------------------------------------------------------------------
+ 
+  if (lineAreaAccesos.length) {
+    new Chart(lineAreaAccesos, {
+      type: 'line',
+      plugins: [
+        // to add spacing between legends and chart
+        {
+          beforeInit: function (chart) {
+            chart.legend.afterFit = function () {
+              this.height += 20;
+            };
+          }
+        }
+      ],
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        legend: {
+          position: 'top',
+          align: 'start',
+          labels: {
+            usePointStyle: true,
+            padding: 25,
+            boxWidth: 9
+          }
+        },
+        layout: {
+          padding: {
+            top: -20,
+            bottom: -20,
+            left: -20
+          }
+        },
+        tooltips: {
+          // Updated default tooltip UI
+          shadowOffsetX: 1,
+          shadowOffsetY: 1,
+          shadowBlur: 8,
+          shadowColor: tooltipShadow,
+          backgroundColor: window.colors.solid.white,
+          titleFontColor: window.colors.solid.black,
+          bodyFontColor: window.colors.solid.black
+        },
+        scales: {
+          xAxes: [
+            {
+              display: true,
+              gridLines: {
+                color: 'transparent',
+                zeroLineColor: grid_line_color
+              },
+              scaleLabel: {
+                display: true
+              },
+              ticks: {
+                fontColor: labelColor
+              }
+            }
+          ],
+          yAxes: [
+            {
+              display: true,
+              gridLines: {
+                color: 'transparent',
+                zeroLineColor: grid_line_color
+              },
+              ticks: {
+                stepSize: 100,
+                min: 0,
+                max: 200,
+                fontColor: labelColor
+              },
+              scaleLabel: {
+                display: true
+              }
+            }
+          ]
+        }
+      },
+      data: {
+        labels: [
+          'Lunes',
+          'Martes',
+          'Miercoles',
+          'Jueves',
+          'Viernes',
+          'Sabado',
+          'Domingo'
+        ],
+        datasets: [
+          {
+            label: 'Denegados',
+            data: [40, 55, 45, 75, 65, 55, 70],
+            lineTension: 0,
+            backgroundColor: Red,
+            pointStyle: 'circle',
+            borderColor: 'transparent',
+            pointRadius: 0.5,
+            pointHoverRadius: 5,
+            pointHoverBorderWidth: 5,
+            pointBorderColor: 'transparent',
+            pointHoverBackgroundColor: Red,
+            pointHoverBorderColor: window.colors.solid.white
+          },
+          {
+            label: 'Ingresos',
+            data: [70, 85, 75, 150, 100, 140, 110],
+            lineTension: 0,
+            backgroundColor: Green,
+            pointStyle: 'circle',
+            borderColor: 'transparent',
+            pointRadius: 0.5,
+            pointHoverRadius: 5,
+            pointHoverBorderWidth: 5,
+            pointBorderColor: 'transparent',
+            pointHoverBackgroundColor: Green,
+            pointHoverBorderColor: window.colors.solid.white
+          }
+        ]
+      }
+    });
+  }
+
 });
