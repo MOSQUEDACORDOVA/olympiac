@@ -277,7 +277,7 @@ $(window).on('load', function () {
     stroke: {
       width: 3
     },
-    colors: [window.colors.solid.info],
+    colors: [window.colors.solid.primary],
     series: [
       {
         data: [0, 20, 5, 30, 15, 45]
@@ -285,8 +285,8 @@ $(window).on('load', function () {
     ],
     markers: {
       size: 2,
-      colors: window.colors.solid.info,
-      strokeColors: window.colors.solid.info,
+      colors: window.colors.solid.black,
+      strokeColors: window.colors.solid.black,
       strokeWidth: 2,
       strokeOpacity: 1,
       strokeDashArray: 0,
@@ -296,7 +296,7 @@ $(window).on('load', function () {
           seriesIndex: 0,
           dataPointIndex: 5,
           fillColor: '#ffffff',
-          strokeColor: window.colors.solid.info,
+          strokeColor: window.colors.solid.black,
           size: 5
         }
       ],
@@ -367,16 +367,16 @@ $(window).on('load', function () {
     stroke: {
       width: 3
     },
-    colors: [window.colors.solid.info],
+    colors: [window.colors.solid.danger],
     series: [
       {
-        data: [0, 20, 5, 30, 15, 45]
+        data: [0, 5, 0, 10, 5, 15]
       }
     ],
     markers: {
       size: 2,
-      colors: window.colors.solid.info,
-      strokeColors: window.colors.solid.info,
+      colors: window.colors.solid.black,
+      strokeColors: window.colors.solid.black,
       strokeWidth: 2,
       strokeOpacity: 1,
       strokeDashArray: 0,
@@ -386,7 +386,7 @@ $(window).on('load', function () {
           seriesIndex: 0,
           dataPointIndex: 5,
           fillColor: '#ffffff',
-          strokeColor: window.colors.solid.info,
+          strokeColor: window.colors.solid.black,
           size: 5
         }
       ],
@@ -458,7 +458,7 @@ $(window).on('load', function () {
     stroke: {
       width: 3
     },
-    colors: [window.colors.solid.info],
+    colors: [window.colors.solid.success],
     series: [
       {
         data: [0, 20, 5, 30, 15, 45]
@@ -466,8 +466,8 @@ $(window).on('load', function () {
     ],
     markers: {
       size: 2,
-      colors: window.colors.solid.info,
-      strokeColors: window.colors.solid.info,
+      colors: window.colors.solid.black,
+      strokeColors: window.colors.solid.black,
       strokeWidth: 2,
       strokeOpacity: 1,
       strokeDashArray: 0,
@@ -477,7 +477,7 @@ $(window).on('load', function () {
           seriesIndex: 0,
           dataPointIndex: 5,
           fillColor: '#ffffff',
-          strokeColor: window.colors.solid.info,
+          strokeColor: window.colors.solid.black,
           size: 5
         }
       ],
@@ -558,8 +558,8 @@ $(window).on('load', function () {
     ],
     markers: {
       size: 2,
-      colors: window.colors.solid.info,
-      strokeColors: window.colors.solid.info,
+      colors: window.colors.solid.black,
+      strokeColors: window.colors.solid.black,
       strokeWidth: 2,
       strokeOpacity: 1,
       strokeDashArray: 0,
@@ -569,7 +569,7 @@ $(window).on('load', function () {
           seriesIndex: 0,
           dataPointIndex: 5,
           fillColor: '#ffffff',
-          strokeColor: window.colors.solid.info,
+          strokeColor: window.colors.solid.black,
           size: 5
         }
       ],
