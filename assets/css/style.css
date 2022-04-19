@@ -12,3 +12,6 @@ WE WILL RELEASE FUTURE UPDATES SO IN ORDER TO NOT OVERWRITE YOUR STYLES IT'S BET
 .select2-container--default .select2-selection--single .select2-selection__arrow b {
 	display: none !important;
 }
+.text-primary {
+	color: #007EA8 !important;
+}
