@@ -13,12 +13,12 @@ var prevMonth = date.getMonth() === 11 ? new Date(date.getFullYear() - 1, 0, 1) 
 
 var events = [
   {
-    id: 1,
+    id: 12,
     url: '',
     title: 'Design Review',
     start: date,
     end: nextDay,
-    allDay: false,
+    allDay: true,
     extendedProps: {
       calendar: 'Business'
     }
