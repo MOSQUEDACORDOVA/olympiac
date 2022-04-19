@@ -18,6 +18,12 @@
     <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/vendors.min.css">
     <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/charts/apexcharts.css">
     <link rel="stylesheet" type="text/css" href="app-assets/vendors/css/extensions/toastr.min.css">
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/forms/select/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/extensions/dragula.min.css">
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/editors/quill/katex.min.css">
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/editors/quill/monokai-sublime.min.css">
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/editors/quill/quill.snow.css">
+
     <!-- END: Vendor CSS-->
 
     <!-- BEGIN: Theme CSS-->
@@ -34,6 +40,10 @@
     <link rel="stylesheet" type="text/css" href="app-assets/css/pages/dashboard-ecommerce.css">
     <link rel="stylesheet" type="text/css" href="app-assets/css/plugins/charts/chart-apex.css">
     <link rel="stylesheet" type="text/css" href="app-assets/css/plugins/extensions/ext-component-toastr.css">
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/plugins/extensions/ext-component-drag-drop.css">
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/plugins/forms/form-quill-editor.css">
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/pages/page-blog.css">
+
     <!-- END: Page CSS-->
 
     <!-- BEGIN: Custom CSS-->
@@ -280,14 +290,198 @@
         <div class="content-wrapper container-xxl p-0">
             <div class="content-header row"></div>
             <div class="content-body">
+
                 <section class="invoice-list-wrapper">
                     <div class="card">
                         <div class="card-header border-bottom">
                             <h4 class="card-title">Programas</h4>
                             <div class="dt-buttons d-inline-flex"> 
-                                <a href="agregar_programa.html">
-                                <button class="dt-button create-new btn btn-primary" tabindex="0" aria-controls="DataTables_Table_0" type="button" data-bs-toggle="modal" data-bs-target="#modals-slide-in"><span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus me-50 font-small-4"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>Agregar Programa</span></button></a>
-                                    
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#add-new-programa">
+                                    <i data-feather='plus'></i> Agregar Programa
+                                </button>
+                                <!-- Modal -->
+                                <div class="modal fade text-start" id="inlineForm" tabindex="-1" aria-labelledby="myModalLabel33" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h4 class="modal-title" id="myModalLabel33">Inline Login Form</h4>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <form action="#">
+                                                <div class="modal-body">
+                                                    <label>Email: </label>
+                                                    <div class="mb-1">
+                                                        <input type="text" placeholder="Email Address" class="form-control" />
+                                                    </div>
+
+                                                    <label>Password: </label>
+                                                    <div class="mb-1">
+                                                        <input type="password" placeholder="Password" class="form-control" />
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Login</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Calendar Add/Update/Delete event modal-->
+                                <div class="modal event-sidebar fade" id="add-new-programa" tabindex="-1" aria-labelledby="pricingModalTitle" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered modal-xl">
+                                    <div class="modal-content">
+                                        <div class="modal-header bg-transparent">
+                                            <h3 class="modal-title text-primary" id="exampleModalCenterTitle">Agregar Programa</h3>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body pb-5">
+                                            <div class="row">
+                                                <div class="col-8">
+                                                <div class="blog-edit-wrapper">
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <div class="card">
+                                                            <div class="card-body">
+                                                                <div class="row align-items-start">
+                                                                    <div class="col-md-5 col-12 d-flex justify-content-between align-items-center">
+
+                                                                        <div>
+                                                                            <h3 class="mb-0 ">Mittie Evans</h3>
+                                                                            <small class="text-muted">Cliente</small>
+                                                                        </div>
+
+
+                                                                    </div>
+                                                                </div>
+                                                                <!-- Form -->
+                                                                <form action="javascript:;" class="mt-2">
+                                                                    <div class="row align-items-center">
+                                                                        <div class="col-md-5 col-12">
+                                                                        <div class="mb-2">
+                                                                            <label class="form-label" for="blog-edit-title">Titulo</label>
+                                                                            <input type="text" id="blog-edit-title" class="form-control" value="Tren inferior" />
+                                                                        </div>
+                                                                        </div>
+                                                                        <div class="col-md-5 col-12">
+                                                                        <div class="mb-2">
+                                                                            <label class="form-label" for="blog-edit-category">Categorias</label>
+                                                                            <select id="blog-edit-category" class="select2 form-select" multiple>
+                                                                                <option value="1" selected>Biceps</option>
+                                                                                <option value="3" selected>Cardio</option>
+                                                                                <option value="6">Espalda</option>
+                                                                                <option value="9">Glúteos</option>
+                                                                                <option value="8">Hombro</option>
+                                                                                <option value="10">Pantorrilas</option>
+                                                                                <option value="7">Pecho</option>
+                                                                                <option value="2">Piernas</option>
+                                                                                <option value="4">Triceps</option>
+                                                                            </select>
+                                                                        </div>
+                                                                        </div>
+                                                                        <div class="col-md-2 mb-2 mb-md-0">
+                                                                            <div class="form-check form-check-inline">
+                                                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="checked" checked="">
+                                                                                <label class="form-check-label" for="inlineCheckbox1">Repetir</label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-12">
+                                                                        <div class="mb-2">
+                                                                            <div id="blog-editor-wrapper">
+                                                                                <div id="blog-editor-container">
+                                                                                    <div class="editor">
+                                                                                    <p>
+                                                                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/iSSAk4XCsRA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+                                                                                    </p>
+                                                                                    <p><br /></p>
+                                                                                    <p>
+                                                                                        Categoría: Cardio<br>
+                                                                                        Link: https://www.youtube.com/watch?v=iSSAk4XCsRA<br>
+                                                                                        Descripción: Se trata de dar un salto en el sitio al mismo tiempo que abres las piernas un poco más del ancho de los hombros y elevas los brazos hacia los laterales y hacia arriba hasta dar una palmada.
+                                                                                    </p>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        </div>
+                                                                        <div class="col-12 mb-2">
+                                                                        <div class="border rounded p-2">
+                                                                            <h4 class="mb-1">Subir Archivo</h4>
+                                                                            <div class="d-flex flex-column flex-md-row">
+                                                                                <div class="featured-info">
+                                                                                    <div class="d-inline-block">
+                                                                                    <input class="form-control" type="file" id="blogCustomFile" accept="image/*" />
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        </div>
+                                                                        <div class="col-12 mt-50">
+                                                                        <button type="submit" class="btn btn-primary me-1">Guardar</button>
+                                                                        <button type="reset" class="btn btn-outline-secondary">Cancelar</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </form>
+                                                                <!--/ Form -->
+                                                            </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                </div>
+                                                <div class="col-4">
+                                                <section id="dd-with-handle">
+                                                    <div class="row">
+                                                        <div class="col-sm-12">
+                                                            <div class="card">
+                                                            <div class="card-header">
+                                                                <h4 class="card-title">Ejercicios</h4>
+                                                            </div>
+                                                            <div class="card-body">
+                                                                <div class="input-group mb-2">
+                                                                    <span class="input-group-text" id="basic-addon-search1">
+                                                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search">
+                                                                        <circle cx="11" cy="11" r="8"></circle>
+                                                                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                                                                        </svg>
+                                                                    </span>
+                                                                    <input type="text" class="form-control" placeholder="Buscar...." aria-label="Search..." aria-describedby="basic-addon-search1">
+                                                                </div>
+                                                                <div class="col-sm-12 mb-2">
+                                                                    <select id="blog-edit-category2" class="select2 form-select" >
+                                                                        <option value="1" selected>Categorias</option>
+                                                                        <option value="1" >Biceps</option>
+                                                                        <option value="3" >Cardio</option>
+                                                                        <option value="6">Espalda</option>
+                                                                        <option value="9">Glúteos</option>
+                                                                        <option value="8">Hombro</option>
+                                                                        <option value="10">Pantorrilas</option>
+                                                                        <option value="7">Pecho</option>
+                                                                        <option value="2">Piernas</option>
+                                                                        <option value="4">Triceps</option>
+                                                                    </select>
+                                                                </div>
+                                                                <div class="col-sm-12">
+                                                                    <ul class="list-group" id="handle-list-1">
+                                                                        <li class="list-group-item"><span class="handle me-50">+</span>Aperturas con TRX</li>
+                                                                        <li class="list-group-item"><span class="handle me-50">+</span>Jumping jacks</li>
+                                                                        <li class="list-group-item"><span class="handle me-50">+</span>Pantorrilla maquina (Smith)</li>
+                                                                        <li class="list-group-item"><span class="handle me-50">+</span>Press militar sentado barra</li>
+                                                                        <li class="list-group-item"><span class="handle me-50">+</span>Remo vertical mancuernas</li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </section>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                                <!--/ Calendar Add/Update/Delete event modal-->
                             </div>
                         </div>
                         <div class="card-datatable table-responsive">
@@ -447,12 +641,25 @@
     <!-- BEGIN: Page Vendor JS-->
     <script src="app-assets/vendors/js/charts/apexcharts.min.js"></script>
     <script src="app-assets/vendors/js/extensions/toastr.min.js"></script>
+    <script src="../../../app-assets/vendors/js/forms/select/select2.full.min.js"></script>
+    <script src="../../../app-assets/vendors/js/extensions/dragula.min.js"></script>
+    <script src="../../../app-assets/vendors/js/editors/quill/katex.min.js"></script>
+    <script src="../../../app-assets/vendors/js/editors/quill/highlight.min.js"></script>
+    <script src="../../../app-assets/vendors/js/editors/quill/quill.min.js"></script>
+
     <!-- END: Page Vendor JS-->
 
     <!-- BEGIN: Theme JS-->
     <script src="app-assets/js/core/app-menu.js"></script>
     <script src="app-assets/js/core/app.js"></script>
     <!-- END: Theme JS-->
+
+    <!-- BEGIN: Page JS-->
+    <script src="../../../app-assets/js/scripts/forms/form-select2.js"></script>
+    <script src="../../../app-assets/js/scripts/extensions/ext-component-drag-drop.js"></script>
+    <script src="../../../app-assets/js/scripts/pages/page-blog-edit.js"></script>
+
+    <!-- END: Page JS-->
 
     <script>
         $(window).on('load', function() {
