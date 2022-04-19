@@ -50,7 +50,9 @@
     <link rel="stylesheet" type="text/css" href="../../../app-assets/css/plugins/extensions/ext-component-drag-drop.css">
     <link rel="stylesheet" type="text/css" href="../../../app-assets/css/plugins/forms/form-quill-editor.css">
     <link rel="stylesheet" type="text/css" href="../../../app-assets/css/plugins/charts/chart-apex.css">
-    <link rel="stylesheet" type="text/css" href="app-assets/css/plugins/forms/form-quill-editor.css">
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/plugins/forms/form-quill-editor.css">
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/pages/page-blog.css">
+
     <!-- END: Page CSS-->
 
     <!-- BEGIN: Custom CSS-->
@@ -1353,104 +1355,136 @@
             </div>
             <!-- /Medidas -->
             <!-- Nutricion -->
-            <div class="card tab-pane fade show" id="nutricion" role="tabpanel" aria-labelledby="list-home-list">
-            <div class="card-header">
-                <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#editCard">
-                <i data-feather="plus" class="me-25"></i>
-                <span>Agregar Nutricion</span>
-                </button>
-                <div class="col-2 mb-2">
-                    <select class=" w-100 select2 form-select" id="select2-basic">
-                        <option value="AK">Enero</option>
-                        <option value="HI">Febrero</option>
-                        <option value="CA">Marzo</option>
-                        <option value="NV">Abril</option>
-                        <option value="OR">Mayo</option>
-                        <option value="WA">Junio</option>
-                        <option value="AZ">Julio</option>
-                        <option value="CO">Agosto</option>
-                        <option value="ID">Septiembre</option>
-                        <option value="ID">Octubre</option>
-                        <option value="MT">Noviembre</option>
-                        <option value="NE">Diciembre</option>
-                    </select>
-                </div>
-            </div>
-            <div class="card-header">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-6 mb-2">
-                            <div id="blog-editor-wrapper">
-                                <div id="blog-editor-container">
-                                    <div class="editor">
-                                        <p>
-                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/iSSAk4XCsRA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-                                        </p>
-                                        <p><br /></p>
-                                        <p>
-                                        Categoría: Cardio<br>
-                                        Link: https://www.youtube.com/watch?v=iSSAk4XCsRA<br>
-                                        Descripción: Se trata de dar un salto en el sitio al mismo tiempo que abres las piernas un poco más del ancho de los hombros y elevas los brazos hacia los laterales y hacia arriba hasta dar una palmada.
-                                        </p>
-                                            </div>
-                                    </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-6 mb-2">
-                                        <div id="blog-editor-wrapper">
-                                                <div id="blog-editor-container">
-                                                    <div class="editor">
-                                                        <p>
-                                                            <iframe width="560" height="315" src="https://www.youtube.com/embed/iSSAk4XCsRA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-                                                        </p>
-                                                        <p><br /></p>
-                                                        <p>
-                                                            Categoría: Cardio<br>
-                                                            Link: https://www.youtube.com/watch?v=iSSAk4XCsRA<br>
-                                                            Descripción: Se trata de dar un salto en el sitio al mismo tiempo que abres las piernas un poco más del ancho de los hombros y elevas los brazos hacia los laterales y hacia arriba hasta dar una palmada.
-                                                                                </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="w-100"></div>
-                                        <div class="col-6 mb-2">
-                                        <div id="blog-editor-wrapper">
-                                            <div id="blog-editor-container">
-                                                <div class="editor">
-                                                    <p>
-                                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/iSSAk4XCsRA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-                                                    </p>
-                                                    <p><br /></p>
-                                                    <p>
-                                                    Categoría: Cardio<br>
-                                                    Link: https://www.youtube.com/watch?v=iSSAk4XCsRA<br>
-                                                    Descripción: Se trata de dar un salto en el sitio al mismo tiempo que abres las piernas un poco más del ancho de los hombros y elevas los brazos hacia los laterales y hacia arriba hasta dar una palmada.
-                                                    </p>
-                                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-6 mb-2">
-                                        <div id="blog-editor-wrapper">
-                                            <div id="blog-editor-container">
-                                                <div class="editor">
-                                                    <p>
-                                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/iSSAk4XCsRA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-                                                    </p>
-                                                    <p><br /></p>
-                                                    <p>
-                                                    Categoría: Cardio<br>
-                                                    Link: https://www.youtube.com/watch?v=iSSAk4XCsRA<br>
-                                                    Descripción: Se trata de dar un salto en el sitio al mismo tiempo que abres las piernas un poco más del ancho de los hombros y elevas los brazos hacia los laterales y hacia arriba hasta dar una palmada.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+            <div class="tab-pane fade show" id="nutricion">
+                <div class="card fade show"  role="tabpanel" aria-labelledby="list-home-list">
+                    <div class="card-header py-1">
+                        <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#editCard">
+                        <i data-feather="plus" class="me-25"></i>
+                        <span>Agregar Nutricion</span>
+                        </button>
+                        <div class="col-2 ">
+                            <select class=" w-100 select2 form-select" id="select2-basic">
+                                <option value="AK">Enero</option>
+                                <option value="HI">Febrero</option>
+                                <option value="CA">Marzo</option>
+                                <option value="NV">Abril</option>
+                                <option value="OR">Mayo</option>
+                                <option value="WA">Junio</option>
+                                <option value="AZ">Julio</option>
+                                <option value="CO">Agosto</option>
+                                <option value="ID">Septiembre</option>
+                                <option value="ID">Octubre</option>
+                                <option value="MT">Noviembre</option>
+                                <option value="NE">Diciembre</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
-            </div>
+                <div class="row">
+                    <div class="col-sm-12 col-md-6">
+                        <div class="card fade show">
+                            <div class="card-header">
+                                <div class="col-10">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <input class="form-control " type="text" placeholder="Titulo" value=""  />
+                                        </div>
+                                        <div class="col-6">
+                                            <input type="text" id="fp-default" class="form-control flatpickr-basic" placeholder="YYYY-MM-DD" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="heading-elements">
+                                    <ul class="list-inline mb-0">
+                                        <li data-bs-toggle="tooltip" data-popup="tooltip-custom" title="Deshabilitar Perfil">
+                                            <a href="#" class="text-secondary">
+                                                <i data-feather='trash-2'></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div id="blog-editor-wrapper">
+                                        <div id="blog-editor-container-nutricion1">
+                                            <div class="editor">
+                                                <p>
+                                                    Cupcake ipsum dolor sit. Amet dessert donut candy chocolate bar cotton dessert candy
+                                                    chocolate. Candy muffin danish. Macaroon brownie jelly beans marzipan cheesecake oat cake.
+                                                    Carrot cake macaroon chocolate cake. Jelly brownie jelly. Marzipan pie sweet roll.
+                                                </p>
+                                                <p><br /></p>
+                                                <p>
+                                                    Liquorice dragée cake chupa chups pie cotton candy jujubes bear claw sesame snaps. Fruitcake
+                                                    chupa chups chocolate bonbon lemon drops croissant caramels lemon drops. Candy jelly cake
+                                                    marshmallow jelly beans dragée macaroon. Gummies sugar plum fruitcake. Candy canes candy
+                                                    cupcake caramels cotton candy jujubes fruitcake.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                </div>
+            
+                            </div>
+                        </div>
+    
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <div class="card fade show ">
+                            <div class="card-header">
+                                <div class="col-10">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <input class="form-control " type="text" placeholder="Titulo" value=""  />
+                                        </div>
+                                        <div class="col-6">
+                                            <input type="text" id="fp-default" class="form-control flatpickr-basic" placeholder="YYYY-MM-DD" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="heading-elements">
+                                    <ul class="list-inline mb-0">
+                                        <li data-bs-toggle="tooltip" data-popup="tooltip-custom" title="Deshabilitar Perfil">
+                                            <a href="#" class="text-secondary">
+                                                <i data-feather='trash-2'></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+
+                            <div class="card-body">
+                                <div class="row">
+                                    <div id="blog-editor-wrapper">
+                                        <div id="blog-editor-container-nutricion2">
+                                            <div class="editor">
+                                                <p>
+                                                    Cupcake ipsum dolor sit. Amet dessert donut candy chocolate bar cotton dessert candy
+                                                    chocolate. Candy muffin danish. Macaroon brownie jelly beans marzipan cheesecake oat cake.
+                                                    Carrot cake macaroon chocolate cake. Jelly brownie jelly. Marzipan pie sweet roll.
+                                                </p>
+                                                <p><br /></p>
+                                                <p>
+                                                    Liquorice dragée cake chupa chups pie cotton candy jujubes bear claw sesame snaps. Fruitcake
+                                                    chupa chups chocolate bonbon lemon drops croissant caramels lemon drops. Candy jelly cake
+                                                    marshmallow jelly beans dragée macaroon. Gummies sugar plum fruitcake. Candy canes candy
+                                                    cupcake caramels cotton candy jujubes fruitcake.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+            
+                            </div>
+                        </div>
+    
+                    </div>
+                </div>
+
             </div>
             <!-- /Nutricion -->
         </div>
@@ -1774,6 +1808,8 @@
     <script src="../../../app-assets/js/scripts/components/components-popovers.js"></script>
     <script src="../../../app-assets/js/scripts/forms/pickers/form-pickers.js"></script>
     <script src="../../../app-assets/js/scripts/pages/page-blog-edit.js"></script>
+    <script src="../../../app-assets/js/scripts/pages/page-blog-edit-nutricion1.js"></script>
+    <script src="../../../app-assets/js/scripts/pages/page-blog-edit-nutricion2.js"></script>
     <script src="../../../app-assets/js/scripts/charts/chart-apex.js"></script>
     <script src="../../../app-assets/js/scripts/forms/form-select2.js"></script>
 
