@@ -53,9 +53,9 @@
     <link rel="stylesheet" type="text/css" href="app-assets/css/plugins/forms/form-quill-editor.css">
     <!-- END: Page CSS-->
 
-        <!-- BEGIN: Custom CSS-->
-        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-        <!-- END: Custom CSS-->
+    <!-- BEGIN: Custom CSS-->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <!-- END: Custom CSS-->
     <style>
         .fc-view-harness {
             height: 100%!important;
@@ -540,7 +540,7 @@
                                 <p>Project meeting with john @10:15am.</p>
                                 <div class="d-flex flex-row align-items-center">
                                     <div class="avatar">
-                                    <img src="app-assets/images/avatars/12-small.png" alt="avatar" height="38" width="38" />
+                                        <img src="app-assets/images/avatars/12-small.png" alt="avatar" height="38" width="38" />
                                     </div>
                                     <div class="ms-50">
                                     <h6 class="mb-0">John Doe (Client)</h6>
@@ -1207,8 +1207,44 @@
                         <td>
                             <span class="fw-bold">Altura</span>
                         </td>
-                        <td class="text-center text-primary">0</td>
-                        <td class="text-center">0</td>
+                        <td class="text-center text-primary fw-bolder">0</td>
+                        <td class="text-center">
+                            <div class="fw-bolder cursor-pointer" data-bs-toggle="modal" data-bs-target="#graficaExample">
+                                1.8m
+                            </div>
+
+                            <!-- Modal -->
+                            <div class="modal fade text-start" id="graficaExample" tabindex="-1" aria-labelledby="myModalLabel1" aria-hidden="true">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h4 class="modal-title" id="myModalLabel1">Evolución de Mittie Evans</h4>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <!-- Line Chart Starts -->
+                                            <div class="
+                                                        card-header
+                                                        d-flex
+                                                        flex-sm-row flex-column
+                                                        justify-content-md-between
+                                                        align-items-start
+                                                        justify-content-start
+                                                    ">
+                                                        <div>
+                                                            <h4 class="card-title mb-25">Altura</h4>
+                                                            <span class="card-subtitle text-muted">Esta gráfica refleja progreso del atleta.</span>
+                                                        </div>
+                                            </div>
+                                            <div class="card-body">
+                                                        <div id="line-chart"></div>
+                                            </div>
+                                            <!-- Line Chart Ends -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
                         <td class="text-center">0</td>
                         <td class="text-center">0</td>
                         <td class="text-center">0</td>
@@ -1219,7 +1255,7 @@
                         <td>
                             <span class="fw-bold">Peso</span>
                         </td>
-                        <td class="text-center text-primary">0</td>
+                        <td class="text-center text-primary fw-bolder">0</td>
                         <td class="text-center">0</td>
                         <td class="text-center">0</td>
                         <td class="text-center">0</td>
@@ -1231,7 +1267,7 @@
                         <td>
                             <span class="fw-bold">Edad Metabólica</span>
                         </td>
-                        <td class="text-center text-primary">0</td>
+                        <td class="text-center text-primary fw-bolder">0</td>
                         <td class="text-center">0</td>
                         <td class="text-center">0</td>
                         <td class="text-center">0</td>
@@ -1243,7 +1279,7 @@
                         <td>
                             <span class="fw-bold">Indice de Masa Corporal</span>
                         </td>
-                        <td class="text-center text-primary">0</td>
+                        <td class="text-center text-primary fw-bolder">0</td>
                         <td class="text-center">0</td>
                         <td class="text-center">0</td>
                         <td class="text-center">0</td>
@@ -1255,7 +1291,7 @@
                         <td>
                             <span class="fw-bold">% Grasa Corporal</span>
                         </td>
-                        <td class="text-center text-primary">0</td>
+                        <td class="text-center text-primary fw-bolder">0</td>
                         <td class="text-center">0</td>
                         <td class="text-center">0</td>
                         <td class="text-center">0</td>
@@ -1267,7 +1303,7 @@
                         <td>
                             <span class="fw-bold">Masa Muscular</span>
                         </td>
-                        <td class="text-center text-primary">0</td>
+                        <td class="text-center text-primary fw-bolder">0</td>
                         <td class="text-center">0</td>
                         <td class="text-center">0</td>
                         <td class="text-center">0</td>
@@ -1279,7 +1315,7 @@
                         <td>
                             <span class="fw-bold">% Grasa Visceral</span>
                         </td>
-                        <td class="text-center text-primary">0</td>
+                        <td class="text-center text-primary fw-bolder">0</td>
                         <td class="text-center">0</td>
                         <td class="text-center">0</td>
                         <td class="text-center">0</td>
@@ -1291,7 +1327,7 @@
                         <td>
                             <span class="fw-bold">% Agua</span>
                         </td>
-                        <td class="text-center text-primary">0</td>
+                        <td class="text-center text-primary fw-bolder">0</td>
                         <td class="text-center">0</td>
                         <td class="text-center">0</td>
                         <td class="text-center">0</td>
@@ -1303,7 +1339,7 @@
                         <td>
                             <span class="fw-bold">Masa Ósea</span>
                         </td>
-                        <td class="text-center text-primary">0</td>
+                        <td class="text-center text-primary fw-bolder">0</td>
                         <td class="text-center">0</td>
                         <td class="text-center">0</td>
                         <td class="text-center">0</td>
@@ -1344,74 +1380,74 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-6 mb-2">
-                        <div id="blog-editor-wrapper">
-                            <div id="blog-editor-container">
-                                <div class="editor">
-                                    <p>
-                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/iSSAk4XCsRA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-                                    </p>
-                                    <p><br /></p>
-                                    <p>
-                                    Categoría: Cardio<br>
-                                    Link: https://www.youtube.com/watch?v=iSSAk4XCsRA<br>
-                                    Descripción: Se trata de dar un salto en el sitio al mismo tiempo que abres las piernas un poco más del ancho de los hombros y elevas los brazos hacia los laterales y hacia arriba hasta dar una palmada.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        </div>
-                        <div class="col-6 mb-2">
-                        <div id="blog-editor-wrapper">
-                            <div id="blog-editor-container">
-                                <div class="editor">
-                                    <p>
-                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/iSSAk4XCsRA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-                                    </p>
-                                    <p><br /></p>
-                                    <p>
-                                    Categoría: Cardio<br>
-                                    Link: https://www.youtube.com/watch?v=iSSAk4XCsRA<br>
-                                    Descripción: Se trata de dar un salto en el sitio al mismo tiempo que abres las piernas un poco más del ancho de los hombros y elevas los brazos hacia los laterales y hacia arriba hasta dar una palmada.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        </div>
-                        <div class="w-100"></div>
-                        <div class="col-6 mb-2">
-                        <div id="blog-editor-wrapper">
-                            <div id="blog-editor-container">
-                                <div class="editor">
-                                    <p>
-                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/iSSAk4XCsRA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-                                    </p>
-                                    <p><br /></p>
-                                    <p>
-                                    Categoría: Cardio<br>
-                                    Link: https://www.youtube.com/watch?v=iSSAk4XCsRA<br>
-                                    Descripción: Se trata de dar un salto en el sitio al mismo tiempo que abres las piernas un poco más del ancho de los hombros y elevas los brazos hacia los laterales y hacia arriba hasta dar una palmada.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        </div>
-                        <div class="col-6 mb-2">
-                        <div id="blog-editor-wrapper">
-                            <div id="blog-editor-container">
-                                <div class="editor">
-                                    <p>
-                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/iSSAk4XCsRA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-                                    </p>
-                                    <p><br /></p>
-                                    <p>
-                                    Categoría: Cardio<br>
-                                    Link: https://www.youtube.com/watch?v=iSSAk4XCsRA<br>
-                                    Descripción: Se trata de dar un salto en el sitio al mismo tiempo que abres las piernas un poco más del ancho de los hombros y elevas los brazos hacia los laterales y hacia arriba hasta dar una palmada.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        </div>
+                            <div id="blog-editor-wrapper">
+                                <div id="blog-editor-container">
+                                    <div class="editor">
+                                        <p>
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/iSSAk4XCsRA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+                                        </p>
+                                        <p><br /></p>
+                                        <p>
+                                        Categoría: Cardio<br>
+                                        Link: https://www.youtube.com/watch?v=iSSAk4XCsRA<br>
+                                        Descripción: Se trata de dar un salto en el sitio al mismo tiempo que abres las piernas un poco más del ancho de los hombros y elevas los brazos hacia los laterales y hacia arriba hasta dar una palmada.
+                                        </p>
+                                            </div>
+                                    </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 mb-2">
+                                        <div id="blog-editor-wrapper">
+                                                <div id="blog-editor-container">
+                                                    <div class="editor">
+                                                        <p>
+                                                            <iframe width="560" height="315" src="https://www.youtube.com/embed/iSSAk4XCsRA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+                                                        </p>
+                                                        <p><br /></p>
+                                                        <p>
+                                                            Categoría: Cardio<br>
+                                                            Link: https://www.youtube.com/watch?v=iSSAk4XCsRA<br>
+                                                            Descripción: Se trata de dar un salto en el sitio al mismo tiempo que abres las piernas un poco más del ancho de los hombros y elevas los brazos hacia los laterales y hacia arriba hasta dar una palmada.
+                                                                                </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="w-100"></div>
+                                        <div class="col-6 mb-2">
+                                        <div id="blog-editor-wrapper">
+                                            <div id="blog-editor-container">
+                                                <div class="editor">
+                                                    <p>
+                                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/iSSAk4XCsRA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+                                                    </p>
+                                                    <p><br /></p>
+                                                    <p>
+                                                    Categoría: Cardio<br>
+                                                    Link: https://www.youtube.com/watch?v=iSSAk4XCsRA<br>
+                                                    Descripción: Se trata de dar un salto en el sitio al mismo tiempo que abres las piernas un poco más del ancho de los hombros y elevas los brazos hacia los laterales y hacia arriba hasta dar una palmada.
+                                                    </p>
+                                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 mb-2">
+                                        <div id="blog-editor-wrapper">
+                                            <div id="blog-editor-container">
+                                                <div class="editor">
+                                                    <p>
+                                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/iSSAk4XCsRA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+                                                    </p>
+                                                    <p><br /></p>
+                                                    <p>
+                                                    Categoría: Cardio<br>
+                                                    Link: https://www.youtube.com/watch?v=iSSAk4XCsRA<br>
+                                                    Descripción: Se trata de dar un salto en el sitio al mismo tiempo que abres las piernas un poco más del ancho de los hombros y elevas los brazos hacia los laterales y hacia arriba hasta dar una palmada.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                     </div>
                 </div>
             </div>
