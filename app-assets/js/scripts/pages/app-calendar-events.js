@@ -18,7 +18,7 @@ var events = [
     title: 'Design Review',
     start: date,
     end: nextDay,
-    allDay: false,
+    allDay: true,
     extendedProps: {
       calendar: 'Business'
     }
