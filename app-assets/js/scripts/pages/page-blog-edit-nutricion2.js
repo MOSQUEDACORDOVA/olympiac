@@ -3,7 +3,7 @@
 	Description: Blog edit field select2 and quill editor JS
 	----------------------------------------------------------------------------------------
 	Item Name: Olympiac  - Vuejs, HTML & Laravel Admin Dashboard Template
-	Author: PIXINVENT
+	Author: PIXINVENTjkk
   Author URL: http://www.themeforest.net/user/pixinvent
 ==========================================================================================*/
 (function (window, document, $) {
