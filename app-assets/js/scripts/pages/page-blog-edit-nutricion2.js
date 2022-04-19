@@ -50,14 +50,14 @@
         ],
         ['bold', 'italic', 'underline', 'strike'],
         [
-          {
+          /*{
             color: []
           },
           {
             background: []
-          }
+          }*/
         ],
-        [
+        /*[
           {
             script: 'super'
           },
@@ -74,14 +74,14 @@
           },
           'blockquote',
           'code-block'
-        ],
+        ],*/
         [
           {
             list: 'ordered'
           },
           {
             list: 'bullet'
-          },
+          },/*
           {
             indent: '-1'
           },
@@ -93,10 +93,10 @@
           'direction',
           {
             align: []
-          }
+          }*/
         ],
-        ['link', 'image', 'video', 'formula'],
-        ['clean']
+        ['link',/* 'image', 'video', 'formula'],
+      ['clean'*/]
       ]
     },
     theme: 'snow'
