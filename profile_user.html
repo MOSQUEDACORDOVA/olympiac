@@ -674,14 +674,14 @@
                                               </ul>
                                            </div>
                                         </div>
-                                     </div>
+                                    </div>
 
                                     <!-- Change Password -->
                                     <div class="col-12">
                                         <div class="card">
                                             <h4 class="card-header">Cambia la contraseña</h4>
                                             <div class="card-body">
-                                                <form id="formChangePassword" method="POST" onsubmit="return false">
+                                                <form id="formChangePassword" method="POST">
                                                     <div class="alert alert-warning mb-2" role="alert">
                                                         <h6 class="alert-heading">Asegúrese de que se cumplan estos requisitos</h6>
                                                         <div class="alert-body fw-normal">Mínimo 8 caracteres de largo, mayúsculas y símbolos </div>
@@ -978,371 +978,491 @@
                                 <!-- Calendario -->
 
                                 <!-- Billing -->
-                                <div class="card tab-pane fade show" id="billing" role="tabpanel" aria-labelledby="list-home-list">
+                                <div class="tab-pane fade show row" id="billing" role="tabpanel" aria-labelledby="list-home-list">
                                 
                                     <!-- current plan -->
-                                    <div class="card">
-                                        <div class="card-header">
-                                            <h4 class="card-title">Fecha de Ingreso</h4>
-                                        </div>
-                                        <div class="card-body">
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <div class="mb-2 pb-50">
-                                                        <h5>Su plan actual es  <strong>Basico</strong></h5>
-                                                        <span>Un comienzo simple para todos.</span>
-                                                    </div>
-                                                    <div class="mb-2 pb-50">
-                                                        <h5>Activo hasta el 09 de diciembre 2021</h5>
-                                                        <span>Le enviaremos una notificación al vencimiento de la Suscripción </span>
-                                                    </div>
-                                                    <div class="mb-2 mb-md-1">
-                                                        <h5>$99 por mes <span class="badge badge-light-primary ms-50">Popular</span></h5>
-                                                        <span>Plan estándar para pequeñas y medianas empresas </span>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <div class="alert alert-warning mb-2" role="alert">
-                                                        <h6 class="alert-heading">¡Necesitamos su atención! </h6>
-                                                        <div class="alert-body fw-normal">su plan requiere actualización </div>
-                                                    </div>
-                                                    <div class="plan-statistics pt-1">
-                                                        <div class="d-flex justify-content-between">
-                                                            <h5 class="fw-bolder">Dias</h5>
-                                                            <h5 class="fw-bolder">4 de 30 Dias</h5>
+                                    <div class="col-12">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <h4 class="card-title">Gestiona tu Membresía</h4>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="mb-2 pb-50">
+                                                            <h5>Su plan actual es  <strong>Mensual</strong></h5>
+                                                            <span>Un comienzo simple para todos.</span>
                                                         </div>
-                                                        <div class="progress">
-                                                            <div class="progress-bar w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        <div class="mb-2 pb-50">
+                                                            <h5>Activo hasta el 09 de diciembre 2021</h5>
+                                                            <span>Le enviaremos una notificación al vencimiento de la Suscripción </span>
                                                         </div>
-                                                        <p class="mt-50">4 días restantes hasta que su plan requiera actualización</p>
+                                                        <div class="mb-2 mb-md-1">
+                                                            <h5>$99 por mes <span class="badge badge-light-primary ms-50">Popular</span></h5>
+                                                            <span>Plan estándar para pequeñas y medianas empresas </span>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div class="col-12">
-                                                    <button class="btn btn-primary me-1 mt-1" data-bs-toggle="modal" data-bs-target="#upgradePlanModal">
-                                                        Plan de actualización 
-                                                    </button>
-                                                    <button class="btn btn-outline-danger cancel-subscription mt-1">Cancelar suscripción</button>
+                                                    <div class="col-md-6">
+                                                        <div class="alert alert-warning mb-2" role="alert">
+                                                            <h6 class="alert-heading">¡Necesitamos su atención! </h6>
+                                                            <div class="alert-body fw-normal">su plan requiere actualización </div>
+                                                        </div>
+                                                        <div class="plan-statistics pt-1">
+                                                            <div class="d-flex justify-content-between">
+                                                                <h5 class="fw-bolder">Dias</h5>
+                                                                <h5 class="fw-bolder">4 de 30 Dias</h5>
+                                                            </div>
+                                                            <div class="progress">
+                                                                <div class="progress-bar w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                                            </div>
+                                                            <p class="mt-50">4 días restantes hasta que su plan requiera actualización</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <button class="btn btn-primary me-1 mt-1" data-bs-toggle="modal" data-bs-target="#upgradePlanModal">
+                                                            Plan de actualización 
+                                                        </button>
+                                                        <button class="btn btn-outline-danger cancel-subscription mt-1">Cancelar suscripción</button>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <!-- / current plan -->
 
+                                    <!-- PAY METHODS -->
+                                    <div class="col-12">
+                                        <div class="card my-0">
+                                            <div class="card-header border-bottom">
+                                              <h4 class="card-title">Métodos de pago</h4>
+                                            </div>
+                                            <div class="card-body my-1 py-25">
+                                              <div class="row gx-4">
+                                                <div class="col-lg-6">
+                                                  <form id="creditCardForm" class="row gx-2 gy-1 validate-form" novalidate="novalidate">
+                                                    <div class="col-12">
+                                                      <div class="form-check form-check-inline mb-1">
+                                                        <input name="collapsible-payment" class="form-check-input" type="radio" id="collapsible-payment-cc" checked="">
+                                                        <label class="form-check-label" for="collapsible-payment-cc">Credito/Debito/ATM</label>
+                                                      </div>
+                                                      <div class="form-check form-check-inline mb-1">
+                                                        <input name="collapsible-payment" class="form-check-input" type="radio" value="" id="collapsible-payment-cash">
+                                                        <label class="form-check-label" for="collapsible-payment-cash">PayPal</label>
+                                                      </div>
+                                                    </div>
+                                                    <div class="col-12 mt-0">
+                                                      <label class="form-label" for="addCardNumber">Número de tarjeta</label>
+                                                      <div class="input-group input-group-merge">
+                                                        <input id="addCardNumber" name="addCard" class="form-control add-credit-card-mask" type="text" placeholder="5637 8172 1290 7898" aria-describedby="addCard2" data-msg="Please enter your credit card number">
+                                                        <span class="input-group-text cursor-pointer p-25" id="addCard2">
+                                                          <span class="add-card-type"></span>
+                                                        </span>
+                                                      </div>
+                                                    </div>
+                                      
+                                                    <div class="col-md-6">
+                                                      <label class="form-label" for="addCardName">Nombre en la tarjeta</label>
+                                                      <input type="text" id="addCardName" class="form-control" placeholder="John Doe">
+                                                    </div>
+                                      
+                                                    <div class="col-6 col-md-3">
+                                                      <label class="form-label" for="addCardExpiryDate">
+                                                        Vencimiento</label>
+                                                      <input type="text" id="addCardExpiryDate" class="form-control add-expiry-date-mask" placeholder="MM/YY">
+                                                    </div>
+                                      
+                                                    <div class="col-6 col-md-3">
+                                                      <label class="form-label" for="addCardCvv">CVV</label>
+                                                      <input type="text" id="addCardCvv" class="form-control add-cvv-code-mask" maxlength="3" placeholder="cvv">
+                                                    </div>
+                                      
+                                                    <div class="col-12">
+                                                      <div class="d-flex align-items-center">
+                                                        <div class="form-check form-switch form-check-primary me-25">
+                                                          <input type="checkbox" class="form-check-input" id="addSaveCard" checked="">
+                                                          <label class="form-check-label" for="addSaveCard">
+                                                            <span class="switch-icon-left"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+                                                            <span class="switch-icon-right"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></span>
+                                                          </label>
+                                                        </div>
+                                                        <label class="form-check-label fw-bolder" for="addSaveCard"> ¿Guardar tarjeta para transacciones futuras? </label>
+                                                      </div>
+                                                    </div>
+                                                    <div class="col-12 mt-2 pt-1">
+                                                      <button type="submit" class="btn btn-primary me-1 waves-effect waves-float waves-light">Guardar</button>
+                                                      <button type="reset" class="btn btn-outline-secondary waves-effect">Descartar</button>
+                                                    </div>
+                                                    <div></div>
+                                                    <input type="hidden">
+                                                  </form>
+                                                </div>
+                                                <div class="col-lg-6 mt-2 mt-lg-0">
+                                                  <h6 class="fw-bolder mb-2">Mis Tarjetas</h6>
+                                                  <div class="added-cards">
+                                                    <div class="cardMaster rounded border p-2 mb-1">
+                                                      <div class="d-flex justify-content-between flex-sm-row flex-column">
+                                                        <div class="card-information">
+                                                          <img class="mb-1 img-fluid" src="../../../app-assets/images/icons/payments/mastercard.png" alt="Master Card">
+                                                          <div class="d-flex align-items-center mb-50">
+                                                            <h6 class="mb-0">Tom McBride</h6>
+                                                            <span class="badge badge-light-primary ms-50">Principal</span>
+                                                          </div>
+                                                          <span class="card-number">∗∗∗∗ ∗∗∗∗ 9856</span>
+                                                        </div>
+                                                        <div class="d-flex flex-column text-start text-lg-end">
+                                                          <div class="d-flex order-sm-0 order-1 mt-1 mt-sm-0">
+                                                            <button class="btn btn-outline-primary me-75 waves-effect" data-bs-toggle="modal" data-bs-target="#editCard">
+                                                              Editar
+                                                            </button>
+                                                            <button class="btn btn-outline-secondary waves-effect">Eliminar</button>
+                                                          </div>
+                                                          <span class="mt-2">La tarjeta vence el 12/24</span>
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                    <div class="cardMaster border rounded p-2">
+                                                      <div class="d-flex justify-content-between flex-sm-row flex-column">
+                                                        <div class="card-information">
+                                                          <img class="mb-1 img-fluid" src="../../../app-assets/images/icons/payments/visa.png" alt="Visa Card">
+                                                          <h6>Mildred Wagner</h6>
+                                                          <span class="card-number">∗∗∗∗ ∗∗∗∗ 5896</span>
+                                                        </div>
+                                                        <div class="d-flex flex-column text-start text-lg-end">
+                                                          <div class="d-flex order-sm-0 order-1 mt-1 mt-sm-0">
+                                                            <button class="btn btn-outline-primary me-75 waves-effect" data-bs-toggle="modal" data-bs-target="#editCard">
+                                                              Editar
+                                                            </button>
+                                                            <button class="btn btn-outline-secondary waves-effect">Eliminar</button>
+                                                          </div>
+                                                          <span class="mt-2">La tarjeta vence el 02/24</span>
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- PAY METHODS -->
+
                                 </div>
                                 <!-- /Billing -->
                             
                                 <!-- Medidas -->
-                                <div class="card tab-pane fade show" id="medidas" role="tabpanel" aria-labelledby="list-home-list">
-                                    <div class="card-header">
-                                        <button type="button" class="btn btn-outline-primary">
-                                            <i data-feather="plus" class="me-25"></i>
-                                            <span>Agregar Medida</span>
-                                        </button>
-
-                                        <div class="col-2">
-                                            <select class=" w-100 select2 form-select" id="select2-basic">
-                                                <option value="AK">Enero</option>
-                                                <option value="HI">Febrero</option>
-                                                <option value="CA">Marzo</option>
-                                                <option value="NV">Abril</option>
-                                                <option value="OR">Mayo</option>
-                                                <option value="WA">Junio</option>
-                                                <option value="AZ">Julio</option>
-                                                <option value="CO">Agosto</option>
-                                                <option value="ID">Septiembre</option>
-                                                <option value="ID">Octubre</option>
-                                                <option value="MT">Noviembre</option>
-                                                <option value="NE">Diciembre</option>
-                                            </select>
+                                <div class="tab-pane fade show" id="medidas" role="tabpanel" aria-labelledby="list-home-list">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <button type="button" class="btn btn-outline-primary">
+                                                <i data-feather="plus" class="me-25"></i>
+                                                <span>Agregar Medida</span>
+                                            </button>
+    
+                                            <div class="col-2">
+                                                <select class=" w-100 select2 form-select" id="select2-basic">
+                                                    <option value="AK">Enero</option>
+                                                    <option value="HI">Febrero</option>
+                                                    <option value="CA">Marzo</option>
+                                                    <option value="NV">Abril</option>
+                                                    <option value="OR">Mayo</option>
+                                                    <option value="WA">Junio</option>
+                                                    <option value="AZ">Julio</option>
+                                                    <option value="CO">Agosto</option>
+                                                    <option value="ID">Septiembre</option>
+                                                    <option value="ID">Octubre</option>
+                                                    <option value="MT">Noviembre</option>
+                                                    <option value="NE">Diciembre</option>
+                                                </select>
+                                            </div>
+    
+    
                                         </div>
-
-
-                                    </div>
-                                    <div class="card-body">
-                                        <p class="card-text">
-                                            Texto descriptivo (opcional). Como es unn modulo complejo recomendamos dejar una descripción de su uso en este párrafo.
-                                        </p>
-                                    </div>
-                                    <div class="table-responsive">
-                                        <table class="table table-bordered">
-                                            <thead>
-                                                <tr>
-                                                    <th>
-                                                        <span class="fw-bold">General</span>
-                                                    </th>
-                                                    <th class="position-relative text-center">
-                                                        <div class="dropdown position-absolute end-0">
-                                                            <button type="button" class="btn btn-sm dropdown-toggle hide-arrow p-0" data-bs-toggle="dropdown">
-                                                                <i data-feather="more-vertical"></i>
-                                                            </button>
-                                                            <div class="dropdown-menu dropdown-menu-end">
-                                                                <a class="dropdown-item text-primary" href="#">
-                                                                    <i data-feather="bookmark" class="me-50"></i>
-                                                                    <span class="text-capitalize">Fijar</span>
-                                                                </a>
-                                                                <a class="dropdown-item" href="#">
-                                                                    <i data-feather="edit-2" class="me-50"></i>
-                                                                    <span class="text-capitalize">Editar</span>
-                                                                </a>
-                                                                <a class="dropdown-item" href="#">
-                                                                    <i data-feather="trash" class="me-50"></i>
-                                                                    <span class="text-capitalize">Eliminar</span>
-                                                                </a>
+                                        <div class="card-body">
+                                            <p class="card-text">
+                                                Texto descriptivo (opcional). Como es unn modulo complejo recomendamos dejar una descripción de su uso en este párrafo.
+                                            </p>
+                                        </div>
+                                        <div class="table-responsive">
+                                            <table class="table table-bordered">
+                                                <thead>
+                                                    <tr>
+                                                        <th>
+                                                            <span class="fw-bold">General</span>
+                                                        </th>
+                                                        <th class="position-relative text-center">
+                                                            <div class="dropdown position-absolute end-0">
+                                                                <button type="button" class="btn btn-sm dropdown-toggle hide-arrow p-0" data-bs-toggle="dropdown">
+                                                                    <i data-feather="more-vertical"></i>
+                                                                </button>
+                                                                <div class="dropdown-menu dropdown-menu-end">
+                                                                    <a class="dropdown-item text-primary" href="#">
+                                                                        <i data-feather="bookmark" class="me-50"></i>
+                                                                        <span class="text-capitalize">Fijar</span>
+                                                                    </a>
+                                                                    <a class="dropdown-item" href="#">
+                                                                        <i data-feather="edit-2" class="me-50"></i>
+                                                                        <span class="text-capitalize">Editar</span>
+                                                                    </a>
+                                                                    <a class="dropdown-item" href="#">
+                                                                        <i data-feather="trash" class="me-50"></i>
+                                                                        <span class="text-capitalize">Eliminar</span>
+                                                                    </a>
+                                                                </div>
                                                             </div>
-                                                        </div>
-                                                        <div class="text-primary">01/04</div>
-                                                    </th>
-                                                    <th class="position-relative text-center">
-                                                        <div class="dropdown position-absolute end-0">
-                                                            <button type="button" class="btn btn-sm dropdown-toggle hide-arrow p-0" data-bs-toggle="dropdown">
-                                                                <i data-feather="more-vertical"></i>
-                                                            </button>
-                                                            <div class="dropdown-menu dropdown-menu-end">
-                                                                <a class="dropdown-item" href="#">
-                                                                    <i data-feather="bookmark" class="me-50"></i>
-                                                                    <span class="text-capitalize">Fijar</span>
-                                                                </a>
-                                                                <a class="dropdown-item" href="#">
-                                                                    <i data-feather="edit-2" class="me-50"></i>
-                                                                    <span class="text-capitalize">Editar</span>
-                                                                </a>
-                                                                <a class="dropdown-item" href="#">
-                                                                    <i data-feather="trash" class="me-50"></i>
-                                                                    <span class="text-capitalize">Eliminar</span>
-                                                                </a>
+                                                            <div class="text-primary">01/04</div>
+                                                        </th>
+                                                        <th class="position-relative text-center">
+                                                            <div class="dropdown position-absolute end-0">
+                                                                <button type="button" class="btn btn-sm dropdown-toggle hide-arrow p-0" data-bs-toggle="dropdown">
+                                                                    <i data-feather="more-vertical"></i>
+                                                                </button>
+                                                                <div class="dropdown-menu dropdown-menu-end">
+                                                                    <a class="dropdown-item" href="#">
+                                                                        <i data-feather="bookmark" class="me-50"></i>
+                                                                        <span class="text-capitalize">Fijar</span>
+                                                                    </a>
+                                                                    <a class="dropdown-item" href="#">
+                                                                        <i data-feather="edit-2" class="me-50"></i>
+                                                                        <span class="text-capitalize">Editar</span>
+                                                                    </a>
+                                                                    <a class="dropdown-item" href="#">
+                                                                        <i data-feather="trash" class="me-50"></i>
+                                                                        <span class="text-capitalize">Eliminar</span>
+                                                                    </a>
+                                                                </div>
                                                             </div>
-                                                        </div>
-                                                        <div>03/04</div>
-                                                    </th>
-                                                    <th class="position-relative text-center">
-                                                        <div class="dropdown position-absolute end-0">
-                                                            <button type="button" class="btn btn-sm dropdown-toggle hide-arrow p-0" data-bs-toggle="dropdown">
-                                                                <i data-feather="more-vertical"></i>
-                                                            </button>
-                                                            <div class="dropdown-menu dropdown-menu-end">
-                                                                <a class="dropdown-item" href="#">
-                                                                    <i data-feather="bookmark" class="me-50"></i>
-                                                                    <span class="text-capitalize">Fijar</span>
-                                                                </a>
-                                                                <a class="dropdown-item" href="#">
-                                                                    <i data-feather="edit-2" class="me-50"></i>
-                                                                    <span class="text-capitalize">Editar</span>
-                                                                </a>
-                                                                <a class="dropdown-item" href="#">
-                                                                    <i data-feather="trash" class="me-50"></i>
-                                                                    <span class="text-capitalize">Eliminar</span>
-                                                                </a>
+                                                            <div>03/04</div>
+                                                        </th>
+                                                        <th class="position-relative text-center">
+                                                            <div class="dropdown position-absolute end-0">
+                                                                <button type="button" class="btn btn-sm dropdown-toggle hide-arrow p-0" data-bs-toggle="dropdown">
+                                                                    <i data-feather="more-vertical"></i>
+                                                                </button>
+                                                                <div class="dropdown-menu dropdown-menu-end">
+                                                                    <a class="dropdown-item" href="#">
+                                                                        <i data-feather="bookmark" class="me-50"></i>
+                                                                        <span class="text-capitalize">Fijar</span>
+                                                                    </a>
+                                                                    <a class="dropdown-item" href="#">
+                                                                        <i data-feather="edit-2" class="me-50"></i>
+                                                                        <span class="text-capitalize">Editar</span>
+                                                                    </a>
+                                                                    <a class="dropdown-item" href="#">
+                                                                        <i data-feather="trash" class="me-50"></i>
+                                                                        <span class="text-capitalize">Eliminar</span>
+                                                                    </a>
+                                                                </div>
                                                             </div>
-                                                        </div>
-                                                        <div>07/04</div>
-                                                    </th>
-                                                    <th class="position-relative text-center">
-                                                        <div class="dropdown position-absolute end-0">
-                                                            <button type="button" class="btn btn-sm dropdown-toggle hide-arrow p-0" data-bs-toggle="dropdown">
-                                                                <i data-feather="more-vertical"></i>
-                                                            </button>
-                                                            <div class="dropdown-menu dropdown-menu-end">
-                                                                <a class="dropdown-item" href="#">
-                                                                    <i data-feather="bookmark" class="me-50"></i>
-                                                                    <span class="text-capitalize">Fijar</span>
-                                                                </a>
-                                                                <a class="dropdown-item" href="#">
-                                                                    <i data-feather="edit-2" class="me-50"></i>
-                                                                    <span class="text-capitalize">Editar</span>
-                                                                </a>
-                                                                <a class="dropdown-item" href="#">
-                                                                    <i data-feather="trash" class="me-50"></i>
-                                                                    <span class="text-capitalize">Eliminar</span>
-                                                                </a>
+                                                            <div>07/04</div>
+                                                        </th>
+                                                        <th class="position-relative text-center">
+                                                            <div class="dropdown position-absolute end-0">
+                                                                <button type="button" class="btn btn-sm dropdown-toggle hide-arrow p-0" data-bs-toggle="dropdown">
+                                                                    <i data-feather="more-vertical"></i>
+                                                                </button>
+                                                                <div class="dropdown-menu dropdown-menu-end">
+                                                                    <a class="dropdown-item" href="#">
+                                                                        <i data-feather="bookmark" class="me-50"></i>
+                                                                        <span class="text-capitalize">Fijar</span>
+                                                                    </a>
+                                                                    <a class="dropdown-item" href="#">
+                                                                        <i data-feather="edit-2" class="me-50"></i>
+                                                                        <span class="text-capitalize">Editar</span>
+                                                                    </a>
+                                                                    <a class="dropdown-item" href="#">
+                                                                        <i data-feather="trash" class="me-50"></i>
+                                                                        <span class="text-capitalize">Eliminar</span>
+                                                                    </a>
+                                                                </div>
                                                             </div>
-                                                        </div>
-                                                        <div>09/04</div>
-                                                    </th>
-                                                    <th class="position-relative text-center">
-                                                        <div class="dropdown position-absolute end-0">
-                                                            <button type="button" class="btn btn-sm dropdown-toggle hide-arrow p-0" data-bs-toggle="dropdown">
-                                                                <i data-feather="more-vertical"></i>
-                                                            </button>
-                                                            <div class="dropdown-menu dropdown-menu-end">
-                                                                <a class="dropdown-item" href="#">
-                                                                    <i data-feather="bookmark" class="me-50"></i>
-                                                                    <span class="text-capitalize">Fijar</span>
-                                                                </a>
-                                                                <a class="dropdown-item" href="#">
-                                                                    <i data-feather="edit-2" class="me-50"></i>
-                                                                    <span class="text-capitalize">Editar</span>
-                                                                </a>
-                                                                <a class="dropdown-item" href="#">
-                                                                    <i data-feather="trash" class="me-50"></i>
-                                                                    <span class="text-capitalize">Eliminar</span>
-                                                                </a>
+                                                            <div>09/04</div>
+                                                        </th>
+                                                        <th class="position-relative text-center">
+                                                            <div class="dropdown position-absolute end-0">
+                                                                <button type="button" class="btn btn-sm dropdown-toggle hide-arrow p-0" data-bs-toggle="dropdown">
+                                                                    <i data-feather="more-vertical"></i>
+                                                                </button>
+                                                                <div class="dropdown-menu dropdown-menu-end">
+                                                                    <a class="dropdown-item" href="#">
+                                                                        <i data-feather="bookmark" class="me-50"></i>
+                                                                        <span class="text-capitalize">Fijar</span>
+                                                                    </a>
+                                                                    <a class="dropdown-item" href="#">
+                                                                        <i data-feather="edit-2" class="me-50"></i>
+                                                                        <span class="text-capitalize">Editar</span>
+                                                                    </a>
+                                                                    <a class="dropdown-item" href="#">
+                                                                        <i data-feather="trash" class="me-50"></i>
+                                                                        <span class="text-capitalize">Eliminar</span>
+                                                                    </a>
+                                                                </div>
                                                             </div>
-                                                        </div>
-                                                        <div>11/04</div>
-                                                    </th>
-                                                    <th class="position-relative text-center">
-                                                        <div class="dropdown position-absolute end-0">
-                                                            <button type="button" class="btn btn-sm dropdown-toggle hide-arrow p-0" data-bs-toggle="dropdown">
-                                                                <i data-feather="more-vertical"></i>
-                                                            </button>
-                                                            <div class="dropdown-menu dropdown-menu-end">
-                                                                <a class="dropdown-item" href="#">
-                                                                    <i data-feather="bookmark" class="me-50"></i>
-                                                                    <span class="text-capitalize">Fijar</span>
-                                                                </a>
-                                                                <a class="dropdown-item" href="#">
-                                                                    <i data-feather="edit-2" class="me-50"></i>
-                                                                    <span class="text-capitalize">Editar</span>
-                                                                </a>
-                                                                <a class="dropdown-item" href="#">
-                                                                    <i data-feather="trash" class="me-50"></i>
-                                                                    <span class="text-capitalize">Eliminar</span>
-                                                                </a>
+                                                            <div>11/04</div>
+                                                        </th>
+                                                        <th class="position-relative text-center">
+                                                            <div class="dropdown position-absolute end-0">
+                                                                <button type="button" class="btn btn-sm dropdown-toggle hide-arrow p-0" data-bs-toggle="dropdown">
+                                                                    <i data-feather="more-vertical"></i>
+                                                                </button>
+                                                                <div class="dropdown-menu dropdown-menu-end">
+                                                                    <a class="dropdown-item" href="#">
+                                                                        <i data-feather="bookmark" class="me-50"></i>
+                                                                        <span class="text-capitalize">Fijar</span>
+                                                                    </a>
+                                                                    <a class="dropdown-item" href="#">
+                                                                        <i data-feather="edit-2" class="me-50"></i>
+                                                                        <span class="text-capitalize">Editar</span>
+                                                                    </a>
+                                                                    <a class="dropdown-item" href="#">
+                                                                        <i data-feather="trash" class="me-50"></i>
+                                                                        <span class="text-capitalize">Eliminar</span>
+                                                                    </a>
+                                                                </div>
                                                             </div>
-                                                        </div>
-                                                        <div>14/04</div>
-                                                    </th>
-                                                    <th class="position-relative text-center">
-                                                        <div class="dropdown position-absolute end-0">
-                                                            <button type="button" class="btn btn-sm dropdown-toggle hide-arrow p-0" data-bs-toggle="dropdown">
-                                                                <i data-feather="more-vertical"></i>
-                                                            </button>
-                                                            <div class="dropdown-menu dropdown-menu-end">
-                                                                <a class="dropdown-item" href="#">
-                                                                    <i data-feather="bookmark" class="me-50"></i>
-                                                                    <span class="text-capitalize">Fijar</span>
-                                                                </a>
-                                                                <a class="dropdown-item" href="#">
-                                                                    <i data-feather="edit-2" class="me-50"></i>
-                                                                    <span class="text-capitalize">Editar</span>
-                                                                </a>
-                                                                <a class="dropdown-item" href="#">
-                                                                    <i data-feather="trash" class="me-50"></i>
-                                                                    <span class="text-capitalize">Eliminar</span>
-                                                                </a>
+                                                            <div>14/04</div>
+                                                        </th>
+                                                        <th class="position-relative text-center">
+                                                            <div class="dropdown position-absolute end-0">
+                                                                <button type="button" class="btn btn-sm dropdown-toggle hide-arrow p-0" data-bs-toggle="dropdown">
+                                                                    <i data-feather="more-vertical"></i>
+                                                                </button>
+                                                                <div class="dropdown-menu dropdown-menu-end">
+                                                                    <a class="dropdown-item" href="#">
+                                                                        <i data-feather="bookmark" class="me-50"></i>
+                                                                        <span class="text-capitalize">Fijar</span>
+                                                                    </a>
+                                                                    <a class="dropdown-item" href="#">
+                                                                        <i data-feather="edit-2" class="me-50"></i>
+                                                                        <span class="text-capitalize">Editar</span>
+                                                                    </a>
+                                                                    <a class="dropdown-item" href="#">
+                                                                        <i data-feather="trash" class="me-50"></i>
+                                                                        <span class="text-capitalize">Eliminar</span>
+                                                                    </a>
+                                                                </div>
                                                             </div>
-                                                        </div>
-                                                        <div>17/04</div>
-                                                    </th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>
-                                                        <span class="fw-bold">Altura</span>
-                                                    </td>
-                                                    <td class="text-center text-primary">0</td>
-                                                    <td class="text-center">0</td>
-                                                    <td class="text-center">0</td>
-                                                    <td class="text-center">0</td>
-                                                    <td class="text-center">0</td>
-                                                    <td class="text-center">0</td>
-                                                    <td class="text-center">0</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <span class="fw-bold">Peso</span>
-                                                    </td>
-                                                    <td class="text-center text-primary">0</td>
-                                                    <td class="text-center">0</td>
-                                                    <td class="text-center">0</td>
-                                                    <td class="text-center">0</td>
-                                                    <td class="text-center">0</td>
-                                                    <td class="text-center">0</td>
-                                                    <td class="text-center">0</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <span class="fw-bold">Edad Metabólica</span>
-                                                    </td>
-                                                    <td class="text-center text-primary">0</td>
-                                                    <td class="text-center">0</td>
-                                                    <td class="text-center">0</td>
-                                                    <td class="text-center">0</td>
-                                                    <td class="text-center">0</td>
-                                                    <td class="text-center">0</td>
-                                                    <td class="text-center">0</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <span class="fw-bold">Indice de Masa Corporal</span>
-                                                    </td>
-                                                    <td class="text-center text-primary">0</td>
-                                                    <td class="text-center">0</td>
-                                                    <td class="text-center">0</td>
-                                                    <td class="text-center">0</td>
-                                                    <td class="text-center">0</td>
-                                                    <td class="text-center">0</td>
-                                                    <td class="text-center">0</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <span class="fw-bold">% Grasa Corporal</span>
-                                                    </td>
-                                                    <td class="text-center text-primary">0</td>
-                                                    <td class="text-center">0</td>
-                                                    <td class="text-center">0</td>
-                                                    <td class="text-center">0</td>
-                                                    <td class="text-center">0</td>
-                                                    <td class="text-center">0</td>
-                                                    <td class="text-center">0</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <span class="fw-bold">Masa Muscular</span>
-                                                    </td>
-                                                    <td class="text-center text-primary">0</td>
-                                                    <td class="text-center">0</td>
-                                                    <td class="text-center">0</td>
-                                                    <td class="text-center">0</td>
-                                                    <td class="text-center">0</td>
-                                                    <td class="text-center">0</td>
-                                                    <td class="text-center">0</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <span class="fw-bold">% Grasa Visceral</span>
-                                                    </td>
-                                                    <td class="text-center text-primary">0</td>
-                                                    <td class="text-center">0</td>
-                                                    <td class="text-center">0</td>
-                                                    <td class="text-center">0</td>
-                                                    <td class="text-center">0</td>
-                                                    <td class="text-center">0</td>
-                                                    <td class="text-center">0</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <span class="fw-bold">% Agua</span>
-                                                    </td>
-                                                    <td class="text-center text-primary">0</td>
-                                                    <td class="text-center">0</td>
-                                                    <td class="text-center">0</td>
-                                                    <td class="text-center">0</td>
-                                                    <td class="text-center">0</td>
-                                                    <td class="text-center">0</td>
-                                                    <td class="text-center">0</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <span class="fw-bold">Masa Ósea</span>
-                                                    </td>
-                                                    <td class="text-center text-primary">0</td>
-                                                    <td class="text-center">0</td>
-                                                    <td class="text-center">0</td>
-                                                    <td class="text-center">0</td>
-                                                    <td class="text-center">0</td>
-                                                    <td class="text-center">0</td>
-                                                    <td class="text-center">0</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
+                                                            <div>17/04</div>
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <span class="fw-bold">Altura</span>
+                                                        </td>
+                                                        <td class="text-center text-primary">0</td>
+                                                        <td class="text-center">0</td>
+                                                        <td class="text-center">0</td>
+                                                        <td class="text-center">0</td>
+                                                        <td class="text-center">0</td>
+                                                        <td class="text-center">0</td>
+                                                        <td class="text-center">0</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <span class="fw-bold">Peso</span>
+                                                        </td>
+                                                        <td class="text-center text-primary">0</td>
+                                                        <td class="text-center">0</td>
+                                                        <td class="text-center">0</td>
+                                                        <td class="text-center">0</td>
+                                                        <td class="text-center">0</td>
+                                                        <td class="text-center">0</td>
+                                                        <td class="text-center">0</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <span class="fw-bold">Edad Metabólica</span>
+                                                        </td>
+                                                        <td class="text-center text-primary">0</td>
+                                                        <td class="text-center">0</td>
+                                                        <td class="text-center">0</td>
+                                                        <td class="text-center">0</td>
+                                                        <td class="text-center">0</td>
+                                                        <td class="text-center">0</td>
+                                                        <td class="text-center">0</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <span class="fw-bold">Indice de Masa Corporal</span>
+                                                        </td>
+                                                        <td class="text-center text-primary">0</td>
+                                                        <td class="text-center">0</td>
+                                                        <td class="text-center">0</td>
+                                                        <td class="text-center">0</td>
+                                                        <td class="text-center">0</td>
+                                                        <td class="text-center">0</td>
+                                                        <td class="text-center">0</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <span class="fw-bold">% Grasa Corporal</span>
+                                                        </td>
+                                                        <td class="text-center text-primary">0</td>
+                                                        <td class="text-center">0</td>
+                                                        <td class="text-center">0</td>
+                                                        <td class="text-center">0</td>
+                                                        <td class="text-center">0</td>
+                                                        <td class="text-center">0</td>
+                                                        <td class="text-center">0</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <span class="fw-bold">Masa Muscular</span>
+                                                        </td>
+                                                        <td class="text-center text-primary">0</td>
+                                                        <td class="text-center">0</td>
+                                                        <td class="text-center">0</td>
+                                                        <td class="text-center">0</td>
+                                                        <td class="text-center">0</td>
+                                                        <td class="text-center">0</td>
+                                                        <td class="text-center">0</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <span class="fw-bold">% Grasa Visceral</span>
+                                                        </td>
+                                                        <td class="text-center text-primary">0</td>
+                                                        <td class="text-center">0</td>
+                                                        <td class="text-center">0</td>
+                                                        <td class="text-center">0</td>
+                                                        <td class="text-center">0</td>
+                                                        <td class="text-center">0</td>
+                                                        <td class="text-center">0</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <span class="fw-bold">% Agua</span>
+                                                        </td>
+                                                        <td class="text-center text-primary">0</td>
+                                                        <td class="text-center">0</td>
+                                                        <td class="text-center">0</td>
+                                                        <td class="text-center">0</td>
+                                                        <td class="text-center">0</td>
+                                                        <td class="text-center">0</td>
+                                                        <td class="text-center">0</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <span class="fw-bold">Masa Ósea</span>
+                                                        </td>
+                                                        <td class="text-center text-primary">0</td>
+                                                        <td class="text-center">0</td>
+                                                        <td class="text-center">0</td>
+                                                        <td class="text-center">0</td>
+                                                        <td class="text-center">0</td>
+                                                        <td class="text-center">0</td>
+                                                        <td class="text-center">0</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
                                     </div>
                                 </div>
                                 <!-- /Medidas -->
 
                                 <!-- Nutricion -->
-                                <div class="card tab-pane fade show" id="medidas" role="tabpanel" aria-labelledby="list-home-list">
+                                <div class="tab-pane fade show" id="medidas" role="tabpanel" aria-labelledby="list-home-list">
                                     
                                     <div class="">
 
@@ -1562,9 +1682,9 @@
                             <div class="modal-body px-5 pb-2">
                                 <div class="text-center mb-2">
                                     <h1 class="mb-1">Plan de actualización </h1>
-                                    <p>Elige el mejor plan para el usuario.</p>
+                                    <p>Elige el mejor plan para el cliente.</p>
                                 </div>
-                                <form id="upgradePlanForm" class="row pt-50" onsubmit="return false">
+                                <form id="upgradePlanForm" class="row pt-50">
                                     <div class="col-sm-8">
                                         <label class="form-label" for="choosePlan">Elija Plan </label>
                                         <select id="choosePlan" name="choosePlan" class="form-select" aria-label="Choose Plan">
@@ -1574,7 +1694,18 @@
                                             <option value="Enterprise">Enterprise - $499/month</option>
                                         </select>
                                     </div>
-                                    <div class="col-sm-4 text-sm-end">
+                                    <div class="col-sm-4 d-flex">
+                                        <input type="number" class="form-control mt-auto mb-0 d-block" value="0">
+                                    </div>
+                                    <div class="col-12 my-1">
+                                        <label class="form-label" for="">Próximo Pago </label>
+                                        <input type="date" class="form-control">
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="form-label" for="">Clases por semana </label>
+                                        <input type="number" class="form-control" value="0">
+                                    </div>
+                                    <div class="col-12">
                                         <button type="submit" class="btn btn-primary mt-2">Actualizar</button>
                                     </div>
                                 </form>
