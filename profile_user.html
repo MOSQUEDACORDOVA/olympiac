@@ -1153,7 +1153,7 @@
                                 <div class="tab-pane fade show" id="medidas" role="tabpanel" aria-labelledby="list-home-list">
                                     <div class="card">
                                         <div class="card-header">
-                                            <button type="button" class="btn btn-outline-primary">
+                                            <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#medidas-modal">
                                                 <i data-feather="plus" class="me-25"></i>
                                                 <span>Agregar Medida</span>
                                             </button>
@@ -1479,6 +1479,69 @@
                     </div>
                 </section>
                 
+                <!-- MEDIDAS modal  -->
+                <div class="modal fade" id="medidas-modal" aria-modal="true" role="dialog">
+                    <div class="modal-dialog modal-dialog-centered modal-lg" >
+                      <div class="modal-content">
+                        <div class="modal-header bg-transparent">
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body px-sm-5 mx-50 pb-5">
+                          <h1 class="text-center mb-1" id="addNewCardTitle">Agregar Medidas</h1>
+                          <p class="text-center">Lorem ipsum dolor sit amet.</p>
+                  
+                          <!-- form -->
+                          <form id="addNewCardValidation" class="row gy-1 gx-2 mt-75">
+                            <div class="col-12 col-sm-6">
+                              <label class="form-label" for="">Altura</label>
+                              <input type="text" class="form-control">
+                            </div>
+                            <div class="col-12 col-sm-6">
+                              <label class="form-label" for="">Peso</label>
+                              <input type="text" class="form-control">
+                            </div>
+                            <div class="col-12 col-sm-6">
+                              <label class="form-label" for="">Edad Metabólica</label>
+                              <input type="text" class="form-control">
+                            </div>
+                            <div class="col-12 col-sm-6">
+                              <label class="form-label" for="">Indice de Masa Corporal</label>
+                              <input type="text" class="form-control">
+                            </div>
+                            <div class="col-12 col-sm-6">
+                              <label class="form-label" for="">% Grasa Corporal</label>
+                              <input type="text" class="form-control">
+                            </div>
+                            <div class="col-12 col-sm-6">
+                              <label class="form-label" for="">Masa Muscular</label>
+                              <input type="text" class="form-control">
+                            </div>
+                            <div class="col-12 col-sm-6">
+                              <label class="form-label" for="">% Grasa Visceral</label>
+                              <input type="text" class="form-control">
+                            </div>
+                            <div class="col-12 col-sm-6">
+                              <label class="form-label" for="">% Agua</label>
+                              <input type="text" class="form-control">
+                            </div>
+                            <div class="col-12">
+                              <label class="form-label" for="">Masa Ósea</label>
+                              <input type="text" class="form-control">
+                            </div>
+                  
+                            <div class="col-12 text-center">
+                              <button type="submit" class="btn btn-primary me-1 mt-1 waves-effect waves-float waves-light">Guardar</button>
+                              <button type="reset" class="btn btn-outline-secondary mt-1 waves-effect" data-bs-dismiss="modal" aria-label="Close">
+                                Cancelar
+                              </button>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                <!-- MEDIDAS modal  -->
+
                 <!-- edit card modal  -->
                 <div class="modal fade" id="editCard" tabindex="-1" aria-labelledby="editCardTitle" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered">
