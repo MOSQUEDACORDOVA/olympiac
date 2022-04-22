@@ -340,7 +340,7 @@ $(function () {
         strokeWidth: 7,
         strokeOpacity: 1,
         strokeColors: [window.colors.solid.white],
-        colors: [window.colors.solid.warning]
+        colors: [window.colors.solid.black]
       },
       dataLabels: {
         enabled: false
@@ -348,7 +348,7 @@ $(function () {
       stroke: {
         curve: 'straight'
       },
-      colors: [window.colors.solid.warning],
+      colors: [window.colors.solid.primary],
       grid: {
         xaxis: {
           lines: {
